@@ -1,0 +1,240 @@
+spriteTypes = {
+	#副领袖
+	spriteType = {
+		name = "GFX_NRR_chitong"
+		texturefile = "gfx/leaders/NRR/Akame_alternate_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ANR_heitong"
+		texturefile = "gfx/leaders/ANR/Kurome_alternate_2.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_MY"
+		texturefile = "gfx/leaders/NRR/GFX_NRR_MY.dds"
+	}
+
+	#结尾
+	spriteType = {
+		name = "GFX_NRR_democratic_survived_End_Icon"
+		texturefile = "gfx/interface/gui/end_ui/GFX_NRR_democratic_survived_End_Icon.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Tatsumi_perfecet_End_Icon"
+		texturefile = "gfx/interface/gui/end_ui/NRR_Tatsumi_perfecet_end.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Tatsumi_normal_End_Icon"
+		texturefile = "gfx/interface/gui/end_ui/NRR_Tatsumi_normal_end.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Tatsumi_bad_End_Icon"
+		texturefile = "gfx/interface/gui/end_ui/NRR_Tatsumi_bad_end.dds"
+	}
+
+
+
+
+
+	#超事件
+	spriteType = {
+		name = "GFX_super_event_LOS_start_war"
+		texturefile = "gfx/superevent_picutures/LOS_start_war.dds"
+	}
+
+
+	#事件
+	SpriteType = {
+		name = "GFX_NRR_event001"
+		texturefile = "gfx/event_pictures/NRR/NRR_event001.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event002"
+		texturefile = "gfx/event_pictures/NRR/NRR_event002.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event003"
+		texturefile = "gfx/event_pictures/NRR/NRR_event003.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event004"
+		texturefile = "gfx/event_pictures/NRR/NRR_event004.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event005"
+		texturefile = "gfx/event_pictures/NRR/NRR_event005.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event006"
+		texturefile = "gfx/event_pictures/NRR/NRR_event006.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event007"
+		texturefile = "gfx/event_pictures/NRR/NRR_event007.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event008"
+		texturefile = "gfx/event_pictures/NRR/NRR_event008.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event009"
+		texturefile = "gfx/event_pictures/NRR/NRR_event009.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event010"
+		texturefile = "gfx/event_pictures/NRR/NRR_event010.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event011"
+		texturefile = "gfx/event_pictures/NRR/NRR_event011.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event012"
+		texturefile = "gfx/event_pictures/NRR/NRR_event012.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event013"
+		texturefile = "gfx/event_pictures/NRR/NRR_event013.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event014"
+		texturefile = "gfx/event_pictures/NRR/NRR_event014.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event015"
+		texturefile = "gfx/event_pictures/NRR/NRR_event015.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event016"
+		texturefile = "gfx/event_pictures/NRR/NRR_event016.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event017"
+		texturefile = "gfx/event_pictures/NRR/NRR_event017.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event018"
+		texturefile = "gfx/event_pictures/NRR/NRR_event018.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event019"
+		texturefile = "gfx/event_pictures/NRR/NRR_event019.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event020"
+		texturefile = "gfx/event_pictures/NRR/NRR_event020.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event021"
+		texturefile = "gfx/event_pictures/NRR/NRR_event021.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event022"
+		texturefile = "gfx/event_pictures/NRR/NRR_event022.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event023"
+		texturefile = "gfx/event_pictures/NRR/NRR_event023.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event024"
+		texturefile = "gfx/event_pictures/NRR/NRR_event024.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event025"
+		texturefile = "gfx/event_pictures/NRR/NRR_event025.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event026"
+		texturefile = "gfx/event_pictures/NRR/NRR_event026.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_event027"
+		texturefile = "gfx/event_pictures/NRR/NRR_event027.png"
+	}
+
+	#国策
+	SpriteType = {
+		name = "GFX_ASDS"
+		texturefile = "gfx/interface/goals/NRR/ASDS.dds"
+	}
+	SpriteType = {
+		name = "GFX_industry"
+		texturefile = "gfx/interface/goals/NRR/industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_justice"
+		texturefile = "gfx/interface/goals/NRR/justice.dds"
+	}
+	SpriteType = {
+		name = "GFX_MY"
+		texturefile = "gfx/interface/goals/NRR/MY.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_adhere_to_neutrality"
+		texturefile = "gfx/interface/goals/NRR/NRR_adhere_to_neutrality.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_preliminary_victory"
+		texturefile = "gfx/interface/goals/NRR/NRR_preliminary_victory.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_develops_diplomacy"
+		texturefile = "gfx/interface/goals/NRR/NRR_develops_diplomacy.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_have_a_glass"
+		texturefile = "gfx/interface/goals/NRR/NRR_have_a_glass.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_huge_economic_potential"
+		texturefile = "gfx/interface/goals/NRR/NRR_huge_economic_potential.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_one_country_one_army"
+		texturefile = "gfx/interface/goals/NRR/NRR_one_country_one_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_uphold_the_constitution"
+		texturefile = "gfx/interface/goals/NRR/NRR_uphold_the_constitution.dds"
+	}
+	SpriteType = {
+		name = "GFX_TZM"
+		texturefile = "gfx/interface/goals/NRR/TZM.dds"
+	}
+	SpriteType = {
+		name = "GFX_NRR_agricultural_recovery"
+		texturefile = "gfx/interface/goals/NRR/NRR_agricultural_recovery.dds"
+	}
+	
+
+
+	#民族精神图标
+	SpriteType = {
+		name = "GFX_NRR_cigarette"
+		texturefile = "gfx/interface/ideas/NRR/NRR_cigarette.dds"
+	}
+
+
+	#mio
+	SpriteType = {
+		name = "GFX_idea_Mandalay_Republican_Arsenal"
+		texturefile = "gfx/interface/ideas/NRR/idea_Mandalay_Republican_Arsenal.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Ganges_Independent_Tank_Factory"
+		texturefile = "gfx/interface/ideas/NRR/NRR_Ganges_Independent_Tank_Factory.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Ganges_Blue_Dive_Shipyard"
+		texturefile = "gfx/interface/ideas/NRR/NRR_Ganges_Blue_Dive_Shipyard.png"
+	}
+	SpriteType = {
+		name = "GFX_NRR_Ganges_Soaring_Aircraft_Factory"
+		texturefile = "gfx/interface/ideas/NRR/NRR_Ganges_Soaring_Aircraft_Factory.png"
+	}
+
+ 
+}
+
+
+

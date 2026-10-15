@@ -1,0 +1,15 @@
+spriteTypes = {
+	#副领袖
+	spriteType = {
+		name = "GFX_MFD_dong"
+		texturefile = "gfx/leaders/MFD/dong.png"
+	}
+	spriteType = {
+		name = "GFX_BLS_fumo"
+		texturefile = "gfx/leaders/BLS/fumo.png"
+	}
+ 
+}
+
+
+

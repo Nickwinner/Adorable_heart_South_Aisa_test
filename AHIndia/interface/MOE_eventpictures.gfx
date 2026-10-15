@@ -1,0 +1,162 @@
+spriteTypes = {
+	
+ #事件
+	spriteType = {
+		name = "GFX_RAJ_event_001"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_001.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_002"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_002.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_003"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_003.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_004"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_004.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_005"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_005.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_006"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_006.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_007"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_007.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_008"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_008.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_009"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_009.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_010"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_010.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_011"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_011.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_012"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_012.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_013"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_013.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_014"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_014.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_015"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_015.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_016"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_016.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_017"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_017.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_018"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_018.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_019"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_019.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_020"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_020.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_021"
+		texturefile = "gfx/event_pictures/RAJ/RAJ_event_021.png"
+	}
+
+
+ #芙莉莲萌心游记
+	spriteType = {
+		name = "GFX_RAJ_event_fll01"
+		texturefile = "gfx/event_pictures/RAJ/fll01.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll03"
+		texturefile = "gfx/event_pictures/RAJ/fll03.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll02"
+		texturefile = "gfx/event_pictures/RAJ/fll02.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll04"
+		texturefile = "gfx/event_pictures/RAJ/fll04.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll05"
+		texturefile = "gfx/event_pictures/RAJ/fll05.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll06"
+		texturefile = "gfx/event_pictures/RAJ/fll06.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll07"
+		texturefile = "gfx/event_pictures/RAJ/fll07.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll08"
+		texturefile = "gfx/event_pictures/RAJ/fll08.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll09"
+		texturefile = "gfx/event_pictures/RAJ/fll09.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll10"
+		texturefile = "gfx/event_pictures/RAJ/fll10.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll11"
+		texturefile = "gfx/event_pictures/RAJ/fll11.png"
+	}
+	spriteType = {
+		name = "GFX_RAJ_event_fll12"
+		texturefile = "gfx/event_pictures/RAJ/fll12.png"
+	}
+	
+ #副领袖
+	spriteType = {
+		name = "GFX_RAJ_DC"
+		texturefile = "gfx/leaders/RAJ/DC.png"
+		
+	}
+
+	spriteType = {
+		name = "GFX_super_event_200"
+		textureFile = "gfx/superevent_pictures/super_event_LOS_start_war.dds"
+	}
+
+
+
+
+
+
+
+
+}
+
+
+

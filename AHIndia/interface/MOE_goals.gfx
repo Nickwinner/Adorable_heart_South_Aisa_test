@@ -1,0 +1,220 @@
+spriteTypes = {	
+
+ #### Generic continuous goal icons
+
+	spriteType = {
+    name = "GFX_RAJ"
+	texturefile = "gfx/interface/goals/RAJ/agriculture.png"
+	}
+	SpriteType = {
+		name = "GFX_BBR_freedom_budget"
+		texturefile = "gfx/interface/goals/RAJ/BBR_freedom_budget.png"
+	}
+	SpriteType = {
+		name = "GFX_CAL_hit_the_stomach"
+		texturefile = "gfx/interface/goals/RAJ/CAL_hit_the_stomach.png"
+	}
+	SpriteType = {
+		name = "GFX_CSA_for_fair_days_work"
+		texturefile = "gfx/interface/goals/RAJ/CSA_for_fair_days_work.png"
+	}
+	SpriteType = {
+		name = "GFX_CSA_industrial_democracy"
+		texturefile = "gfx/interface/goals/RAJ/CSA_industrial_democracy.png"
+	}
+	SpriteType = {
+		name = "GFX_CSA_industrial_unionism"
+		texturefile = "gfx/interface/goals/RAJ/CSA_industrial_unionism.png"
+	}
+	SpriteType = {
+		name = "GFX_EGY_Pyramids"
+		texturefile = "gfx/interface/goals/RAJ/EGY_Pyramids.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_AST_never_gallipoli"
+		texturefile = "gfx/interface/goals/RAJ/focus_AST_never_gallipoli.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_chi_mission_to_the_soviet_union"
+		texturefile = "gfx/interface/goals/RAJ/focus_chi_mission_to_the_soviet_union.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_rus_right_communists"
+		texturefile = "gfx/interface/goals/RAJ/focus_rus_right_communists.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_rus_vozhd2"
+		texturefile = "gfx/interface/goals/RAJ/focus_rus_vozhd2.png"
+	}
+	SpriteType = {
+		name = "GFX_FRA_vouchers"
+		texturefile = "gfx/interface/goals/RAJ/FRA_vouchers.png"
+	}
+	SpriteType = {
+		name = "GFX_generic_army_mass_assault"
+		texturefile = "gfx/interface/goals/RAJ/generic_army_mass_assault.png"
+	}
+	SpriteType = {
+		name = "GFX_generic_army_mobile_warfare"
+		texturefile = "gfx/interface/goals/RAJ/.generic_army_mobile_warfarepng"
+	}
+	SpriteType = {
+		name = "GFX_get_weapon"
+		texturefile = "gfx/interface/goals/RAJ/get_weapon.png"
+	}
+	SpriteType = {
+		name = "GFX_INC_Indochina_Internationale_Outpost"
+		texturefile = "gfx/interface/goals/RAJ/INC_Indochina_Internationale_Outpost.png"
+	}
+	SpriteType = {
+		name = "GFX_NEE_coop_management"
+		texturefile = "gfx/interface/goals/RAJ/NEE_coop_management.png"
+	}
+	SpriteType = {
+		name = "GFX_Orwell"
+		texturefile = "gfx/interface/goals/RAJ/Orwell.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_air_domination"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_air_domination.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_B_and_S"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_B_and_S.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_chapter2"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_chapter2.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_D_and_C"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_D_and_C.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_diplomacy"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_diplomacy.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_dispute"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_dispute.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_education_is_war"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_education_is_war.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_equality"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_equality.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_expert"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_expert.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_hope_and_dream"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_hope_and_dream.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_industrialization"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_industrialization.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_land_domination"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_land_domination.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_membai_declaration"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_membai_declaration.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_member_of_lion"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_member_of_lion.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_nation_propaganda"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_nation_propaganda.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_question_of_truth"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_question_of_truth.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_revolution_propaganda"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_revolution_propaganda.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_rrrrready"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_rrrrready.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_strom_is_coming"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_strom_is_coming.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_they_are_ready"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_they_are_ready.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_visitors"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_visitors.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_war_is_education"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_war_is_education.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_we_are_ready"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_we_are_ready.png"
+	}
+	SpriteType = {
+		name = "GFX_RAJ_welcome_my_friends"
+		texturefile = "gfx/interface/goals/RAJ/RAJ_welcome_my_friends.png"
+	}
+	SpriteType = {
+		name = "GFX_RUS_Deal_With_Left_Lean"
+		texturefile = "gfx/interface/goals/RAJ/RUS_Deal_With_Left_Lean.png"
+	}
+	SpriteType = {
+		name = "GFX_Unite_Arabia"
+		texturefile = "gfx/interface/goals/RAJ/Unite_Arabia.png"
+	}
+	SpriteType = {
+		name = "GFX_USA_reconcile_canada"
+		texturefile = "gfx/interface/goals/RAJ/USA_reconcile_canada.png"
+	}
+	SpriteType = {
+		name = "GFX_agriculture2"
+		texturefile = "gfx/interface/goals/RAJ/agriculture2.png"
+	}
+	SpriteType = {
+		name = "GFX_integrate_the_militia"
+		texturefile = "gfx/interface/goals/RAJ/integrate_the_militia.png"
+	}
+
+
+
+
+
+ #头像
+	spriteType = {
+		name = "GFX_RAJ_Orwell"
+		texturefile = "gfx/leaders/RAJ/001.dds"
+	}
+	spriteType = {
+		name = "GFX_RAJ_FitzGerald"
+		texturefile = "gfx/leaders/RAJ/006.dds"
+	}
+ 
+ #bop
+    spriteType = {
+	    name = "GFX_RAJ_international"
+	    texturefile = "gfx/interface/bop/RAJ/bop_ITA_communism_improved_side.dds"
+    }
+    spriteType = {
+		name = "GFX_RAJ_national"
+		texturefile = "gfx/interface/bop/RAJ/bop_ETH_communist_side.dds"
+    }
+
+
+
+}
