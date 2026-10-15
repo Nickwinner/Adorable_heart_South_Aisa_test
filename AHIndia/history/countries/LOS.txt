@@ -1,0 +1,66 @@
+capital = 867
+oob = "LOS_1936"
+set_naval_oob = "LOS_1936_Naval"
+set_stability = 0.5
+set_war_support = 0.4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	CAS1 = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_technology = {
+	mtg_transport = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+}
+
+recruit_character = LOS_FL
+recruit_character = LOS_JL
+recruit_character = LOS_kabul
+recruit_character = LOS_LOS
+recruit_character = LOS_LX
+recruit_character = LOS_MLXE
+recruit_character = LOS_QECK
+recruit_character = LOS_SX
+recruit_character = LOS_YJJM
+recruit_character = LOS_maizuru
+recruit_character = LOS_knotweed
+recruit_character = LOS_namiri
+
+add_ideas = {
+	volunteer_only
+	low_economic_mobilisation
+	LOS_autoconstruction
+	LOS_cookbook
+	LOS_dongeon_ace
+
+}
+
+
+set_convoys = 100
+set_cosmetic_tag = LOS
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 30
+	neutrality = 30
+	fascism = 0
+	communism = 40
+}

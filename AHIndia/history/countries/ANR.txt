@@ -1,0 +1,63 @@
+capital = 431
+oob = "ANR_1936"
+set_naval_oob = "ANR_1936_Naval"
+set_stability = 0.2
+set_war_support = 0.6
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	CAS1 = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	magic_weapons0 = 1
+	magic_weapons1 = 1
+}
+
+set_technology = {
+	early_ship_hull_submarine = 1
+	early_ship_hull_light = 1
+}
+
+
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+	ANR_Long_live_for_ACDC
+	ANR_ACE
+	ANR_anti_NRR
+
+}
+
+recruit_character = ANR_aisi
+recruit_character = ANR_aisi_2
+recruit_character = ANR_heitong
+recruit_character = ANR_BLS
+recruit_character = ANR_LAN
+recruit_character = ANR_LW
+recruit_character = ANR_SL
+recruit_character = ANR_WE
+
+set_convoys = 20
+set_cosmetic_tag = ANR # British Raj
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 0
+	neutrality = 80
+	fascism = 20
+	communism = 0
+}
