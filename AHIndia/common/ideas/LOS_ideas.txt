@@ -1,0 +1,52 @@
+ideas = {
+	hidden_ideas = {
+		
+	}
+	country = {
+		
+		LOS_autoconstruction ={ #魔物自动化畜牧业
+			picture = ARG_argentine_beef_trade
+
+			modifier = {
+				industrial_capacity_factory = 0.25
+				production_speed_buildings_factor = 0.2
+				local_resources_factor = 0.25
+				local_building_slots_factor = 0.25
+				consumer_goods_factor = -0.2
+				
+				monthly_population = 0.25
+			}
+		}
+
+		LOS_cookbook ={ #魔物烹饪食谱
+			picture = RAJ_specialized_dietery_requirements
+
+			modifier = {
+
+				hcp_exincome_monthly = 10
+
+				attrition = -0.5
+				supply_consumption_factor = -0.4
+		        no_supply_grace = 48
+				out_of_supply_factor = -0.25
+		        terrain_penalty_reduction = 0.25
+			}
+			
+		}
+
+		LOS_dongeon_ace ={#经验丰富的地下城冒险者军团
+			picture = SWE_neither_death_nor_dishonor
+
+			modifier = {
+				land_night_attack = 0.3
+				army_infantry_attack_factor = 0.25
+		        army_infantry_defence_factor = 0.25
+				org_loss_when_moving = -0.25
+				experience_loss_factor = -0.25
+
+
+			}
+		
+		}
+	}
+}

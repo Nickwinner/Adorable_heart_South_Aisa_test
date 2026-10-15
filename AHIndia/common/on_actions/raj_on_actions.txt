@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					or = {
+						tag = RAJ
+						
+					}
+				}
+				set_variable = {
+					another_country_leader_group = 4
+				}
+			}
+	    }
+	}
+}

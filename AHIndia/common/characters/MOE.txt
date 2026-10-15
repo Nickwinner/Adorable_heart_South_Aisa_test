@@ -1,0 +1,20 @@
+characters = {
+	MOE_HD = {
+		name = "皇帝"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOE/HD.png"
+			}
+		}
+		country_leader = {
+			desc = RAJ_HD_desc_leader
+			ideology = autocracy_subideology
+			traits = {
+				
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+}

@@ -1,0 +1,43 @@
+ideas = {
+	hidden_ideas = {
+		
+	}
+	country = {
+		
+		BLS_jyzxbt ={ #旧有秩序崩塌
+			picture = ARG_state_atheism
+
+			modifier = {
+				stability_factor = -0.4
+				stability_weekly = 0.01
+				war_support_factor = 0.2
+		        war_support_weekly = 0.01
+			}
+		}
+
+		BLS_nbhl ={ #内部混乱
+			picture = CZE_divided_nation
+
+			modifier = {
+				defensive_war_stability_factor = -0.15
+				mobilization_speed = -0.25
+				conscription = -0.01
+				training_time_army_factor = 0.2
+
+			}
+		}
+
+		BLS_conference ={#八雷神会议
+			picture = generic_conference
+
+			modifier = {
+				army_infantry_attack_factor = 0.15
+		        army_infantry_defence_factor = 0.15
+				planning_speed = 0.2
+		        max_planning = 0.2
+				neutrality_drift = 0.01
+			}
+		
+		}
+	}
+}

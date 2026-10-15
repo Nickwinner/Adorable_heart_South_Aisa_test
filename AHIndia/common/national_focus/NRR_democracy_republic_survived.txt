@@ -1,0 +1,164 @@
+focus_tree={
+	id = NRR_democracy_republic_survived
+	country={
+		factor=0
+		modifier={
+			add=10
+			tag=NRR
+		}
+	}
+	default=no
+	focus={
+		id=NRR_preliminary_victory
+		icon= GFX_focus_ARG_defense_and_democracy
+		x=3
+		y=0
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=NRR_huge_economic_potential
+		icon=GFX_NRR_huge_economic_potential
+		x=0
+		y=1
+		prerequisite={focus=NRR_preliminary_victory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			hidden_effect = {
+				add_to_variable = { ubs_save = 100 }
+			}
+			custom_effect_tooltip = SOV_get_100_add_to_reserve
+		}
+	}
+	focus={
+		id=NRR_adhere_to_neutrality
+		icon=GFX_NRR_adhere_to_neutrality
+		x=3
+		y=1
+		prerequisite={focus=NRR_preliminary_victory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = deterrence
+			add_ideas = neutrality_idea
+			add_political_power = 100
+		}
+	}
+	focus={
+		id=NRR_uphold_the_constitution
+		icon=GFX_NRR_uphold_the_constitution
+		x=6
+		y=1
+		prerequisite={focus=NRR_preliminary_victory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = { id = NRR.event.40 }
+		}
+	}
+	focus={
+		id=NRR_agricultural_recovery
+		icon=GFX_NRR_agricultural_recovery
+		x=0
+		y=2
+		prerequisite={focus=NRR_huge_economic_potential}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			every_state = {
+				limit = {
+					is_core_of = NRR
+					}
+				add_building_construction = {
+			    type = infrastructure
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+		}
+	}
+	focus={
+		id=NRR_develops_diplomacy
+		icon=GFX_NRR_develops_diplomacy
+		x=3
+		y=2
+		prerequisite={focus=NRR_adhere_to_neutrality}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			create_faction_from_template = faction_template_federation_of_Ganges
+			add_faction_initiative = 1
+			add_ideas = why_we_fight_focus
+		}
+	}
+	focus={
+		id=NRR_one_country_one_army
+		icon=GFX_NRR_one_country_one_army
+		x=6
+		y=2
+		prerequisite={focus=NRR_uphold_the_constitution}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			remove_ideas = NRR_mhsddgmjgc
+		}
+	}
+	focus={
+		id=NRR_have_a_glass
+		icon=GFX_NRR_have_a_glass
+		x=3
+		y=3
+		prerequisite={focus=NRR_agricultural_recovery}
+		prerequisite={focus=NRR_develops_diplomacy}
+		prerequisite={focus=NRR_one_country_one_army}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = { id = NRR.event.41 }
+		}
+	}
+}

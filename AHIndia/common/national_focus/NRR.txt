@@ -1,0 +1,1326 @@
+focus_tree={
+	id = NRR_focus_tree
+	country={
+		factor=0
+		modifier= {
+			add = 10
+			tag = NRR
+		}
+	}
+	default=no
+    continuous_focus_position = { #持续性国策
+		x = 700
+		y = 2200
+	}
+	focus={
+		id=NRR_revolution_day
+		icon=GFX_focus_ARG_defense_and_democracy
+		x=8
+		y=0
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=NRR_meeting
+		icon=GFX_focus_generic_commission
+		x=8
+		y=1
+		prerequisite={focus=NRR_revolution_day}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = {
+			    id = NRR.event.001
+		    }
+		}
+	}
+	focus={
+		id=NRR_purchase
+		icon=GFX_focus_BUL_support_macedonian_organizations
+		x=8
+		y=2
+		prerequisite={focus=NRR_meeting}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = {
+			    id = NRR.event.2
+		    }
+		add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 1000
+		    producer = ANR
+	        }
+		}
+	}
+	focus={
+		id=NRR_not_a_chance
+		icon=GFX_focus_AUS_disregard_the_treaties
+		x=7
+		y=3
+		prerequisite={focus=NRR_purchase}
+		mutually_exclusive={focus=NRR_cooperation }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_choose_fight
+		    }
+		search_filters={
+		}
+		completion_reward={
+			add_war_support = 0.1
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+					}
+				add_claim_by = ROOT
+			}
+		}
+	}
+	focus={
+		id=NRR_cooperation
+		icon=GFX_focus_BRA_rio_protocol
+		x=9
+		y=3
+		prerequisite={focus=NRR_purchase}
+		mutually_exclusive={focus=NRR_not_a_chance }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_choose_coop
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_popularity = { 
+				ideology = democratic 
+				popularity = 0.05 
+			}
+			add_stability = 0.05
+		}
+	}
+	focus={
+		id=NRR_mobilization
+		icon=GFX_focus_generic_mass_production
+		x=7
+		y=4
+		prerequisite={focus=NRR_not_a_chance}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_offsite_building = { 
+				type = arms_factory 
+				level = 2 
+			}
+		}
+	}
+	focus={
+		id=NRR_negotiate
+		icon=GFX_focus_generic_sway_navy
+		x=9
+		y=4
+		prerequisite={focus=NRR_cooperation}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = {
+			    id = NRR.event.7
+		    }
+		}
+	}
+	focus={
+		id=NRR_rliminate_heresy
+		icon=GFX_focus_BRA_end_the_state_of_emergency
+		x=9
+		y=5
+		prerequisite={focus=NRR_negotiate}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			ANR = {
+				ANR_SL = {
+					set_nationality = RAJ
+				}
+				add_popularity = { 
+				ideology = democratic 
+				popularity = 0.2 
+			   }
+			}
+		}
+	}
+	focus={
+		id=NRR_battle_ANR
+		icon=GFX_focus_AUS_ban_dnsap
+		x=7
+		y=5
+		prerequisite={focus=NRR_mobilization}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			declare_war_on = { 
+				target = ANR 
+				type = annex_everything
+			 }
+		}
+	}
+	focus={
+		id=NRR_unite
+		icon=GFX_focus_BRA_reach_out_to_military_dem
+		x=9
+		y=6
+		prerequisite={focus=NRR_rliminate_heresy}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = {
+			    id = NRR.event.8
+		    }
+			create_country_leader = {
+				name = "艾斯德斯"
+				id = NRR_aisi
+			    portraits = {
+			        civilian = {
+				        large = "gfx/leaders/ANR/aisi.dds"
+			        }
+		        }
+				desc = ANR_aisi_desc_leader
+			    ideology = autocracy_subideology
+			}
+		}
+	}
+	focus={
+		id=NRR_onslaught
+		icon=GFX_focus_GER_the_peoples_victory
+		x=7
+		y=6
+		prerequisite={focus=NRR_battle_ANR}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_timed_idea = { 
+				idea = NRR_continue_onslaught 
+				days = 180
+			}
+		}
+	}
+	focus={
+		id=NRR_end_empire
+		icon=GFX_focus_generic_piracy
+		x=8
+		y=7
+		prerequisite={focus=NRR_onslaught focus=NRR_unite }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			declare_war_on = { 
+				target = RAJ 
+				type = annex_everything
+			 }
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+					}
+				add_state_claim = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus={
+		id=NRR_ready_for_war
+		icon=GFX_focus_ARG_march_to_la_casa_rosada
+		x=2
+		y=0
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_completed_focus = NRR_meeting
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=NRR_rally_soldier
+		icon=GFX_focus_generic_infiltration
+		x=0
+		y=1
+		prerequisite={focus=NRR_ready_for_war}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_manpower = 20000
+		}
+	}
+	focus={
+		id=NRR_find_rifle
+		icon=GFX_focus_generic_combined_arms
+		x=2
+		y=1
+		prerequisite={focus=NRR_ready_for_war}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 1000
+		    producer = NRR
+	        }
+		}
+	}
+	focus={
+		id=NRR_invite_military_advisor
+		icon=GFX_focus_CHI_tongzi_jun
+		x=4
+		y=1
+		prerequisite={focus=NRR_ready_for_war}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			army_experience = 100
+		}
+	}
+	focus={
+		id=NRR_oldgun
+		icon=GFX_focus_generic_license_production
+		x=1
+		y=2
+		prerequisite={focus=NRR_rally_soldier}
+		prerequisite={focus=NRR_find_rifle}
+		prerequisite={focus=NRR_find_rifle}
+		prerequisite={focus=NRR_invite_military_advisor}
+		mutually_exclusive={focus=NRR_nightraid_lead }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 365
+				name = PRC_indirect_fire
+
+				track = combat_support
+			}
+			add_equipment_to_stockpile = {
+		        type = motorized_equipment
+		        amount = 150
+		        producer = ENG
+	        }
+		}
+	}
+	focus={
+		id=NRR_nightraid_lead
+		icon=GFX_focus_generic_league_of_nations
+		x=3
+		y=2
+		prerequisite={focus=NRR_rally_soldier}
+		prerequisite={focus=NRR_find_rifle}
+		prerequisite={focus=NRR_invite_military_advisor}
+		mutually_exclusive={focus=NRR_oldgun }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_to_variable = { 
+				PRC_the_chinese_army_experience_gain_army_factor = 0.1
+				tooltip = experience_gain_army_factor_tt
+			}
+			add_mastery_bonus = {
+				bonus = 0.1
+				days = 365
+				name = PRC_conventional_warfare
+
+				track = infantry
+			}
+		}
+	}
+	focus={
+		id=NRR_learn_gun_design
+		icon=GFX_focus_generic_anti_tank_guns
+		x=0
+		y=3
+		prerequisite={focus=NRR_oldgun}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 2
+		        category = artillery_equipment
+	        }
+			add_tech_bonus = {
+		        bonus = 1.0 
+		        ahead_reduction = 1 
+		        uses = 1
+		        category = artillery_equipment 
+	        }
+		}
+	}
+	focus={
+		id=NRR_recruit_more
+		icon=GFX_focus_generic_advanced_military_studies
+		x=2
+		y=3
+		prerequisite={focus=NRR_oldgun focus=NRR_nightraid_lead}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		bypass = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		completion_reward={
+			add_ideas = limited_conscription
+		}
+	}
+	focus={
+		id=NRR_hugecrowd
+		icon=GFX_focus_CHI_weaponise_the_faithful
+		x=4
+		y=3
+		prerequisite={focus=NRR_nightraid_lead}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus={
+		id=NRR_ask_instructor
+		icon=GFX_focus_CHI_start_looking_outwards
+		x=0
+		y=4
+		prerequisite={focus=NRR_learn_gun_design}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 1
+		        category = support_tech
+	        }
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 1
+		        category = mountaineers_tech
+	        }
+
+		}
+	}
+	focus={
+		id=NRR_nochoice_buthurry
+		icon=GFX_focus_AFG_scavenging
+		x=2
+		y=4
+		prerequisite={focus=NRR_recruit_more}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		bypass = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		completion_reward={
+			add_timed_idea = { 
+				idea = NRR_nochoicebuthurry 
+				days = 720
+			}
+		}
+	}
+	focus={
+		id=NRR_transfer_officer
+		icon=GFX_focus_AUS_frontmiliz_focus
+		x=4
+		y=4
+		prerequisite={focus=NRR_hugecrowd}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_jyffdjcjg
+		}
+	}
+	focus={
+		id=NRR_airplane
+		icon=GFX_focus_generic_air_research_boost
+		x=0
+		y=5
+		prerequisite={focus=NRR_ask_instructor}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 0.5
+		        uses = 2
+		        category = light_fighter
+	        }
+		}
+	}
+	focus={
+		id=NRR_strengthen_will
+		icon=GFX_focus_focus_fra_fascist_threat
+		x=2
+		y=5
+		prerequisite={focus=NRR_nochoice_buthurry}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		bypass = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_timed_idea = { 
+				idea = NRR_gydgmdz 
+				days = 720
+			}
+		}
+	}
+	focus={
+		id=NRR_rifle_design
+		icon=GFX_focus_focus_fra_maquis
+		x=4
+		y=5
+		prerequisite={focus=NRR_transfer_officer}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 3
+		        category = infantry_weapons
+	        }
+		}
+	}
+	focus={
+		id=NRR_rebirth_army
+		icon=GFX_focus_GER_demonstration_of_military_achievements
+		x=2
+		y=6
+		prerequisite={focus=NRR_strengthen_will}
+		prerequisite={focus=NRR_airplane focus=NRR_rifle_design }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+				remove_idea = NRR_kygmrqdxb
+			    add_idea = NRR_xlysdgmj
+			}
+			add_mastery_bonus  = {
+				bonus = 0.2
+				days = 720
+				name = PRC_role_of_kangda
+
+				track = operations
+			}
+		}
+	}
+
+
+	focus={
+		id=NRR_strengthen_base
+		icon=GFX_focus_generic_agricultural_subsidies
+		x=15
+		y=0
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_completed_focus = NRR_meeting
+		}
+		search_filters={
+		}
+		completion_reward={
+			640 = {
+		        add_extra_state_shared_building_slots = 2
+		        add_building_construction = {
+			        type = infrastructure
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+			288 = {
+		        add_extra_state_shared_building_slots = 2
+		        add_building_construction = {
+			        type = infrastructure
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+			790 = {
+		        add_extra_state_shared_building_slots = 2
+		        add_building_construction = {
+			        type = infrastructure
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+		}
+	}
+	focus={
+		id=NRR_send_workingteam
+		icon=GFX_focus_JAP_launch_the_income_doubling_plan
+		x=14
+		y=1
+		prerequisite={focus=NRR_strengthen_base}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.05
+			add_political_power = -50
+		}
+	}
+	focus={
+		id=NRR_ask_help
+		icon=GFX_focus_AUS_inviting_the_observers
+		x=16
+		y=1
+		prerequisite={focus=NRR_strengthen_base}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=NRR_landreform
+		icon=GFX_focus_CHI_students_to_the_countryside
+		x=13
+		y=2
+		prerequisite={focus=NRR_send_workingteam}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			432 = {
+			    add_dynamic_modifier = {
+					modifier = POL_new_towns
+				}
+			}
+			434 = {
+			    add_dynamic_modifier = {
+					modifier = POL_new_towns
+				}
+			}
+			701 = {
+			    add_dynamic_modifier = {
+					modifier = POL_new_towns
+				}
+			}
+			790 = {
+			    add_dynamic_modifier = {
+					modifier = POL_new_towns
+				}
+			}
+
+		}
+	}
+	focus={
+		id=NRR_strating_heavy_industry
+		icon=GFX_focus_CHI_effectivize_ground_crew_usage
+		x=15
+		y=2
+		prerequisite={focus=NRR_send_workingteam focus=NRR_ask_help }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			640 = {
+		        add_extra_state_shared_building_slots = 1
+		        add_building_construction = {
+			        type = arms_factory
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+			288 = {
+		        add_extra_state_shared_building_slots = 1
+		        add_building_construction = {
+			        type = arms_factory
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+			790 = {
+		        add_extra_state_shared_building_slots = 1
+		        add_building_construction = {
+			        type = arms_factory
+			        level = 1
+			        instant_build = yes
+		        }
+	        }
+		}
+	}
+	focus={
+		id=NRR_ask_ENG_FRA
+		icon=GFX_focus_BEL_expression_of_belgian_unity
+		x=17
+		y=2
+		prerequisite={focus=NRR_ask_help}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			ENG = {
+				exists = yes
+				is_subject = no
+				has_civil_war = no
+				has_government = ROOT
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			FRA = {
+				exists = yes
+				is_subject = no
+				has_civil_war = no
+				has_government = ROOT
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			or = {
+			FRA = {
+				NOT = {
+					has_government = ROOT
+				}
+			}
+			RAJ ={
+				exists = NO
+			}
+			}
+		}
+		search_filters={
+		}
+		completion_reward={
+			ENG = {
+				country_event = {
+					id = NRR.event.askforhelp.1
+					hours = 3 
+					random_hours = 6
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 3000
+					producer = ENG
+				}
+				add_equipment_to_stockpile = { 
+					type = support_equipment
+					amount = 750
+					producer = ENG
+				}
+				ENG = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -3000
+						producer = ENG
+					}
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = -750
+						producer = ENG
+					}
+				}
+				add_popularity = { 
+					ideology = democratic 
+					popularity = 0.05 
+				}
+			}
+
+			FRA = {
+				country_event = {
+					id = NRR.event.askforhelp.1
+					hours = 3 
+					random_hours = 6
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 3000
+					producer = FRA
+				}
+				add_equipment_to_stockpile = { 
+					type = support_equipment
+					amount = 750
+					producer = FRA
+				}
+				FRA = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -3000
+						producer = FRA
+					}
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = -750
+						producer = FRA
+					}
+				}
+				add_popularity = { 
+					ideology = democratic 
+					popularity = 0.05 
+				}
+			}
+
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 3000
+					producer = ENG
+				}
+				add_equipment_to_stockpile = { 
+					type = support_equipment
+					amount = 750
+					producer = ENG
+				}
+				ENG = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -3000
+						producer = ENG
+					}
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = -750
+						producer = ENG
+					}
+				}
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 3000
+					producer = FRA
+				}
+				add_equipment_to_stockpile = { 
+					type = support_equipment
+					amount = 750
+					producer = FRA
+				}
+				FRA = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -3000
+						producer = FRA
+					}
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = -750
+						producer = FRA
+					}
+				}
+				add_popularity = { 
+					ideology = democratic 
+					popularity = 0.1 
+				}
+			}
+		}
+	}
+	focus={
+		id=NRR_prepare_airport
+		icon=GFX_focus_generic_air_bases
+		x=13
+		y=3
+		prerequisite={focus=NRR_landreform}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			324 = {
+				add_building_construction = {
+			    type = infrastructure
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			432 = {
+				add_building_construction = {
+			    type = infrastructure
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			434 = {
+				add_building_construction = {
+			    type = infrastructure
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			324 = {
+				add_building_construction = {
+			    type = air_base
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			432 = {
+				add_building_construction = {
+			    type = air_base
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			434 = {
+				add_building_construction = {
+			    type = air_base
+			    level = 1
+			    instant_build = yes 
+		        }
+			}
+			air_experience = 100
+		}
+	}
+	focus={
+		id=NRR_explore_resources
+		icon=GFX_focus_BRA_amazon_colonization
+		x=15
+		y=3
+		prerequisite={focus=NRR_strating_heavy_industry}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			640 = {
+		        add_resource = {
+				    type = rubber
+				    amount = 16
+			    }
+				add_resource = {
+				    type = steel
+				    amount = 10
+			    }
+	        }
+			288 = {
+		        add_resource = {
+				    type = rubber
+				    amount = 16
+			    }
+				add_resource = {
+				    type = steel
+				    amount = 10
+			    }
+	        }
+		}
+	}
+	focus={
+		id=NRR_relation_with_chi
+		icon=GFX_focus_chi_cooperation_with_the_nationalists
+		x=17
+		y=3
+		prerequisite={focus=NRR_ask_ENG_FRA}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			ROC = {
+				exists = yes
+				is_subject = no
+				has_civil_war = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		search_filters={
+		}
+		completion_reward={
+			ROC = {
+				country_event = {
+					id = NRR.event.askforhelp.2
+					hours = 3 
+					random_hours = 6
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 1000
+					producer = ROC
+				}
+				ROC = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -1000
+						producer = ROC
+					}
+				}
+				add_popularity = { 
+					ideology = democratic 
+					popularity = 0.1 
+				}
+			}
+
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 1000
+					producer = ROC
+				}
+				ROC = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -1000
+						producer = ROC
+					}
+				}
+				add_popularity = { 
+					ideology = democratic 
+					popularity = 0.1 
+				}
+			}
+
+		}
+	}
+	focus={
+		id=NRR_concentrate_scimanpower
+		icon=GFX_focus_ARG_universidad_de_buenos_aires
+		x=13
+		y=4
+		prerequisite={focus=NRR_prepare_airport}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+			remove_idea = NRR_kylldq
+			add_idea = NRR_zsjzdkyll			
+		    }
+			add_research_slot = 1
+		}
+	}
+	focus={
+		id=NRR_new_city
+		icon=GFX_focus_DEN_civilian_preparations
+		x=15
+		y=4
+		prerequisite={focus=NRR_explore_resources}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			640 = {
+				increase_state_category_by_one_level = yes
+	        }
+			288 = {
+				increase_state_category_by_one_level = yes
+			}
+		}
+	}
+	focus={
+		id=NRR_maybe_sov
+		icon=GFX_focus_chi_mission_to_the_soviet_union
+		x=17
+		y=4
+		prerequisite={focus=NRR_relation_with_chi}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			SOV = {
+				exists = yes
+				is_subject = no
+				has_civil_war = no
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		bypass = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		search_filters={
+		}
+		completion_reward={
+			SOV = {
+				country_event = {
+					id = NRR.event.askforhelp.3
+					hours = 3 
+					random_hours = 6
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 2000
+					producer = SOV
+				}
+				SOV = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -2000
+						producer = SOV
+					}
+				}
+				add_popularity = { 
+					ideology = communism 
+					popularity = 0.1
+				}
+			}
+
+			hidden_effect = {
+				add_equipment_to_stockpile = { 
+					type = infantry_equipment_0
+					amount = 2000
+					producer = SOV
+				}
+				SOV = {
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment_0
+						amount = -2000
+						producer = SOV
+					}
+				}
+				add_popularity = { 
+					ideology = communism 
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus={
+		id=NRR_Preliminary_reconstruction_conpleted
+		icon=GFX_focus_BRA_cafe_com_leite_politics
+		x=15
+		y=6
+		prerequisite={focus=NRR_concentrate_scimanpower}
+		prerequisite={focus=NRR_new_city}
+		prerequisite={focus=NRR_maybe_sov}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_cjcxdgjdjs
+		}
+	}
+	focus={
+		id=NRR_New_republic
+		icon=GFX_focus_RAJ_a_tiger_unchained
+		x=8
+		y=8
+		prerequisite={focus=NRR_end_empire}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available = {
+			RAJ ={
+				exists = NO
+			}
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event = {
+				id = NRR.event.9
+			}
+			load_focus_tree = NRR_fate_crossroad
+		}
+	}
+}

@@ -1,0 +1,586 @@
+focus_tree={
+	id = NRR_kolkata_crisis
+	country={
+		factor=0
+		modifier={
+			add=10
+			tag=NRR
+		}
+	}
+	continuous_focus_position={
+		x=700
+		y=2200
+	}
+	focus={
+		id=NRR_total_crisis
+		icon= GFX_focus_SWE_organize_a_putsch
+		x=9
+		y=0
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.88
+			}
+			NRR = {
+				remove_from_faction = ANR
+			}
+		}
+	}
+	focus={
+		id=NRR_tough_decision
+		icon=GFX_focus_RAJ_red_in_the_shadows
+		x=9
+		y=1
+		prerequisite={focus=NRR_total_crisis}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.89
+			}
+		}
+	}
+	focus={
+		id=NRR_worst_plan
+		icon=GFX_focus_RAJ_military_into_the_workforce
+		x=9
+		y=2
+		prerequisite={focus=NRR_tough_decision}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.90
+			}
+		}
+	}
+	focus={
+		id=NRR_loading_shells
+		icon=GFX_focus_RAJ_mountain_guns
+		x=9
+		y=3
+		prerequisite={focus=NRR_worst_plan}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			not = {
+				has_country_flag = NRR_we_have_better_option
+			}
+			
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.101
+			}
+		}
+	}
+	focus={
+		id=NRR_the_endgame
+		icon=GFX_focus_PHI_declare_military_emergency
+		x=9
+		y=4
+		prerequisite={focus=NRR_loading_shells}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.102
+			}
+		}
+	}
+	focus={
+		id=NRR_wait_a_second
+		icon=GFX_focus_RAJ_the_sun_sets
+		x=2
+		y=3
+		prerequisite={focus=NRR_worst_plan}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_we_have_better_option
+		}
+		search_filters={
+		}
+		allow_branch = {
+			has_country_flag = NRR_waves_message
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.91
+		    }
+		}
+	}
+	focus={
+		id=NRR_the_enemy_of_my_enemy
+		icon=GFX_focus_RAJ_seek_allies_with_the_muslim_league
+		x=2
+		y=4
+		prerequisite={focus=NRR_wait_a_second}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.92
+		    }
+		}
+	}
+	focus={
+		id=NRR_pyrrhic_victory
+		icon=GFX_focus_PHI_i_shall_return
+		x=9
+		y=5
+		prerequisite={focus=NRR_the_endgame}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		available = {
+			not = {
+				country_exists = ANR
+			}
+			
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.103
+		    }
+		}
+	}
+	focus={
+		id=NRR_quick_and_clean
+		icon=GFX_focus_RAJ_kingmaker
+		x=0
+		y=6
+		prerequisite={focus=NRR_determined_to_win}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			not = {
+				country_exists = ANR
+			}
+			
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.94
+		    }
+		}
+	}
+	focus={
+		id=NRR_loyalty_and_friendship
+		icon=GFX_focus_PER_strengthen_the_tudeh
+		x=4
+		y=6
+		prerequisite={focus=NRR_determined_to_win}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			not = {
+				country_exists = ANR
+			}
+			
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.97
+		    }
+		}
+	}
+	focus={
+		id=NRR_back_to_home
+		icon=GFX_focus_SWE_form_rfsu
+		x=0
+		y=7
+		prerequisite={focus=NRR_quick_and_clean}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.95
+		    }
+		}
+	}
+	focus={
+		id=NRR_a_tough_woman
+		icon=GFX_focus_LAT_suspend_constitution_of_latvia
+		x=4
+		y=7
+		prerequisite={focus=NRR_loyalty_and_friendship}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.98
+		    }
+		}
+	}
+	focus={
+		id=NRR_the_real_goodbye
+		icon=GFX_focus_PRC_petition_for_freedom
+		x=0
+		y=8
+		prerequisite={focus=NRR_back_to_home}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.96
+		    }
+		}
+	}
+	focus={
+		id=NRR_chains_forever
+		icon=GFX_focus_PHI_anti_hacendados
+		x=4
+		y=8
+		prerequisite={focus=NRR_a_tough_woman}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.99
+		    }
+		}
+	}
+	focus={
+		id=NRR_have_a_nice_day
+		icon=GFX_focus_PHI_utang_na_loob
+		x=2
+		y=10
+		prerequisite={focus=NRR_the_real_goodbye}
+		prerequisite={focus=NRR_chains_forever}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			   id =  NRR.event.100
+		    }
+		}
+	}
+	focus={
+		id=NRR_determined_to_win
+		icon=GFX_focus_PHI_bill_of_rights_for_veterans
+		x=2
+		y=5
+		prerequisite={focus=NRR_the_enemy_of_my_enemy}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		select_effect = {
+			country_event={ 
+			   id =  NRR.event.93
+		    }
+		}
+		completion_reward={
+			declare_war_on = { 
+				target = ANR
+				type = annex_everything
+			 }
+			every_state = {
+				limit = {
+					is_core_of = ANR
+					}
+				add_state_claim = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus={
+		id=NRR_bury_the_enemy
+		icon= GFX_focus_RAJ_i_am_death
+		x=7
+		y=6
+		prerequisite={focus=NRR_pyrrhic_victory}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		allow_branch = {
+			has_idea = NRR_gmjzh_1
+			has_country_flag = NRR_ANR_annexed
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.104
+		    }
+		}
+	}
+	focus={
+		id=NRR_nothing_left
+		icon= GFX_focus_RAJ_i_am_death
+		x=16
+		y=6
+		prerequisite={focus=NRR_pyrrhic_victory}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		allow_branch = {
+			has_idea = NRR_gmjzh_2
+			has_country_flag = NRR_ANR_annexed
+		}
+		completion_reward={
+			custom_effect_tooltip = NRR_you_already_know_what_you_done
+		}
+	}
+	focus={
+		id=NRR_and_our_people
+		icon=GFX_focus_generic_immigration
+		x=7
+		y=7
+		prerequisite={focus=NRR_bury_the_enemy}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.105
+		    }
+		}
+	}
+	focus={
+		id=NRR_appalling_the_nation
+		icon=GFX_focus_INS_akademi_angkatan_laut
+		x=11
+		y=6
+		prerequisite={focus=NRR_pyrrhic_victory}
+		cost=10
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		allow_branch = {
+			has_idea = NRR_gmjzh_1
+			has_country_flag = NRR_ANR_annexed
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.107
+		    }
+		}
+	}
+	focus={
+		id=NRR_safe_return
+		icon=GFX_focus_SWE_form_rfsu
+		x=7
+		y=8
+		prerequisite={focus=NRR_and_our_people}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.106
+		    }
+		}
+	}
+	focus={
+		id=NRR_weak_trust
+		icon=GFX_focus_generic_whispers
+		x=11
+		y=7
+		prerequisite={focus=NRR_appalling_the_nation}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.108
+		    }
+		}
+	}
+	focus={
+		id=NRR_victorious_but_defeated
+		icon=GFX_focus_ITA_topple_amhara_rulers
+		x=11
+		y=8
+		prerequisite={focus=NRR_weak_trust}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.109
+		    }
+		}
+	}
+	focus={
+		id=NRR_nothing_to_reply
+		icon=GFX_focus_PHI_the_red_sun_over_manila
+		x=9
+		y=10
+		prerequisite={focus=NRR_safe_return}
+		prerequisite={focus=NRR_victorious_but_defeated}
+		cost=12
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={ 
+			id =  NRR.event.110
+		    }
+		}
+	}
+	focus={
+		id=NRR_my_dear
+		icon=GFX_focus_JAP_revoke_the_peace_preservation_law
+		x=16
+		y=7
+		prerequisite={focus=NRR_nothing_left}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.114
+			}
+			
+		}
+	}
+	focus={
+		id=NRR_my_dream
+		icon=GFX_focus_GER_end_european_communism
+		x=16
+		y=8
+		prerequisite={focus=NRR_my_dear}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.115
+			}
+		}
+	}
+	focus={
+		id=NRR_all_of_them_broken
+		icon=GFX_focus_RAJ_a_private_military
+		x=16
+		y=10
+		prerequisite={focus=NRR_my_dream}
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+			id = NRR.event.118
+			days = 3
+		  }
+		}
+	}
+}

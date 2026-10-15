@@ -1,0 +1,22 @@
+RAJ_decision_category = {
+	icon = generic_formable_nations
+	available = {
+		tag = RAJ
+	}
+	visible = {
+		tag = RAJ
+	}
+	priority = 100
+}
+
+RAJ_balance = {
+	available = {
+		tag = RAJ
+	}
+	allowed = {
+		tag = RAJ
+	}
+	visible = {
+		tag = RAJ
+	}
+}

@@ -1,0 +1,2117 @@
+focus_tree={
+	id = NRR_TZM_revolution
+	country={
+		factor=0
+		modifier={
+			add=10
+			tag=NRR
+		}
+	}
+	default=no
+	continuous_focus_position={
+		x=700
+		y=2200
+	}
+	focus={
+		id=NRR_neworder
+		icon=GFX_focus_ARG_chilean_ultimatum
+		x=9
+		y=0
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id=NRR.event.44
+			}
+			
+		}
+	}
+	focus={
+		id=NRR_rebuild_declearation
+		icon=GFX_rebuild_declearation
+		x=8
+		y=1
+		prerequisite={focus=NRR_neworder}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id=NRR.event.45
+			}
+		}
+	}
+	focus={
+		id=NRR_dismiss_senate
+		icon=GFX_dismiss_senate
+		x=10
+		y=1
+		prerequisite={focus=NRR_neworder}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id=NRR.event.46
+			}
+		}
+	}
+	focus={
+		id=NRR_wait_calls
+		icon=GFX_focus_generic_conference
+		x=9
+		y=2
+		prerequisite={focus=NRR_rebuild_declearation}
+		prerequisite={focus=NRR_dismiss_senate}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+			    id=NRR.event.50
+		    }
+		}
+	}
+	focus={
+		id=NRR_theheart
+		icon=GFX_MY
+		x=7
+		y=3
+		prerequisite={focus=NRR_wait_calls}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+			    id=NRR.event.51
+		    }
+		}
+	}
+	focus={
+		id=NRR_thewarrior
+		icon=GFX_thewarrior
+		x=9
+		y=3
+		prerequisite={focus=NRR_wait_calls}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+			    id=NRR.event.52
+		    }
+		}
+	}
+	focus={
+		id=NRR_thecareerist
+		icon=GFX_ASDS
+		x=11
+		y=3
+		prerequisite={focus=NRR_wait_calls}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+			    id=NRR.event.53
+		    }
+		}
+	}
+	focus={
+		id=NRR_thecurtain_rises
+		icon=GFX_TZM_leader
+		x=9
+		y=4
+		prerequisite={focus=NRR_theheart}
+		prerequisite={focus=NRR_thewarrior}
+		prerequisite={focus=NRR_thecareerist}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		select_effect = {
+			country_event = { id = NRR.event.54  days = 2}
+		}
+		completion_reward={
+			set_country_flag = NRR_thecurtainrises
+			set_variable = {
+	            NRR_rebuild_unity_point = 1
+            }
+			set_variable = {
+	            NRR_rebuild_arbitrary_point = 1
+            }
+		}
+	}
+	focus={
+		id=NRR_thecivil_servant_system
+		icon=GFX_thecivil_servant_system
+		x=1
+		y=5
+		prerequisite={focus=NRR_thecurtain_rises}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.66
+			}
+		}
+	}
+	focus={
+		id=NRR_the_education
+		icon=GFX_the_education
+		x=5
+		y=5
+		prerequisite={focus=NRR_thecurtain_rises}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.68
+			}
+		}
+	}
+	focus={
+		id=NRR_the_parties
+		icon=GFX_the_parties
+		x=9
+		y=5
+		prerequisite={focus=NRR_thecurtain_rises}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.71
+			}
+		}
+	}
+	focus={
+		id=NRR_the_economy
+		icon=GFX_the_economy
+		x=13
+		y=5
+		prerequisite={focus=NRR_thecurtain_rises}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.73
+			}
+			swap_ideas = {
+				remove_idea = NRR_investigation_act
+			    add_idea = NRR_investigation_act_amendment
+			}	
+		}
+		hidden_effect = {
+			country_event={
+				id= NRR.event.43  days = 7
+			}
+		}
+	}
+	focus={
+		id=NRR_the_people
+		icon=GFX_the_people
+		x=17
+		y=5
+		prerequisite={focus=NRR_thecurtain_rises}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.75
+			}	
+		}
+	}
+	focus={
+		id=NRR_scalpel
+		icon=GFX_scalpel
+		x=0
+		y=6
+		prerequisite={focus=NRR_thecivil_servant_system}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_civilservant_left
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_broadsword
+		icon=GFX_broadsword
+		x=2
+		y=6
+		prerequisite={focus=NRR_thecivil_servant_system}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_civilservant_right
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Republican_morality
+		icon=GFX_Republican_morality
+		x=4
+		y=6
+		prerequisite={focus=NRR_the_education}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_education_left
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Republican_morality
+		}
+	}
+	focus={
+		id=NRR_Revolutionary_morality
+		icon=GFX_Revolutionary_morality
+		x=6
+		y=6
+		prerequisite={focus=NRR_the_education}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_education_right
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Revolutionary_morality
+		}
+	}
+	focus={
+		id=NRR_Partisan_politics
+		icon=GFX_Partisan_politics
+		x=8
+		y=6
+		prerequisite={focus=NRR_the_parties}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_party_left
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.1
+		    }
+
+			add_ideas = NRR_Partisan_politics
+
+		}
+	}
+	focus={
+		id=NRR_The_Banality_of_Evil
+		icon=GFX_The_Banality_of_Evil
+		x=10
+		y=6
+		prerequisite={focus=NRR_the_parties}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_party_right
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.1
+		    }
+
+			add_ideas = NRR_The_Banality_of_Evil
+		}
+	}
+	focus={
+		id=NRR_Local_autonomous_economy
+		icon=GFX_Local_autonomous_economy
+		x=12
+		y=6
+		prerequisite={focus=NRR_the_economy}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_economy_left
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Local_autonomous_economy
+		}
+	}
+	focus={
+		id=NRR_Centralized_economy
+		icon=GFX_Centralized_economy
+		x=14
+		y=6
+		prerequisite={focus=NRR_the_economy}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_economy_right
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Centralized_economy
+		}
+	}
+	focus={
+		id=NRR_As_steady_as_usual
+		icon=GFX_As_steady_as_usual
+		x=16
+		y=6
+		prerequisite={focus=NRR_the_people}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_thepeople_left
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.1
+		    }
+			add_ideas = NRR_As_steady_as_usual
+		}
+	}
+	focus={
+		id=NRR_Temporary_patience
+		icon=GFX_Temporary_patience
+		x=18
+		y=6
+		prerequisite={focus=NRR_the_people}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_thepeople_right
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.1
+		    }
+			add_ideas = NRR_Temporary_patience
+		}
+	}
+	focus={
+		id=NRR_National_Supervision_Law
+		icon=GFX_National_Supervision_Law
+		x=0
+		y=7
+		prerequisite={focus=NRR_scalpel}
+		mutually_exclusive={focus=NRR_Independent_system }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_National_Supervision_Law
+			
+		}
+	}
+	focus={
+		id=NRR_Independent_system
+		icon=GFX_Independent_system
+		x=2
+		y=7
+		prerequisite={focus=NRR_broadsword}
+		mutually_exclusive={focus=NRR_National_Supervision_Law }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Independent_system
+		}
+	}
+	focus={
+		id=NRR_government_sponsored_teacher
+		icon=GFX_government_sponsored_teacher
+		x=4
+		y=7
+		prerequisite={focus=NRR_Republican_morality}
+		mutually_exclusive={focus=NRR_commissar_transfers_to_school }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+
+			add_ideas = NRR_government_sponsored_teacher
+		}
+	}
+	focus={
+		id=NRR_commissar_transfers_to_school
+		icon=GFX_commissar_transfers_to_school
+		x=6
+		y=7
+		prerequisite={focus=NRR_Revolutionary_morality}
+		mutually_exclusive={focus=NRR_government_sponsored_teacher }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.69
+			}
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+			add_ideas = NRR_commissar_transfers_to_school
+		}
+	}
+	focus={
+		id=NRR_reorganize_DR
+		icon=GFX_reorganize_DR
+		x=8
+		y=7
+		prerequisite={focus=NRR_Partisan_politics}
+		mutually_exclusive={focus=NRR_liquidate_DR }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			add_popularity = { ideology = communism popularity = 0.1 }
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_liquidate_DR
+		icon=GFX_liquidate_DR
+		x=10
+		y=7
+		prerequisite={focus=NRR_The_Banality_of_Evil}
+		mutually_exclusive={focus=NRR_reorganize_DR }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+			add_popularity = { ideology = democratic popularity = -0.1 }
+			add_popularity = { ideology = neutrality popularity = -0.1 }
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Withdraw_from_light_industry
+		icon=GFX_Withdraw_from_light_industry
+		x=12
+		y=7
+		prerequisite={focus=NRR_Local_autonomous_economy}
+		mutually_exclusive={focus=NRR_Centralized_development_plan }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Withdraw_from_light_industry
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 1
+		        category  = industry
+	        }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_Centralized_development_plan
+		icon=GFX_Centralized_development_plan
+		x=14
+		y=7
+		prerequisite={focus=NRR_Centralized_economy}
+		mutually_exclusive={focus=NRR_Withdraw_from_light_industry }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Centralized_development_plan
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category  = industry
+	        }
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Social_Insurance_Law
+		icon=GFX_Social_Insurance_Law
+		x=16
+		y=7
+		prerequisite={focus=NRR_As_steady_as_usual}
+		mutually_exclusive={focus=NRR_Food_rationing_system }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+			add_ideas = NRR_Social_Insurance_Law
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_Food_rationing_system
+		icon=GFX_Food_rationing_system
+		x=18
+		y=7
+		prerequisite={focus=NRR_Temporary_patience}
+		mutually_exclusive={focus=NRR_Social_Insurance_Law }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+			add_ideas = NRR_Food_rationing_system
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Subsidy_Amendment
+		icon=GFX_Subsidy_Amendment
+		x=0
+		y=8
+		prerequisite={focus=NRR_National_Supervision_Law focus=NRR_Independent_system }
+		mutually_exclusive={focus=NRR_Ombudsman }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Subsidy_Amendment
+		}
+	}
+	focus={
+		id=NRR_Ombudsman
+		icon=GFX_Ombudsman
+		x=2
+		y=8
+		prerequisite={focus=NRR_National_Supervision_Law focus=NRR_Independent_system }
+		mutually_exclusive={focus=NRR_Subsidy_Amendment }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Ombudsman
+		}
+	}
+	focus={
+		id=NRR_Textbook_Management_Law
+		icon=GFX_Textbook_Management_Law
+		x=4
+		y=8
+		prerequisite={focus=NRR_government_sponsored_teacher focus=NRR_commissar_transfers_to_school }
+		mutually_exclusive={focus=NRR_Statutes_of_public_institutions }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_research_slot = 1
+		}
+	}
+	focus={
+		id=NRR_Statutes_of_public_institutions
+		icon=GFX_Statutes_of_public_institutions
+		x=6
+		y=8
+		prerequisite={focus=NRR_government_sponsored_teacher focus=NRR_commissar_transfers_to_school }
+		mutually_exclusive={focus=NRR_Textbook_Management_Law }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_research_slot = 2
+		}
+	}
+	focus={
+		id=NRR_Political_donation_management_law
+		icon=GFX_Political_donation_management_law
+		x=8
+		y=8
+		prerequisite={focus=NRR_reorganize_DR focus=NRR_liquidate_DR }
+		mutually_exclusive={focus=NRR_Anti_Bribery_Election_Law }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_Anti_Bribery_Election_Law
+		icon=GFX_Anti_Bribery_Election_Law
+		x=10
+		y=8
+		prerequisite={focus=NRR_reorganize_DR focus=NRR_liquidate_DR }
+		mutually_exclusive={focus=NRR_Political_donation_management_law }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+			custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Medium_Enterprise_Promotion_Act
+		icon=GFX_Medium_Enterprise_Promotion_Act
+		x=12
+		y=8
+		prerequisite={focus=NRR_Withdraw_from_light_industry focus=NRR_Centralized_development_plan }
+		mutually_exclusive={focus=NRR_Bureau_of_Commercial_Security }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Medium_Enterprise_Promotion_Act
+		}
+	}
+	focus={
+		id=NRR_Bureau_of_Commercial_Security
+		icon=GFX_Bureau_of_Commercial_Security
+		x=14
+		y=8
+		prerequisite={focus=NRR_Withdraw_from_light_industry focus=NRR_Centralized_development_plan }
+		mutually_exclusive={focus=NRR_Medium_Enterprise_Promotion_Act }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Bureau_of_Commercial_Security
+		}
+	}
+	focus={
+		id=NRR_Autonomous_funding_allocation_system
+		icon=GFX_Autonomous_funding_allocation_system
+		x=16
+		y=8
+		prerequisite={focus=NRR_Social_Insurance_Law focus=NRR_Food_rationing_system }
+		mutually_exclusive={focus=NRR_Bureau_of_Public_Welfare_Planning }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			add_ideas = NRR_Autonomous_funding_allocation_system_1
+		}
+	}
+	focus={
+		id=NRR_Bureau_of_Public_Welfare_Planning
+		icon=GFX_Bureau_of_Public_Welfare_Planning
+		x=18
+		y=8
+		prerequisite={focus=NRR_Social_Insurance_Law focus=NRR_Food_rationing_system }
+		mutually_exclusive={focus=NRR_Autonomous_funding_allocation_system }
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			add_ideas = NRR_Bureau_of_Public_Welfare_Planning
+		}
+	}
+	focus={
+		id=NRR_Mandalay_Declaration
+		icon=GFX_focus_AST_under_the_rule_of_canberra
+		x=23
+		y=0
+		cost=1
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		available = {
+			has_country_flag = NRR_thecurtainrises
+		}
+		completion_reward={
+			country_event={
+				id=NRR.event.59
+			}
+		}
+	}
+	focus={
+		id=NRR_League_of_the_Just
+		icon=GFX_League_of_the_Just
+		x=23
+		y=1
+		prerequisite={focus=NRR_Mandalay_Declaration}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id=NRR.event.60
+			}
+		}
+	}
+	focus={
+		id=NRR_Proceed_south
+		icon=GFX_Proceed_south
+		x=23
+		y=2
+		prerequisite={focus=NRR_League_of_the_Just}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		select_effect = {
+			country_event = { id = NRR.event.61  days = 2}
+		}
+		completion_reward={
+			LOS = {
+				every_unit_leader = {
+					set_nationality = NRR
+				}
+			}
+			annex_country = { target = LOS transfer_troops = yes }
+		}
+	}
+	focus={
+		id=NRR_return_home_in_glory
+		icon=GFX_return_home_in_glory
+		x=22
+		y=3
+		prerequisite={focus=NRR_Proceed_south}
+		mutually_exclusive={focus=NRR_return_home_in_battle }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		available = {
+			has_country_flag = NRR_we_choose_peace
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = -0.05
+		    }
+			MFD = {
+                country_event = {
+			        id = MFD.event.300
+		        }
+            }
+		}
+	}
+	focus={
+		id=NRR_return_home_in_battle
+		icon=GFX_return_home_in_battle
+		x=24
+		y=3
+		prerequisite={focus=NRR_Proceed_south}
+		mutually_exclusive={focus=NRR_return_home_in_glory }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		available = {
+			has_country_flag = NRR_we_choose_a_war
+		}
+		completion_reward={
+			add_power_balance_value = {
+			id = NRR_TZM_balance
+			value = 0.05
+		    }
+			declare_war_on = { 
+				target = MFD
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					is_core_of = MFD
+					}
+				add_state_claim = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+	focus={
+		id=NRR_Harmony_brings_wealth
+		icon=GFX_Harmony_brings_wealth
+		x=22
+		y=4
+		prerequisite={focus=NRR_return_home_in_glory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id = NRR.event.63
+
+			}
+		}
+	}
+	focus={
+		id=NRR_not_to_be_interfered
+		icon=GFX_not_to_be_interfered
+		x=24
+		y=4
+		prerequisite={focus=NRR_return_home_in_battle}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			set_country_flag = NRR_we_will_take_the_land_back
+			custom_effect_tooltip = NRR_we_will_take_the_land_back_soon
+			
+		}
+	}
+	focus={
+		id=NRR_South_Asian_Unification
+		icon=GFX_South_Asian_Unification
+		x=23
+		y=5
+		prerequisite={focus=NRR_Harmony_brings_wealth focus=NRR_not_to_be_interfered }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			
+			or = {
+				MFD = {
+					is_in_faction_with = NRR
+				}
+				not = {
+				country_exists = MFD
+			    }
+			}
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id = NRR.event.65
+			}
+			set_variable={
+				adorable_heart_super_event_var=202
+			}
+			adorable_heart_fire_super_event=yes
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+			set_country_flag = NRR_southasia_unification
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_to_the_world
+		icon=GFX_to_the_world
+		x=23
+		y=6
+		prerequisite={focus=NRR_South_Asian_Unification}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			
+			country_event={
+				id = NRR.event.64
+			}
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 1
+		    }
+			set_country_flag = NRR_librate_the_world
+			custom_effect_tooltip = NRR_we_will_librate_the_world
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_1
+		}
+	}
+	focus={
+		id=NRR_Discipline_Inspection_Department
+		icon=GFX_Discipline_Inspection_Department
+		x=1
+		y=9
+		prerequisite={focus=NRR_Subsidy_Amendment focus=NRR_Ombudsman }
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.67
+			}
+			add_to_variable = {
+			    NRR_rebuild_arbitrary_point = 1
+		    }
+		    custom_effect_tooltip = NRR_rebuild_arbitrary_point_add_1
+		}
+	}
+	focus={
+		id=NRR_School_Opening_Day_Speech
+		icon=GFX_School_Opening_Day_Speech
+		x=5
+		y=9
+		prerequisite={focus=NRR_Textbook_Management_Law focus=NRR_Statutes_of_public_institutions }
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.70
+			}
+			add_ideas = NRR_education_act
+		}
+	}
+	focus={
+		id=NRR_Multi_party_joint_meeting
+		icon=GFX_Multi_party_joint_meeting
+		x=9
+		y=9
+		prerequisite={focus=NRR_Political_donation_management_law focus=NRR_Anti_Bribery_Election_Law }
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.72
+			}
+		}
+	}
+	focus={
+		id=NRR_Quarterly_Financial_Report
+		icon=GFX_Quarterly_Financial_Report
+		x=13
+		y=9
+		prerequisite={focus=NRR_Medium_Enterprise_Promotion_Act focus=NRR_Bureau_of_Commercial_Security }
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.74
+			}	
+		}
+	}
+	focus={
+		id=NRR_Famine_Relief_Act
+		icon=GFX_Famine_Relief_Act
+		x=17
+		y=9
+		prerequisite={focus=NRR_Autonomous_funding_allocation_system focus=NRR_Bureau_of_Public_Welfare_Planning }
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.76
+			}
+		}
+	}
+	focus={
+		id=NRR_Dissolve_the_SNRC
+		icon=GFX_Dissolve_the_SNRC
+		x=3
+		y=10
+		prerequisite={focus=NRR_Discipline_Inspection_Department}
+		prerequisite={focus=NRR_School_Opening_Day_Speech}
+		prerequisite={focus=NRR_Multi_party_joint_meeting}
+		prerequisite={focus=NRR_Quarterly_Financial_Report}
+		prerequisite={focus=NRR_Famine_Relief_Act}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		search_filters={
+		}
+		select_effect = {
+			country_event={
+				id =  NRR.event.80
+			}
+		}
+		completion_reward={
+			custom_effect_tooltip = NRR_we_succeed
+		}
+	}
+	focus={
+		id=NRR_New_election
+		icon=GFX_New_election
+		x=9
+		y=10
+		prerequisite={focus=NRR_Discipline_Inspection_Department}
+		prerequisite={focus=NRR_School_Opening_Day_Speech}
+		prerequisite={focus=NRR_Multi_party_joint_meeting}
+		prerequisite={focus=NRR_Quarterly_Financial_Report}
+		prerequisite={focus=NRR_Famine_Relief_Act}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		cancel = {
+			has_war = yes
+		}
+		search_filters={
+		}
+		completion_reward={
+			country_event={
+				id =  NRR.event.82
+			}
+		}
+	}
+	focus={
+		id=NRR_Farewell_Speech
+		icon=GFX_Farewell_Speech
+		x=15
+		y=10
+		prerequisite={focus=NRR_Discipline_Inspection_Department}
+		prerequisite={focus=NRR_Multi_party_joint_meeting}
+		prerequisite={focus=NRR_Quarterly_Financial_Report}
+		prerequisite={focus=NRR_Famine_Relief_Act}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_war = no
+		}
+		search_filters={
+		}
+		select_effect = {
+			country_event={
+				id =  NRR.event.83 days = 3
+			}
+		}
+		completion_reward={
+			custom_effect_tooltip = NRR_the_last_speech
+		}
+	}
+	focus={
+		id=NRR_back_to_normal_life
+		icon=GFX_back_to_normal_life
+		x=9
+		y=12
+		prerequisite={focus=NRR_Dissolve_the_SNRC}
+		prerequisite={focus=NRR_New_election}
+		prerequisite={focus=NRR_Farewell_Speech}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		select_effect = {
+			country_event={
+				id =  NRR.event.85 days = 2
+			}
+		}
+		completion_reward={
+			custom_effect_tooltip = NRR_back_to_our_life
+		}
+	}
+	focus={
+		id=NRR_dream_comes_ture
+		icon=GFX_dream_comes_ture
+		x=9
+		y=14
+		prerequisite={focus=NRR_back_to_normal_life}
+		cost=6
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			swap_ideas = {
+			remove_idea = NRR_gmjzh_1
+			add_idea = NRR_gmjzh			
+		    }
+		}
+	}
+	focus={
+		id=NRR_War_Department
+		icon= GFX_focus_generic_advanced_military_studies
+		x=30
+		y=0
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		available = {
+			has_country_flag = NRR_thecurtainrises
+		}
+		completion_reward={
+			army_experience = 100
+		}
+	}
+	focus={
+		id=NRR_Air_Force_Department
+		icon= GFX_focus_generic_aircraft_production
+		x=34
+		y=0
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_thecurtainrises
+		}
+		search_filters={
+		}
+		completion_reward={
+			air_experience = 100
+		}
+	}
+	focus={
+		id=NRR_Admiralty
+		icon= GFX_focus_generic_battleship_guns
+		x=38
+		y=0
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_thecurtainrises
+		}
+		search_filters={
+		}
+		completion_reward={
+			navy_experience = 100
+		}
+	}
+	focus={
+		id=NRR_new_night_raid
+		icon = GFX_goal_generic_special_forces
+		x=28
+		y=1
+		prerequisite={focus=NRR_War_Department}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			create_intelligence_agency = {
+                name = "NRR_new_night_raid"
+                icon = GFX_agency_logo_generic_3
+            }
+			add_ideas = NRR_new_yxzz
+		}
+	}
+	focus={
+		id=NRR_Army_air_force_integration
+		icon= GFX_focus_generic_tank_air_support
+		x=32
+		y=1
+		prerequisite={focus=NRR_War_Department}
+		prerequisite={focus=NRR_Air_Force_Department}
+		mutually_exclusive={focus=NRR_navy_air_force_Integration  }
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_Army_air_force_integration
+		}
+	}
+	focus={
+		id=NRR_navy_air_force_Integration 
+		icon= GFX_focus_generic_air_carrier
+		x=36
+		y=1
+		prerequisite={focus=NRR_Air_Force_Department}
+		prerequisite={focus=NRR_Admiralty}
+		mutually_exclusive={focus=NRR_Army_air_force_integration }
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_navy_air_force_Integration
+		}
+	}
+	focus={
+		id=NRR_The_Sea_Power_Theory
+		icon= GFX_focus_generic_large_navy
+		x=40
+		y=1
+		prerequisite={focus=NRR_Admiralty}
+		cost=2
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category = dd_tech
+	        }
+
+		}
+	}
+	focus={
+		id=NRR_Weapon_Modernization
+		icon= GFX_focus_generic_tank_assault
+		x=28
+		y=2
+		prerequisite={focus=NRR_new_night_raid}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category  = infantry_weapons
+	        }
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 1
+		        category  = armor
+	        }
+			add_tech_bonus = {
+		        bonus = 0.75
+		        uses = 1
+		        category  = artillery
+	        }
+	        add_tech_bonus = {
+		        bonus = 2.0 
+		        ahead_reduction = 2
+		        uses = 1
+		        category = artillery 
+	        }
+			add_tech_bonus = {
+		        bonus = 2.0 
+		        ahead_reduction = 2
+		        uses = 1
+		        category = armor 
+	        }
+		}
+	}
+	focus={
+		id=NRR_Devolution_of_support_powers
+		icon= GFX_focus_generic_armored_air_support
+		x=30
+		y=2
+		prerequisite={focus=NRR_new_night_raid}
+		prerequisite={focus=NRR_Army_air_force_integration}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_Devolution_of_support_powers
+		}
+	}
+	focus={
+		id=NRR_improve_CAS
+		icon= GFX_focus_generic_cas_aircraft
+		x=32
+		y=2
+		prerequisite={focus=NRR_Army_air_force_integration}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = light_air
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = cas_bomber
+	        }
+		}
+	}
+	focus={
+		id=NRR_company_core
+		icon= GFX_focus_generic_army_attack
+		x=28
+		y=3
+		prerequisite={focus=NRR_Weapon_Modernization}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 3
+		        technology = battlefield_support_tree
+	        }
+			add_tech_bonus = {
+		        bonus = 2.0 
+		        ahead_reduction = 2
+		        uses = 3
+		        category = artillery 
+	        }
+		}
+	}
+	focus={
+		id=NRR_Improve_air_defense_weapons
+		icon= GFX_focus_PER_construct_air_defenses
+		x=30
+		y=3
+		prerequisite={focus=NRR_Devolution_of_support_powers}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category = artillery
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category = cat_anti_tank
+	        }
+			add_tech_bonus = {
+		        bonus = 2.0 
+		        ahead_reduction = 2
+		        uses = 1
+		        category = cat_anti_tank
+	        }
+		}
+	}
+	focus={
+		id=NRR_Systematic_dive_bombing
+		icon= GFX_focus_generic_multi_role_aircraft
+		x=32
+		y=3
+		prerequisite={focus=NRR_improve_CAS}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_Systematic_dive_bombing
+		}
+	}
+	focus={
+		id=NRR_National_Aviation_Military_Academy
+		icon= GFX_focus_generic_education
+		x=34
+		y=2
+		prerequisite={focus=NRR_Army_air_force_integration focus=NRR_navy_air_force_Integration  }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_research_slot = 1
+		}
+	}
+	focus={
+		id=NRR_improve_Naval_bomber
+		icon= GFX_focus_SWE_marauder_bombers
+		x=36
+		y=2
+		prerequisite={focus=NRR_navy_air_force_Integration }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category  = naval_air
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 1
+				ahead_reduction = 2
+		        category  = naval_air
+	        }
+		}
+	}
+	focus={
+		id=NRR_Drawing_on_foreign_airframes
+		icon= GFX_focus_generic_copy_plane_designs
+		x=34
+		y=3
+		prerequisite={focus=NRR_National_Aviation_Military_Academy}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = light_air
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = medium_air
+	        }
+		}
+	}
+	focus={
+		id=NRR_Improved_shipborne_radar
+		icon=GFX_goal_generic_radar
+		x=36
+		y=3
+		prerequisite={focus=NRR_improve_Naval_bomber}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+		        category  = electronics
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 1
+		        category  = construction_tech
+	        }
+		}
+	}
+	focus={
+		id=NRR_unorthodox_approach
+		icon= GFX_focus_PHI_thats_not_an_island
+		x=38
+		y=2
+		prerequisite={focus=NRR_navy_air_force_Integration }
+		prerequisite={focus=NRR_The_Sea_Power_Theory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category  = cv_tech
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 1
+				ahead_reduction = 2
+		        category = bb_tech
+	        }
+		}
+	}
+	focus={
+		id=NRR_Sea_Eagle
+		icon= GFX_focus_SMB_blue_water_fleet
+		x=38
+		y=3
+		prerequisite={focus=NRR_unorthodox_approach}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = naval_bomber
+	        }
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 1
+				ahead_reduction = 2
+		        category = cat_strategic_bomber
+	        }
+		}
+	}
+	focus={
+		id=NRR_Focus_on_submarine
+		icon=GFX_focus_generic_cruiser_submarines
+		x=40
+		y=2
+		prerequisite={focus=NRR_The_Sea_Power_Theory}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_tech_bonus = {
+		        bonus = 1
+		        uses = 2
+				ahead_reduction = 2
+		        category = ss_tech
+	        }
+
+		}
+	}
+	focus={
+		id=NRR_From_green_to_blue
+		icon=GFX_focus_SIA_use_ships_as_generators
+		x=40
+		y=3
+		prerequisite={focus=NRR_Focus_on_submarine}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_ideas = NRR_From_green_to_blue
+		}
+	}
+	focus={
+		id=NRR_our_Army_world_army
+		icon=GFX_focus_PRC_immediate_response_to_lack_of_army
+		x=34
+		y=4
+		prerequisite={focus=NRR_company_core}
+		prerequisite={focus=NRR_Drawing_on_foreign_airframes}
+		prerequisite={focus=NRR_From_green_to_blue}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		available = {
+			has_country_flag = NRR_southasia_unification
+		}
+		search_filters={
+		}
+		completion_reward={
+			add_to_variable = {
+			    NRR_rebuild_unity_point = 2
+		    }
+		    custom_effect_tooltip = NRR_rebuild_unity_point_add_2
+		}
+	}
+	focus={
+		id=NRR_Courtesy_before_force
+		icon=GFX_focus_generic_worker_expansion
+		x=32
+		y=5
+		prerequisite={focus=NRR_our_Army_world_army}
+		mutually_exclusive={focus=NRR_preemptive_strike }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			MFD = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    PAW = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    ROV = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    MAL = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    AFG = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    PER = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    TAM = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    LAN = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    YEM = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    ZIM = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+		    AFA = {
+			add_timed_idea = { idea = NRR_enlight_the_people
+			days = 180 }
+			}
+	    }
+	}
+	focus={
+		id=NRR_preemptive_strike
+		icon=GFX_focus_generic_workers
+		x=36
+		y=5
+		prerequisite={focus=NRR_our_Army_world_army}
+		mutually_exclusive={focus=NRR_Courtesy_before_force }
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_timed_idea = { idea = NRR_preemptive_strike days = 180 }
+		}
+	}
+	
+}

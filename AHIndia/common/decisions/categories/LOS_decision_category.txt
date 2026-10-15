@@ -1,0 +1,11 @@
+LOS_decision_category = {
+	icon = generic_formable_nations
+	available = {
+		tag = LOS
+	}
+	visible = {
+		tag = LOS
+	}
+	priority = 100
+
+}

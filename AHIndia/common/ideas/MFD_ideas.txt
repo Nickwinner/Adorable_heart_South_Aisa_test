@@ -1,0 +1,44 @@
+ideas = {
+	hidden_ideas = {
+		
+	}
+	country = {
+		
+		MFD_jjsc ={ #久经战阵
+			picture = tur_coordinated_balkan_armed_forces
+
+			modifier = {
+				
+				stability_weekly = 0.01
+				war_support_factor = 0.2
+		        war_support_weekly = 0.01
+				training_time_army_factor = -0.15
+				experience_loss_factor = -0.15
+			}
+		}
+
+		MFD_lzww ={ #立足未稳
+			picture = tur_disorganised_armed_forces
+
+			modifier = {
+				stability_factor = -0.4
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		MFD_conference ={#魔防队组长会议
+			picture = generic_conference
+
+			modifier = {
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+				land_reinforce_rate = 0.15
+		        coordination_bonus = 0.2
+				stability_weekly = 0.01
+				political_power_factor = 0.25
+			}
+		
+		}
+	}
+}
