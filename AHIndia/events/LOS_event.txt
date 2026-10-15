@@ -1,0 +1,65 @@
+add_namespace = LOS.event
+add_namespace = LOS_news
+
+
+
+
+
+country_event = {
+    
+	id =  LOS.event.300
+
+	title = LOS.event.300.t
+	desc = NRR.event.300.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.300.a
+
+		NRR = { country_event = generic.2 }
+	}
+}
+
+news_event = {
+	id = LOS_news.001
+    picture = GFX_ENG_news_301
+    title = LOS_news.1.t
+    desc = LOS_news.1.d
+
+	trigger = {
+			wants_world_news = yes
+		}
+		immediate = {
+			set_global_flag = LOS_start_war
+		}
+	is_triggered_only = yes
+    major = yes
+
+	option = {
+		name = LOS_news.1.a
+			trigger = {
+				tag=LOS
+			}
+			set_variable = { adorable_heart_super_event_var = 200 }
+		    adorable_heart_fire_super_event = yes
+			hidden_effect = {
+			play_song = super_event_LOS_start_war 
+			add_political_power = 1
+		    }	
+	}
+	option = {
+		name = LOS_news.1.b
+			
+			trigger = {
+				not = { tag = LOS }	
+			}
+			set_variable = { adorable_heart_super_event_var = 200 }
+		    adorable_heart_fire_super_event = yes
+			hidden_effect = {
+			play_song = super_event_LOS_start_war 
+			add_political_power = 1
+		    }	
+	}
+
+}
