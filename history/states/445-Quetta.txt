@@ -1,0 +1,23 @@
+state={
+	id=445
+	name="STATE_445"
+	manpower=600000
+	state_category = one
+	history = {
+		add_core_of = PAK
+		owner = MOE
+		add_core_of = MOE
+		set_state_flag = TAMZDQ
+		add_to_array = { state_victory_points = 8098 }
+		victory_points = { 8098 10 }
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+		}
+	}
+	provinces={
+		5105 7847 8098 10813
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

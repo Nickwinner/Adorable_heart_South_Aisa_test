@@ -1,0 +1,19 @@
+characters = {
+	BLS_zihei = {
+		name = "紫黑"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLS/zihei.png"
+			}
+		}
+		country_leader = {
+			desc = BLS_zihei_desc_leader
+			ideology = oligarchism
+			traits = {
+				
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+    }
+}

@@ -1,0 +1,18 @@
+state={
+	id=438
+	name="STATE_438"
+	manpower=13390000
+	state_category = five
+	history = {
+		owner = MOE
+		add_core_of = MOE
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+		1983 5055 7064 9973 12777 12786
+	}
+	buildings_max_level_factor=1.000
+	local_supplies=7.000
+}

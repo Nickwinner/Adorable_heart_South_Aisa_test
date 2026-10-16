@@ -1,4 +1,0 @@
-graphical_culture = asian_gfx
-graphical_culture_2d = asian_2D
-color = { 0 139 139 }
-color_ui = rgb {0 139 139}

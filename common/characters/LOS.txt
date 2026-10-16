@@ -1,0 +1,329 @@
+characters = {	
+	LOS_FL = {
+		name = "法琳"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOS/farlin.png"
+				small = "gfx/leaders/LOS/small/farlin.png"
+			}
+			army = {
+				large = "gfx/leaders/LOS/farlin.png"
+				small = "gfx/leaders/LOS/small/farlin.png"
+			}
+		}
+												
+		corps_commander = {
+			skill = 2
+			traits = { career_officer order_mahoushojo }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	LOS_JL = {
+		name = "菊朗"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/kikuchi.png"
+				small = "gfx/leaders/LOS/small/kikuchi.png"
+			}
+		}
+						
+		advisor = {
+			slot = army_chief
+			idea_token = LOS_alta
+			traits = { army_chief_offensive_2 }
+			cost = 150
+			ai_will_do = {
+				base = 2.0
+			}
+		}
+		
+		corps_commander = {
+			skill = 3
+			traits = { career_officer commando cavalry_officer }
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	LOS_kabul = {
+		name = "卡布尔"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/kabul.png"
+				small = "gfx/leaders/LOS/small/kabul.png"
+			}
+		}
+		country_leader = {
+			ideology = democratic
+		}	
+		corps_commander = {
+			skill = 1
+			traits = { panzer_leader brilliant_strategist }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	LOS_LOS = {
+		name = "莱欧斯"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOS/leos.png"
+				small = "gfx/leaders/LOS/small/leos.png"
+			}
+			army = {
+				large = "gfx/leaders/LOS/leos.png"
+				small = "gfx/leaders/LOS/small/leos.png"
+			}
+		}
+		country_leader = {
+			desc = LOS_LOS_desc_leader
+			ideology = Utopian_Socialism
+			traits = {
+				
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 3
+			traits = { career_officer brilliant_strategist }
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	LOS_LX = {
+		name = "林夏"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/linxia.png"
+				small = "gfx/leaders/LOS/small/linxia.png"
+			}
+		}
+								
+		advisor = {
+			slot = air_chief
+			idea_token = LOS_linxia
+			traits = { air_chief_reform_3 }
+			cost = 150
+			ai_will_do = {
+				base = 1.0
+			}
+		}
+										
+		corps_commander = {
+			skill = 2
+			traits = { career_officer order_mahoushojo }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	LOS_MLXE = {
+		name = "玛露希尔"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOS/malucil.png"
+				small = "gfx/leaders/LOS/small/malucil.png"
+			}
+			army = {
+				large = "gfx/leaders/LOS/malucil.png"
+				small = "gfx/leaders/LOS/small/malucil.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LOS_malucil
+			traits = { DEN_Sakurayist }
+			cost = 150
+			ai_will_do = {
+				base = 1.0
+			}
+		}
+		corps_commander = {
+			skill = 3
+			traits = { career_officer order_mahoushojo }
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	LOS_QECK = {
+		name = "齐尔查克"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOS/zilchak.png"
+				small = "gfx/leaders/LOS/small/zilchak.png"
+			}
+			army = {
+				large = "gfx/leaders/LOS/zilchak.png"
+				small = "gfx/leaders/LOS/small/zilchak.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LOS_zilchak
+			traits = { BAL_business_ties }
+			cost = 150
+			ai_will_do = {
+				base = 1.0
+			}
+		}
+	}
+
+	LOS_SX = {
+		name = "森西"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LOS/sensi.png"
+				small = "gfx/leaders/LOS/small/sensi.png"
+			}
+			army = {
+				large = "gfx/leaders/LOS/sensi.png"
+				small = "gfx/leaders/LOS/small/sensi.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = LOS_sensi
+			traits = { army_logistics_3 }
+			cost = 200
+			ai_will_do = {
+				base = 3.0
+			}
+		}				
+		corps_commander = {
+			skill = 3
+			traits = { career_officer inflexible_strategist }
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	LOS_YJJM = {
+		name = "伊津津美"
+		portraits = {
+			portraits = {
+			army = {
+				large = "gfx/leaders/LOS/kinmei.png"
+				small = "gfx/leaders/LOS/small/kinmei.png"
+			}
+		}
+												
+		corps_commander = {
+			skill = 2
+			traits = { biological_weapon }
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		    }
+	    }
+	}
+	LOS_maizuru = {
+		name = "舞鹤"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/maizuru.png"
+				small = "gfx/leaders/LOS/small/maizuru.png"
+			}
+		}
+								
+		advisor = {
+			slot = air_chief
+			idea_token = LOS_maizuru
+			traits = { air_chief_ground_support_2 }
+			cost = 150
+			ai_will_do = {
+				base = 2.0
+			}
+		}
+								
+		advisor = {
+			slot = theorist
+			idea_token = LOS_maizuru
+			traits = { air_warfare_theorist }
+			cost = 100
+			ai_will_do = {
+				base = 1.0
+			}
+		}
+	}
+	
+	LOS_knotweed = {
+		name = "犬蓼"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/knotweed.png"
+				small = "gfx/leaders/LOS/small/knotweed.png"
+			}
+		}
+										
+		advisor = {
+			slot = high_command
+			idea_token = LOS_knotweed
+			traits = { army_armored_2 }
+			cost = 150
+			ai_will_do = {
+				base = 2.0
+			}
+		}
+		
+		corps_commander = {
+			skill = 1
+			traits = { panzer_leader commando }
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	LOS_namiri = {
+		name = "娜玛莉"
+		portraits = {
+			army = {
+				large = "gfx/leaders/LOS/namiri.png"
+				small = "gfx/leaders/LOS/small/namiri.png"
+			}
+		}
+														
+		advisor = {
+			slot = high_command
+			idea_token = LOS_namiri
+			traits = { army_artillery_2 }
+			cost = 150
+			ai_will_do = {
+				base = 2.0
+			}
+		}
+										
+		corps_commander = {
+			skill = 2
+			traits = { career_officer bearer_of_artillery }
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+
+}

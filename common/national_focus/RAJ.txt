@@ -1,0 +1,189 @@
+focus_tree={
+	id = indian_tree
+	country={
+		
+		factor=0
+		modifier={
+			add=99
+			tag=RAJ
+		}
+	}
+	default=no
+	focus={
+		id=RAJ_powerfulempire
+		icon = GFX_focus_BRA_restore_brazilian_honor
+		x=2
+		y=0
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 1
+		}
+	}
+	focus={
+		id=RAJ_support_ANR
+		icon = GFX_focus_CHI_promote_national_currency
+		x=1
+		y=1
+		prerequisite={focus=RAJ_powerfulempire}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			ANR = {
+				add_offsite_building = { 
+					type = arms_factory 
+					level = 3 
+				}
+			}
+		}
+		hidden_effect = {
+			ENG = {
+				set_autonomy = {
+		        target = RAJ
+		        autonomy_state = autonomy_free
+	            }
+			}
+		}
+	}
+	focus={
+		id=RAJ_feast
+		icon = GFX_focus_RAJ_institutional_money_laundering
+		x=3
+		y=1
+		prerequisite={focus=RAJ_powerfulempire}
+		cost=5
+		ai_will_do={
+			factor=10
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_to_variable = { ubs_load = 200 }
+			custom_effect_tooltip = DEN_increase_200_debt
+		}
+	}
+	focus={
+		id=RAJ_diplomacy
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		x=1
+		y=2
+		prerequisite={focus=RAJ_support_ANR}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_to_variable = { ubs_load = 100 }
+			custom_effect_tooltip = DEN_increase_100_debt
+		}
+	}
+	focus={
+		id=RAJ_present
+		icon = GFX_focus_BRA_ethical_internationalism
+		x=3
+		y=2
+		prerequisite={focus=RAJ_feast}
+		cost=5
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_to_variable = { ubs_load = 500 }
+			custom_effect_tooltip = DEN_increase_500_debt
+		}
+	}
+	focus={
+		id=RAJ_invite_eng
+		icon = GFX_focus_CHI_registry_of_property 
+		x=2
+		y=3
+		prerequisite={focus=RAJ_present}
+		prerequisite={focus=RAJ_diplomacy}
+		cost=3
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=RAJ_im_smart
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		x=0
+		y=4
+		prerequisite={focus=RAJ_invite_eng}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = 50
+		}
+	}
+	focus={
+		id=RAJ_hes_loyal
+		icon = GFX_focus_ARG_revive_the_colonial_plan
+		x=4
+		y=4
+		prerequisite={focus=RAJ_invite_eng}
+		cost=4
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			add_political_power = -50
+		}
+	}
+	focus={
+		id=RAJ_approved
+		icon = GFX_focus_BRA_utilize_security_law
+		x=2
+		y=5
+		prerequisite={focus=RAJ_im_smart}
+		prerequisite={focus=RAJ_hes_loyal}
+		cost=200
+		ai_will_do={
+			factor=1
+		}
+		available_if_capitulated=yes
+		search_filters={
+		}
+		completion_reward={
+			ENG = {
+				set_autonomy = {
+		        target = RAJ
+		        autonomy_state = autonomy_puppet
+	            }
+			}
+		}
+	}
+}
+#focus_CONGO_gold_and_diamonds

@@ -1,0 +1,165 @@
+RAJ_decision_category = {
+	assemble_our_man = {
+		
+		icon = generic_formable_nations
+		
+		cost = 50
+		days_remove = 7
+		
+		fire_only_once = no
+		days_re_enable = 37
+
+		available = {
+			
+			or = {
+				has_completed_focus = RAJ_ourday
+				has_completed_focus = chapter2
+			}
+		}
+		
+		modifier = {
+			
+	   	}
+		complete_effect = {  
+			add_manpower=-500
+		}
+		remove_effect = {
+			add_manpower=30000
+		}
+	}
+	get_our_weapon = {
+		
+		icon = generic_formable_nations
+		
+		cost = 50
+		days_remove = 7
+		
+		fire_only_once = no
+		days_re_enable = 37
+
+		available = {
+			
+			or = {
+				has_completed_focus = RAJ_ourday
+				has_completed_focus = chapter2
+			}
+		}
+		
+		modifier = {
+			
+	   	}
+		complete_effect = {  
+
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = ENG
+			}
+		}
+	}
+	walfare = {
+		
+		icon = generic_formable_nations
+		
+		cost = 100
+		days_remove = 150
+		
+		fire_only_once = yes
+		days_re_enable = 1
+
+		available = {
+			
+			or = {
+				has_completed_focus = RAJ_farmerlaw
+				has_completed_focus = chapter2
+			}
+		}
+		
+		modifier = {
+			
+	   	}
+		
+		remove_effect = {
+			remove_ideas = RAJ_famine
+		}
+	}
+	lion_glance = {
+		visible = {
+			has_completed_focus = RAJ_deception
+		}     
+		allowed = { always = no }
+		
+		available={
+			has_country_flag = RAJ_Hiding
+		}
+		
+		is_good = no
+		fire_only_once = no                  
+	
+		days_mission_timeout = 60
+		
+		timeout_effect = {
+			if = { 
+				has_government = democratic
+			}               
+			add_stability = -0.5
+			add_war_support = -0.5
+			ENG = {
+				set_autonomy = {
+					target = RAJ
+					autonomy_state = autonomy_free
+				}
+			}
+			ENG = {
+				remove_from_faction = RAJ
+			}
+			ENG = {
+				declare_war_on = { target = RAJ type = puppet_wargoal_focus }
+			}
+			drop_cosmetic_tag = yes
+
+		}
+	 
+		complete_effect = {                    
+			          
+		}
+	}
+	Hide = {
+
+		icon = GFX_decision_generic_operation
+
+		available = {  
+			has_active_mission = lion_glance  
+		}
+
+		visible = {
+			
+			or = {
+				has_completed_focus = RAJ_deception
+				has_completed_focus = chapter2
+			}
+		}
+
+		cost = 50
+		days_remove = 30
+		fire_only_once = no
+
+		days_re_enable = 30
+
+		complete_effect = {
+			set_country_flag = {
+				flag = RAJ_Hiding
+				days = 30
+				value = 1
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				activate_mission  = lion_glance
+			}
+		}
+	}
+
+}
