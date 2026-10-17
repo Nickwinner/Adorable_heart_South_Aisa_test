@@ -1367,3 +1367,8 @@ LOS = {
     color = { 33 85 128 }
     color_ui = rgb {33 85 128}
 }
+
+MOE = {
+    color = rgb { 128 128 128 }
+    color_ui = rgb { 128 128 128 }
+}

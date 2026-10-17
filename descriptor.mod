@@ -7,9 +7,8 @@ tags={
 	"National Focuses"
 	"Sound"
 }
-name="钢铁萌心（submod）-南亚拓展：喜马拉雅下的恒河"
+name="钢铁萌心南亚测试"
 dependencies={
-	"Adorable heart"
         "20240318"
 }
 supported_version="1.19.3.0"
