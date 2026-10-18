@@ -674,7 +674,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			640 = {
+			893 = {
 		        add_extra_state_shared_building_slots = 2
 		        add_building_construction = {
 			        type = infrastructure
@@ -682,7 +682,7 @@ focus_tree={
 			        instant_build = yes
 		        }
 	        }
-			288 = {
+			1287 = {
 		        add_extra_state_shared_building_slots = 2
 		        add_building_construction = {
 			        type = infrastructure
@@ -690,7 +690,7 @@ focus_tree={
 			        instant_build = yes
 		        }
 	        }
-			790 = {
+			1285 = {
 		        add_extra_state_shared_building_slots = 2
 		        add_building_construction = {
 			        type = infrastructure
@@ -749,22 +749,22 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			432 = {
+			893 = {
 			    add_dynamic_modifier = {
 					modifier = POL_new_towns
 				}
 			}
-			434 = {
+			1287 = {
 			    add_dynamic_modifier = {
 					modifier = POL_new_towns
 				}
 			}
-			701 = {
+			1285 = {
 			    add_dynamic_modifier = {
 					modifier = POL_new_towns
 				}
 			}
-			790 = {
+			1300 = {
 			    add_dynamic_modifier = {
 					modifier = POL_new_towns
 				}
@@ -786,7 +786,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			640 = {
+			893 = {
 		        add_extra_state_shared_building_slots = 1
 		        add_building_construction = {
 			        type = arms_factory
@@ -794,7 +794,7 @@ focus_tree={
 			        instant_build = yes
 		        }
 	        }
-			288 = {
+			1287 = {
 		        add_extra_state_shared_building_slots = 1
 		        add_building_construction = {
 			        type = arms_factory
@@ -802,7 +802,7 @@ focus_tree={
 			        instant_build = yes
 		        }
 	        }
-			790 = {
+			1285 = {
 		        add_extra_state_shared_building_slots = 1
 		        add_building_construction = {
 			        type = arms_factory
@@ -1000,42 +1000,42 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			324 = {
+			1273 = {
 				add_building_construction = {
 			    type = infrastructure
 			    level = 1
 			    instant_build = yes 
 		        }
 			}
-			432 = {
+			437 = {
 				add_building_construction = {
 			    type = infrastructure
 			    level = 1
 			    instant_build = yes 
 		        }
 			}
-			434 = {
+			1286 = {
 				add_building_construction = {
 			    type = infrastructure
 			    level = 1
 			    instant_build = yes 
 		        }
 			}
-			324 = {
+			1273 = {
 				add_building_construction = {
 			    type = air_base
 			    level = 1
 			    instant_build = yes 
 		        }
 			}
-			432 = {
+			437 = {
 				add_building_construction = {
 			    type = air_base
 			    level = 1
 			    instant_build = yes 
 		        }
 			}
-			434 = {
+			1286 = {
 				add_building_construction = {
 			    type = air_base
 			    level = 1
@@ -1059,7 +1059,7 @@ focus_tree={
 		search_filters={
 		}
 		completion_reward={
-			640 = {
+			1274 = {
 		        add_resource = {
 				    type = rubber
 				    amount = 16
@@ -1069,7 +1069,7 @@ focus_tree={
 				    amount = 10
 			    }
 	        }
-			288 = {
+			1285 = {
 		        add_resource = {
 				    type = rubber
 				    amount = 16
