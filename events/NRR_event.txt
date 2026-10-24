@@ -1384,13 +1384,15 @@ country_event = {
 
 	option = {
 	    name = NRR.event.61.a
-		every_state = {
-				limit = {
-					is_controlled_by = LOS
-					}
-				add_state_claim = ROOT
-				add_core_of = ROOT
-			}
+		ROOT = {
+			every_state = {
+					limit = {
+						is_controlled_by = LOS
+						}
+					add_state_claim = THIS
+					add_core_of = ROOT
+				}
+		}
 
 		country_event = { id = NRR.event.62  days = 7}
 	}
@@ -2161,7 +2163,6 @@ country_event = {
 			limit = {
 				is_core_of = ANR
 				}
-			add_state_claim = ROOT
 			add_core_of = ROOT
 		}
 	}
@@ -2179,7 +2180,6 @@ country_event = {
 			limit = {
 				is_core_of = ANR
 				}
-			add_state_claim = ROOT
 			add_core_of = ROOT
 		}
 

@@ -10,7 +10,7 @@ country_event = {
 	id =  LOS.event.300
 
 	title = LOS.event.300.t
-	desc = NRR.event.300.d
+	desc = LOS.event.300.d
 	is_triggered_only = yes
 	fire_only_once = yes
 

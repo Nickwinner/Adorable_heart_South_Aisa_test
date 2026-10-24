@@ -24,7 +24,7 @@
 		trigger = { check_variable = { Country_History_Page_Var = 2 } }
 		localization_key = NRR_Country_History_Page_02
 	}
-	text = {history
+	text = {
 		trigger = { check_variable = { Country_History_Page_Var = 3 } }
 		localization_key = NRR_Country_History_Page_03
 	}

@@ -356,7 +356,6 @@ focus_tree={
 				limit = {
 					is_core_of = ANR
 					}
-				add_state_claim = ROOT
 				add_core_of = ROOT
 			}
 		}

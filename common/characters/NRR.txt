@@ -259,7 +259,6 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 		    }	
-	    }
 	    advisor = {  
 			slot = political_advisor
 			idea_token = NRR_XE
@@ -270,7 +269,8 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
-    }
+		}
+	}
 
 	NRR_YaniNeko = {
 		name = "尼古喵喵"

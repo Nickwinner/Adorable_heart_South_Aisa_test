@@ -5,7 +5,7 @@ focus_tree={
 		factor=0
 		modifier={
 			add=99
-			tag=RAJ
+			tag=MOE
 		}
 	}
 	default=no
@@ -46,14 +46,7 @@ focus_tree={
 				}
 			}
 		}
-		hidden_effect = {
-			ENG = {
-				set_autonomy = {
-		        target = RAJ
-		        autonomy_state = autonomy_free
-	            }
-			}
-		}
+		
 	}
 	focus={
 		id=RAJ_feast

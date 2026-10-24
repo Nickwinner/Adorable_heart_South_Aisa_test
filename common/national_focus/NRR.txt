@@ -227,11 +227,7 @@ focus_tree={
 			create_country_leader = {
 				name = "艾斯德斯"
 				id = NRR_aisi
-			    portraits = {
-			        civilian = {
-				        large = "gfx/leaders/ANR/aisi.dds"
-			        }
-		        }
+				picture = "gfx/leaders/ANR/aisi.dds"
 				desc = ANR_aisi_desc_leader
 			    ideology = autocracy_subideology
 			}
@@ -279,7 +275,6 @@ focus_tree={
 				limit = {
 					is_core_of = MOE
 					}
-				add_state_claim = ROOT
 				add_core_of = ROOT
 			}
 		}
@@ -463,7 +458,7 @@ focus_tree={
 		}
 		bypass = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		completion_reward={
@@ -534,7 +529,7 @@ focus_tree={
 		}
 		bypass = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		completion_reward={
@@ -595,7 +590,7 @@ focus_tree={
 		available_if_capitulated=yes
 		bypass = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		search_filters={
@@ -851,7 +846,7 @@ focus_tree={
 				}
 			}
 			MOE ={
-				exists = NO
+				exists = no
 			}
 			}
 		}
@@ -1104,7 +1099,7 @@ focus_tree={
 		}
 		bypass = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		search_filters={
@@ -1225,7 +1220,7 @@ focus_tree={
 		}
 		bypass = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		search_filters={
@@ -1310,7 +1305,7 @@ focus_tree={
 		}
 		available = {
 			MOE ={
-				exists = NO
+				exists = no
 			}
 		}
 		available_if_capitulated=yes

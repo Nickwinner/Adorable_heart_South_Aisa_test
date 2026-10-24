@@ -252,10 +252,10 @@ focus_tree={
 				remove_idea = NRR_investigation_act
 			    add_idea = NRR_investigation_act_amendment
 			}	
-		}
-		hidden_effect = {
-			country_event={
-				id= NRR.event.43  days = 7
+			hidden_effect = {
+				country_event={
+					id= NRR.event.43  days = 7
+				}
 			}
 		}
 	}
@@ -1142,7 +1142,6 @@ focus_tree={
 				limit = {
 					is_core_of = MFD
 					}
-				add_state_claim = ROOT
 				add_core_of = ROOT
 			}
 		}

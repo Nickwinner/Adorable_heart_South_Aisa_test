@@ -671,7 +671,7 @@ NRR_reunite_and_librate_world_category = {
 	NRR_take_the_island_back_from_ENG = {
 		cost = 0
 		days_remove = 21
-		fire_only_once = YES
+		fire_only_once = yes
 
 	    allowed = { 
 			tag = NRR
@@ -715,7 +715,7 @@ NRR_reunite_and_librate_world_category = {
 	NRR_force_ENG_chooes_peace = {
 		cost = 0
 		days_remove = 30
-		fire_only_once = YES
+		fire_only_once = yes
 
 	    allowed = { 
 			tag = NRR
@@ -1165,7 +1165,6 @@ NRR_reunite_and_librate_world_category = {
 				limit = {
 					is_controlled_by = MFD
 					}
-				add_state_claim = ROOT
 				add_core_of = ROOT
 			}
 

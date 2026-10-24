@@ -18,6 +18,7 @@ LOS_decision_category = {
 	    }
 	    available = { 
 		   tag = LOS
+		   is_ai = no
 	    }
 
 

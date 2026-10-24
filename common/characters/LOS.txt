@@ -220,7 +220,6 @@ characters = {
 	LOS_YJJM = {
 		name = "伊津津美"
 		portraits = {
-			portraits = {
 			army = {
 				large = "gfx/leaders/LOS/kinmei.png"
 				small = "gfx/leaders/LOS/small/kinmei.png"
@@ -235,7 +234,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 		    }
-	    }
 	}
 	LOS_maizuru = {
 		name = "舞鹤"

@@ -92,7 +92,7 @@
 		
 		available = {
 			RAJ ={
-				exists = NO
+				exists = no
 			}
 		}
 
@@ -159,7 +159,7 @@
 		
 		available = {
 			RAJ ={
-				exists = NO
+				exists = no
 			}
 		}
 	}
@@ -175,7 +175,7 @@
 
 		available = {
 			RAJ ={
-				exists = NO
+				exists = no
 			}
 		}
 

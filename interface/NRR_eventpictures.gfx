@@ -175,7 +175,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_NRR_preliminary_victory"
-		texturefile = "gfx/interface/goals/NRR/NRR_preliminary_victory.png"
+		texturefile = "gfx/interface/goals/NRR/NRR_preliminary_victory.dds"
 	}
 	SpriteType = {
 		name = "GFX_NRR_develops_diplomacy"
