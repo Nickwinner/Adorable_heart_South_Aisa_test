@@ -132,7 +132,7 @@ units = {
 	}
 	division = {
 		name = "帝国近卫军第5师"
-		location = 12205
+		location = 10807
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
@@ -209,7 +209,7 @@ units = {
 	}
 	division = {
 		name = "帝国近卫军第16师"
-		location = 4106
+		location = 18971
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
