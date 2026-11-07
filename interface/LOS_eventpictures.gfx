@@ -1,0 +1,34 @@
+spriteTypes = {
+	#事件
+	SpriteType = {
+		name = "GFX_LOS_event001"
+		texturefile = "gfx/event_pictures/LOS/LOS_event001.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event002"
+		texturefile = "gfx/event_pictures/LOS/LOS_event002.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event003"
+		texturefile = "gfx/event_pictures/LOS/LOS_event003.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event004"
+		texturefile = "gfx/event_pictures/LOS/LOS_event004.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event005"
+		texturefile = "gfx/event_pictures/LOS/LOS_event005.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event006"
+		texturefile = "gfx/event_pictures/LOS/LOS_event006.png"
+	}
+	SpriteType = {
+		name = "GFX_LOS_event007"
+		texturefile = "gfx/event_pictures/LOS/LOS_event007.png"
+	}
+}
+
+
+

@@ -48,7 +48,7 @@ add_ideas = {
 
 }
 
-
+add_manpower = 50000
 set_convoys = 100
 set_cosmetic_tag = LOS
 set_politics = {

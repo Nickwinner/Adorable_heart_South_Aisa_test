@@ -61,5 +61,122 @@ news_event = {
 			add_political_power = 1
 		    }	
 	}
+}
 
+country_event = {
+    
+	id =  LOS.event.1
+
+	title = LOS.event.1.t
+	desc = LOS.event.1.d
+	picture = GFX_LOS_event001
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.1.a
+
+	}
+}
+country_event = {
+    
+	id =  LOS.event.2
+
+	title = LOS.event.2.t
+	desc = LOS.event.2.d
+	picture = GFX_LOS_event002
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.2.a
+
+	}
+}
+country_event = {
+    
+	id =  LOS.event.3
+
+	title = LOS.event.3.t
+	desc = LOS.event.3.d
+	picture = GFX_LOS_event003
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.3.a
+
+		country_event = {
+			id = LOS.event.4
+			days = 3
+		}
+	}
+	option = {
+	    name = LOS.event.3.b
+
+		country_event = {
+			id = LOS.event.5
+			days = 3
+		}
+	}
+}
+country_event = {
+    
+	id =  LOS.event.4
+
+	title = LOS.event.4.t
+	desc = LOS.event.4.d
+	picture = GFX_LOS_event004
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.4.a
+
+	}
+}
+country_event = {
+    
+	id =  LOS.event.5
+
+	title = LOS.event.5.t
+	desc = LOS.event.5.d
+	picture = GFX_LOS_event005
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.5.a
+
+	}
+}
+country_event = {
+    
+	id =  LOS.event.6
+
+	title = LOS.event.6.t
+	desc = LOS.event.6.d
+	picture = GFX_LOS_event006
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.6.a
+
+	}
+}
+country_event = {
+    
+	id =  LOS.event.7
+
+	title = LOS.event.7.t
+	desc = LOS.event.7.d
+	picture = GFX_LOS_event007
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = LOS.event.7.a
+
+	}
 }
