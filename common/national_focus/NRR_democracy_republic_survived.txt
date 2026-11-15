@@ -10,6 +10,9 @@ focus_tree={
 	default=no
 	focus={
 		id=NRR_preliminary_victory
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon= GFX_focus_ARG_defense_and_democracy
 		x=3
 		y=0
@@ -26,6 +29,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_huge_economic_potential
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_huge_economic_potential
 		x=0
 		y=1
@@ -46,6 +52,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_adhere_to_neutrality
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_adhere_to_neutrality
 		x=3
 		y=1
@@ -65,6 +74,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_uphold_the_constitution
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_uphold_the_constitution
 		x=6
 		y=1
@@ -82,6 +94,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_agricultural_recovery
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_agricultural_recovery
 		x=0
 		y=2
@@ -108,6 +123,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_develops_diplomacy
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_develops_diplomacy
 		x=3
 		y=2
@@ -127,6 +145,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_one_country_one_army
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_one_country_one_army
 		x=6
 		y=2
@@ -144,6 +165,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_have_a_glass
+		allow_branch = {
+			has_country_flag = NRR_democracy_republic_survived
+		}
 		icon=GFX_NRR_have_a_glass
 		x=3
 		y=3

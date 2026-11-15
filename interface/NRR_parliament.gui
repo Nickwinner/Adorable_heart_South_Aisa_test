@@ -1,0 +1,802 @@
+guiTypes = {
+
+	# ========================================================
+	#  Entrance Button (Above Crosshair on the Right Sidebar)
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_parliament_open_window"
+		position = { x = -59 y = -472 }
+		size = { width = 48 height = 48 }
+		Orientation = lower_RIGHT
+
+		buttonType = {
+			name = "NRR_parliament_open_btn"
+			quadTextureSprite = "GFX_NRR_parliament_open_btn"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "NRR_parliament_open_btn_tt"
+			pdx_tooltip_delayed = "NRR_parliament_open_btn_desc"
+		}
+	}
+
+	# ========================================================
+	#  Main Parliament Window (1040 x 740)
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_parliament_main_window"
+		position = { x = 0 y = 0 }
+		size = { width = 1040 height = 740 }
+		Orientation = center
+		Origo = center
+		clipping = no
+		moveable = yes
+		click_to_front = yes
+
+		# Window Background
+		background = {
+			name = "Background"
+			spriteType = "GFX_NRR_parliament_bg"
+		}
+
+		# Window Title
+		instantTextBoxType = {
+			name = "NRR_parliament_title"
+			position = { x = 30 y = 12 }
+			font = "hoi_24header"
+			text = "NRR_PARLIAMENT_MAIN_TITLE"
+			maxWidth = 500
+			maxHeight = 30
+			format = left
+		}
+
+		# System Type Badge (Unicameral vs Bicameral)
+		instantTextBoxType = {
+			name = "NRR_parliament_system_type"
+			position = { x = 550 y = 14 }
+			font = "hoi_18mbs"
+			text = "[Root.GetNRRParliamentSystemType]"
+			maxWidth = 400
+			maxHeight = 25
+			format = right
+		}
+
+		# Close Button
+		buttonType = {
+			name = "NRR_parliament_close_btn"
+			position = { x = 998 y = 12 }
+			quadTextureSprite = "GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		# --------------------------------------------------------
+		#  RIGHT PANEL: National Assembly / House (350 Seats)
+		# --------------------------------------------------------
+		containerWindowType = {
+			name = "NRR_house_subwindow"
+			position = { x = 350 y = 60 }
+			size = { width = 665 height = 380 }
+
+			instantTextBoxType = {
+				name = "NRR_house_title"
+				position = { x = 20 y = 8 }
+				font = "hoi_20b"
+				text = "NRR_HOUSE_TITLE"
+				maxWidth = 625
+				maxHeight = 25
+				format = center
+			}
+
+			instantTextBoxType = {
+				name = "NRR_house_seats_summary"
+				position = { x = 20 y = 38 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_TOTAL_SEATS_TEXT"
+				maxWidth = 625
+				maxHeight = 20
+				format = center
+			}
+
+			# House 350 Dots (Sorted left-to-right by angle for sector wedges)
+			iconType = { name = "NRR_house_dot_1" spriteType = "GFX_NRR_parliament_dot" position = { x = 245 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_2" spriteType = "GFX_NRR_parliament_dot" position = { x = 225 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_3" spriteType = "GFX_NRR_parliament_dot" position = { x = 205 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_4" spriteType = "GFX_NRR_parliament_dot" position = { x = 185 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_5" spriteType = "GFX_NRR_parliament_dot" position = { x = 165 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_6" spriteType = "GFX_NRR_parliament_dot" position = { x = 145 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_7" spriteType = "GFX_NRR_parliament_dot" position = { x = 125 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_8" spriteType = "GFX_NRR_parliament_dot" position = { x = 125 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_9" spriteType = "GFX_NRR_parliament_dot" position = { x = 145 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_10" spriteType = "GFX_NRR_parliament_dot" position = { x = 165 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_11" spriteType = "GFX_NRR_parliament_dot" position = { x = 185 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_12" spriteType = "GFX_NRR_parliament_dot" position = { x = 205 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_13" spriteType = "GFX_NRR_parliament_dot" position = { x = 225 y = 257 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_14" spriteType = "GFX_NRR_parliament_dot" position = { x = 126 y = 247 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_15" spriteType = "GFX_NRR_parliament_dot" position = { x = 245 y = 257 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_16" spriteType = "GFX_NRR_parliament_dot" position = { x = 146 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_17" spriteType = "GFX_NRR_parliament_dot" position = { x = 166 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_18" spriteType = "GFX_NRR_parliament_dot" position = { x = 127 y = 239 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_19" spriteType = "GFX_NRR_parliament_dot" position = { x = 186 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_20" spriteType = "GFX_NRR_parliament_dot" position = { x = 206 y = 247 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_21" spriteType = "GFX_NRR_parliament_dot" position = { x = 147 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_22" spriteType = "GFX_NRR_parliament_dot" position = { x = 226 y = 248 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_23" spriteType = "GFX_NRR_parliament_dot" position = { x = 128 y = 230 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_24" spriteType = "GFX_NRR_parliament_dot" position = { x = 168 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_25" spriteType = "GFX_NRR_parliament_dot" position = { x = 247 y = 249 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_26" spriteType = "GFX_NRR_parliament_dot" position = { x = 188 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_27" spriteType = "GFX_NRR_parliament_dot" position = { x = 149 y = 228 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_28" spriteType = "GFX_NRR_parliament_dot" position = { x = 130 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_29" spriteType = "GFX_NRR_parliament_dot" position = { x = 208 y = 238 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_30" spriteType = "GFX_NRR_parliament_dot" position = { x = 169 y = 227 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_31" spriteType = "GFX_NRR_parliament_dot" position = { x = 228 y = 240 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_32" spriteType = "GFX_NRR_parliament_dot" position = { x = 151 y = 219 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_33" spriteType = "GFX_NRR_parliament_dot" position = { x = 132 y = 213 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_34" spriteType = "GFX_NRR_parliament_dot" position = { x = 190 y = 228 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_35" spriteType = "GFX_NRR_parliament_dot" position = { x = 248 y = 242 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_36" spriteType = "GFX_NRR_parliament_dot" position = { x = 172 y = 218 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_37" spriteType = "GFX_NRR_parliament_dot" position = { x = 210 y = 230 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_38" spriteType = "GFX_NRR_parliament_dot" position = { x = 154 y = 210 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_39" spriteType = "GFX_NRR_parliament_dot" position = { x = 135 y = 204 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_40" spriteType = "GFX_NRR_parliament_dot" position = { x = 193 y = 219 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_41" spriteType = "GFX_NRR_parliament_dot" position = { x = 231 y = 232 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_42" spriteType = "GFX_NRR_parliament_dot" position = { x = 137 y = 196 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_43" spriteType = "GFX_NRR_parliament_dot" position = { x = 175 y = 209 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_44" spriteType = "GFX_NRR_parliament_dot" position = { x = 157 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_45" spriteType = "GFX_NRR_parliament_dot" position = { x = 213 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_46" spriteType = "GFX_NRR_parliament_dot" position = { x = 251 y = 234 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_47" spriteType = "GFX_NRR_parliament_dot" position = { x = 141 y = 187 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_48" spriteType = "GFX_NRR_parliament_dot" position = { x = 196 y = 210 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_49" spriteType = "GFX_NRR_parliament_dot" position = { x = 160 y = 193 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_50" spriteType = "GFX_NRR_parliament_dot" position = { x = 179 y = 201 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_51" spriteType = "GFX_NRR_parliament_dot" position = { x = 234 y = 224 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_52" spriteType = "GFX_NRR_parliament_dot" position = { x = 144 y = 179 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_53" spriteType = "GFX_NRR_parliament_dot" position = { x = 217 y = 213 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_54" spriteType = "GFX_NRR_parliament_dot" position = { x = 164 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_55" spriteType = "GFX_NRR_parliament_dot" position = { x = 200 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_56" spriteType = "GFX_NRR_parliament_dot" position = { x = 183 y = 192 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_57" spriteType = "GFX_NRR_parliament_dot" position = { x = 148 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_58" spriteType = "GFX_NRR_parliament_dot" position = { x = 254 y = 227 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_59" spriteType = "GFX_NRR_parliament_dot" position = { x = 238 y = 216 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_60" spriteType = "GFX_NRR_parliament_dot" position = { x = 168 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_61" spriteType = "GFX_NRR_parliament_dot" position = { x = 221 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_62" spriteType = "GFX_NRR_parliament_dot" position = { x = 153 y = 164 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_63" spriteType = "GFX_NRR_parliament_dot" position = { x = 187 y = 184 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_64" spriteType = "GFX_NRR_parliament_dot" position = { x = 205 y = 194 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_65" spriteType = "GFX_NRR_parliament_dot" position = { x = 173 y = 168 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_66" spriteType = "GFX_NRR_parliament_dot" position = { x = 157 y = 156 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_67" spriteType = "GFX_NRR_parliament_dot" position = { x = 258 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_68" spriteType = "GFX_NRR_parliament_dot" position = { x = 192 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_69" spriteType = "GFX_NRR_parliament_dot" position = { x = 242 y = 209 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_70" spriteType = "GFX_NRR_parliament_dot" position = { x = 226 y = 197 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_71" spriteType = "GFX_NRR_parliament_dot" position = { x = 210 y = 186 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_72" spriteType = "GFX_NRR_parliament_dot" position = { x = 178 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_73" spriteType = "GFX_NRR_parliament_dot" position = { x = 162 y = 149 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_74" spriteType = "GFX_NRR_parliament_dot" position = { x = 198 y = 168 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_75" spriteType = "GFX_NRR_parliament_dot" position = { x = 167 y = 142 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_76" spriteType = "GFX_NRR_parliament_dot" position = { x = 215 y = 178 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_77" spriteType = "GFX_NRR_parliament_dot" position = { x = 184 y = 153 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_78" spriteType = "GFX_NRR_parliament_dot" position = { x = 231 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_79" spriteType = "GFX_NRR_parliament_dot" position = { x = 247 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_80" spriteType = "GFX_NRR_parliament_dot" position = { x = 263 y = 214 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_81" spriteType = "GFX_NRR_parliament_dot" position = { x = 173 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_82" spriteType = "GFX_NRR_parliament_dot" position = { x = 204 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_83" spriteType = "GFX_NRR_parliament_dot" position = { x = 190 y = 146 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_84" spriteType = "GFX_NRR_parliament_dot" position = { x = 221 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_85" spriteType = "GFX_NRR_parliament_dot" position = { x = 237 y = 183 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_86" spriteType = "GFX_NRR_parliament_dot" position = { x = 179 y = 128 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_87" spriteType = "GFX_NRR_parliament_dot" position = { x = 253 y = 196 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_88" spriteType = "GFX_NRR_parliament_dot" position = { x = 210 y = 154 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_89" spriteType = "GFX_NRR_parliament_dot" position = { x = 196 y = 139 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_90" spriteType = "GFX_NRR_parliament_dot" position = { x = 268 y = 208 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_91" spriteType = "GFX_NRR_parliament_dot" position = { x = 185 y = 122 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_92" spriteType = "GFX_NRR_parliament_dot" position = { x = 228 y = 164 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_93" spriteType = "GFX_NRR_parliament_dot" position = { x = 243 y = 177 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_94" spriteType = "GFX_NRR_parliament_dot" position = { x = 203 y = 133 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_95" spriteType = "GFX_NRR_parliament_dot" position = { x = 217 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_96" spriteType = "GFX_NRR_parliament_dot" position = { x = 192 y = 116 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_97" spriteType = "GFX_NRR_parliament_dot" position = { x = 259 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_98" spriteType = "GFX_NRR_parliament_dot" position = { x = 235 y = 158 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_99" spriteType = "GFX_NRR_parliament_dot" position = { x = 210 y = 127 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_100" spriteType = "GFX_NRR_parliament_dot" position = { x = 274 y = 203 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_101" spriteType = "GFX_NRR_parliament_dot" position = { x = 198 y = 110 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_102" spriteType = "GFX_NRR_parliament_dot" position = { x = 224 y = 141 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_103" spriteType = "GFX_NRR_parliament_dot" position = { x = 250 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_104" spriteType = "GFX_NRR_parliament_dot" position = { x = 217 y = 121 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_105" spriteType = "GFX_NRR_parliament_dot" position = { x = 205 y = 105 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_106" spriteType = "GFX_NRR_parliament_dot" position = { x = 266 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_107" spriteType = "GFX_NRR_parliament_dot" position = { x = 242 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_108" spriteType = "GFX_NRR_parliament_dot" position = { x = 232 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_109" spriteType = "GFX_NRR_parliament_dot" position = { x = 257 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_110" spriteType = "GFX_NRR_parliament_dot" position = { x = 213 y = 100 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_111" spriteType = "GFX_NRR_parliament_dot" position = { x = 225 y = 116 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_112" spriteType = "GFX_NRR_parliament_dot" position = { x = 281 y = 198 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_113" spriteType = "GFX_NRR_parliament_dot" position = { x = 250 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_114" spriteType = "GFX_NRR_parliament_dot" position = { x = 240 y = 130 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_115" spriteType = "GFX_NRR_parliament_dot" position = { x = 220 y = 95 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_116" spriteType = "GFX_NRR_parliament_dot" position = { x = 273 y = 180 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_117" spriteType = "GFX_NRR_parliament_dot" position = { x = 232 y = 111 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_118" spriteType = "GFX_NRR_parliament_dot" position = { x = 265 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_119" spriteType = "GFX_NRR_parliament_dot" position = { x = 228 y = 90 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_120" spriteType = "GFX_NRR_parliament_dot" position = { x = 248 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_121" spriteType = "GFX_NRR_parliament_dot" position = { x = 258 y = 142 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_122" spriteType = "GFX_NRR_parliament_dot" position = { x = 287 y = 194 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_123" spriteType = "GFX_NRR_parliament_dot" position = { x = 240 y = 106 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_124" spriteType = "GFX_NRR_parliament_dot" position = { x = 280 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_125" spriteType = "GFX_NRR_parliament_dot" position = { x = 235 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_126" spriteType = "GFX_NRR_parliament_dot" position = { x = 273 y = 157 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_127" spriteType = "GFX_NRR_parliament_dot" position = { x = 256 y = 121 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_128" spriteType = "GFX_NRR_parliament_dot" position = { x = 249 y = 102 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_129" spriteType = "GFX_NRR_parliament_dot" position = { x = 266 y = 138 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_130" spriteType = "GFX_NRR_parliament_dot" position = { x = 243 y = 82 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_131" spriteType = "GFX_NRR_parliament_dot" position = { x = 294 y = 191 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_132" spriteType = "GFX_NRR_parliament_dot" position = { x = 257 y = 98 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_133" spriteType = "GFX_NRR_parliament_dot" position = { x = 265 y = 117 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_134" spriteType = "GFX_NRR_parliament_dot" position = { x = 288 y = 172 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_135" spriteType = "GFX_NRR_parliament_dot" position = { x = 252 y = 79 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_136" spriteType = "GFX_NRR_parliament_dot" position = { x = 281 y = 153 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_137" spriteType = "GFX_NRR_parliament_dot" position = { x = 275 y = 134 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_138" spriteType = "GFX_NRR_parliament_dot" position = { x = 266 y = 95 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_139" spriteType = "GFX_NRR_parliament_dot" position = { x = 260 y = 76 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_140" spriteType = "GFX_NRR_parliament_dot" position = { x = 274 y = 113 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_141" spriteType = "GFX_NRR_parliament_dot" position = { x = 284 y = 131 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_142" spriteType = "GFX_NRR_parliament_dot" position = { x = 290 y = 150 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_143" spriteType = "GFX_NRR_parliament_dot" position = { x = 296 y = 169 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_144" spriteType = "GFX_NRR_parliament_dot" position = { x = 302 y = 188 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_145" spriteType = "GFX_NRR_parliament_dot" position = { x = 268 y = 73 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_146" spriteType = "GFX_NRR_parliament_dot" position = { x = 275 y = 92 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_147" spriteType = "GFX_NRR_parliament_dot" position = { x = 283 y = 111 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_148" spriteType = "GFX_NRR_parliament_dot" position = { x = 277 y = 71 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_149" spriteType = "GFX_NRR_parliament_dot" position = { x = 293 y = 129 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_150" spriteType = "GFX_NRR_parliament_dot" position = { x = 284 y = 90 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_151" spriteType = "GFX_NRR_parliament_dot" position = { x = 298 y = 148 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_152" spriteType = "GFX_NRR_parliament_dot" position = { x = 304 y = 167 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_153" spriteType = "GFX_NRR_parliament_dot" position = { x = 292 y = 108 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_154" spriteType = "GFX_NRR_parliament_dot" position = { x = 285 y = 69 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_155" spriteType = "GFX_NRR_parliament_dot" position = { x = 309 y = 187 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_156" spriteType = "GFX_NRR_parliament_dot" position = { x = 293 y = 88 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_157" spriteType = "GFX_NRR_parliament_dot" position = { x = 302 y = 127 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_158" spriteType = "GFX_NRR_parliament_dot" position = { x = 294 y = 67 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_159" spriteType = "GFX_NRR_parliament_dot" position = { x = 307 y = 146 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_160" spriteType = "GFX_NRR_parliament_dot" position = { x = 301 y = 107 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_161" spriteType = "GFX_NRR_parliament_dot" position = { x = 302 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_162" spriteType = "GFX_NRR_parliament_dot" position = { x = 312 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_163" spriteType = "GFX_NRR_parliament_dot" position = { x = 303 y = 66 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_164" spriteType = "GFX_NRR_parliament_dot" position = { x = 311 y = 126 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_165" spriteType = "GFX_NRR_parliament_dot" position = { x = 317 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_166" spriteType = "GFX_NRR_parliament_dot" position = { x = 311 y = 106 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_167" spriteType = "GFX_NRR_parliament_dot" position = { x = 311 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_168" spriteType = "GFX_NRR_parliament_dot" position = { x = 316 y = 145 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_169" spriteType = "GFX_NRR_parliament_dot" position = { x = 312 y = 65 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_170" spriteType = "GFX_NRR_parliament_dot" position = { x = 321 y = 165 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_171" spriteType = "GFX_NRR_parliament_dot" position = { x = 320 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_172" spriteType = "GFX_NRR_parliament_dot" position = { x = 320 y = 105 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_173" spriteType = "GFX_NRR_parliament_dot" position = { x = 320 y = 85 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_174" spriteType = "GFX_NRR_parliament_dot" position = { x = 321 y = 65 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_175" spriteType = "GFX_NRR_parliament_dot" position = { x = 325 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_176" spriteType = "GFX_NRR_parliament_dot" position = { x = 325 y = 145 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_177" spriteType = "GFX_NRR_parliament_dot" position = { x = 329 y = 65 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_178" spriteType = "GFX_NRR_parliament_dot" position = { x = 330 y = 85 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_179" spriteType = "GFX_NRR_parliament_dot" position = { x = 330 y = 105 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_180" spriteType = "GFX_NRR_parliament_dot" position = { x = 330 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_181" spriteType = "GFX_NRR_parliament_dot" position = { x = 329 y = 165 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_182" spriteType = "GFX_NRR_parliament_dot" position = { x = 338 y = 65 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_183" spriteType = "GFX_NRR_parliament_dot" position = { x = 334 y = 145 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_184" spriteType = "GFX_NRR_parliament_dot" position = { x = 339 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_185" spriteType = "GFX_NRR_parliament_dot" position = { x = 339 y = 106 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_186" spriteType = "GFX_NRR_parliament_dot" position = { x = 333 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_187" spriteType = "GFX_NRR_parliament_dot" position = { x = 339 y = 126 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_188" spriteType = "GFX_NRR_parliament_dot" position = { x = 347 y = 66 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_189" spriteType = "GFX_NRR_parliament_dot" position = { x = 338 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_190" spriteType = "GFX_NRR_parliament_dot" position = { x = 348 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_191" spriteType = "GFX_NRR_parliament_dot" position = { x = 349 y = 107 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_192" spriteType = "GFX_NRR_parliament_dot" position = { x = 343 y = 146 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_193" spriteType = "GFX_NRR_parliament_dot" position = { x = 356 y = 67 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_194" spriteType = "GFX_NRR_parliament_dot" position = { x = 348 y = 127 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_195" spriteType = "GFX_NRR_parliament_dot" position = { x = 357 y = 88 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_196" spriteType = "GFX_NRR_parliament_dot" position = { x = 341 y = 187 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_197" spriteType = "GFX_NRR_parliament_dot" position = { x = 365 y = 69 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_198" spriteType = "GFX_NRR_parliament_dot" position = { x = 358 y = 108 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_199" spriteType = "GFX_NRR_parliament_dot" position = { x = 346 y = 167 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_200" spriteType = "GFX_NRR_parliament_dot" position = { x = 352 y = 148 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_201" spriteType = "GFX_NRR_parliament_dot" position = { x = 366 y = 90 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_202" spriteType = "GFX_NRR_parliament_dot" position = { x = 357 y = 129 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_203" spriteType = "GFX_NRR_parliament_dot" position = { x = 373 y = 71 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_204" spriteType = "GFX_NRR_parliament_dot" position = { x = 367 y = 111 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_205" spriteType = "GFX_NRR_parliament_dot" position = { x = 375 y = 92 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_206" spriteType = "GFX_NRR_parliament_dot" position = { x = 382 y = 73 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_207" spriteType = "GFX_NRR_parliament_dot" position = { x = 348 y = 188 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_208" spriteType = "GFX_NRR_parliament_dot" position = { x = 354 y = 169 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_209" spriteType = "GFX_NRR_parliament_dot" position = { x = 360 y = 150 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_210" spriteType = "GFX_NRR_parliament_dot" position = { x = 366 y = 131 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_211" spriteType = "GFX_NRR_parliament_dot" position = { x = 376 y = 113 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_212" spriteType = "GFX_NRR_parliament_dot" position = { x = 390 y = 76 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_213" spriteType = "GFX_NRR_parliament_dot" position = { x = 384 y = 95 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_214" spriteType = "GFX_NRR_parliament_dot" position = { x = 375 y = 134 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_215" spriteType = "GFX_NRR_parliament_dot" position = { x = 369 y = 153 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_216" spriteType = "GFX_NRR_parliament_dot" position = { x = 398 y = 79 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_217" spriteType = "GFX_NRR_parliament_dot" position = { x = 362 y = 172 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_218" spriteType = "GFX_NRR_parliament_dot" position = { x = 385 y = 117 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_219" spriteType = "GFX_NRR_parliament_dot" position = { x = 393 y = 98 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_220" spriteType = "GFX_NRR_parliament_dot" position = { x = 356 y = 191 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_221" spriteType = "GFX_NRR_parliament_dot" position = { x = 407 y = 82 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_222" spriteType = "GFX_NRR_parliament_dot" position = { x = 384 y = 138 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_223" spriteType = "GFX_NRR_parliament_dot" position = { x = 401 y = 102 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_224" spriteType = "GFX_NRR_parliament_dot" position = { x = 394 y = 121 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_225" spriteType = "GFX_NRR_parliament_dot" position = { x = 377 y = 157 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_226" spriteType = "GFX_NRR_parliament_dot" position = { x = 415 y = 86 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_227" spriteType = "GFX_NRR_parliament_dot" position = { x = 370 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_228" spriteType = "GFX_NRR_parliament_dot" position = { x = 410 y = 106 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_229" spriteType = "GFX_NRR_parliament_dot" position = { x = 363 y = 194 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_230" spriteType = "GFX_NRR_parliament_dot" position = { x = 392 y = 142 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_231" spriteType = "GFX_NRR_parliament_dot" position = { x = 402 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_232" spriteType = "GFX_NRR_parliament_dot" position = { x = 422 y = 90 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_233" spriteType = "GFX_NRR_parliament_dot" position = { x = 385 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_234" spriteType = "GFX_NRR_parliament_dot" position = { x = 418 y = 111 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_235" spriteType = "GFX_NRR_parliament_dot" position = { x = 377 y = 180 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_236" spriteType = "GFX_NRR_parliament_dot" position = { x = 430 y = 95 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_237" spriteType = "GFX_NRR_parliament_dot" position = { x = 410 y = 130 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_238" spriteType = "GFX_NRR_parliament_dot" position = { x = 400 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_239" spriteType = "GFX_NRR_parliament_dot" position = { x = 369 y = 198 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_240" spriteType = "GFX_NRR_parliament_dot" position = { x = 425 y = 116 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_241" spriteType = "GFX_NRR_parliament_dot" position = { x = 437 y = 100 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_242" spriteType = "GFX_NRR_parliament_dot" position = { x = 393 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_243" spriteType = "GFX_NRR_parliament_dot" position = { x = 418 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_244" spriteType = "GFX_NRR_parliament_dot" position = { x = 408 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_245" spriteType = "GFX_NRR_parliament_dot" position = { x = 384 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_246" spriteType = "GFX_NRR_parliament_dot" position = { x = 445 y = 105 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_247" spriteType = "GFX_NRR_parliament_dot" position = { x = 433 y = 121 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_248" spriteType = "GFX_NRR_parliament_dot" position = { x = 400 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_249" spriteType = "GFX_NRR_parliament_dot" position = { x = 426 y = 141 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_250" spriteType = "GFX_NRR_parliament_dot" position = { x = 452 y = 110 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_251" spriteType = "GFX_NRR_parliament_dot" position = { x = 376 y = 203 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_252" spriteType = "GFX_NRR_parliament_dot" position = { x = 440 y = 127 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_253" spriteType = "GFX_NRR_parliament_dot" position = { x = 415 y = 158 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_254" spriteType = "GFX_NRR_parliament_dot" position = { x = 391 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_255" spriteType = "GFX_NRR_parliament_dot" position = { x = 458 y = 116 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_256" spriteType = "GFX_NRR_parliament_dot" position = { x = 433 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_257" spriteType = "GFX_NRR_parliament_dot" position = { x = 447 y = 133 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_258" spriteType = "GFX_NRR_parliament_dot" position = { x = 407 y = 177 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_259" spriteType = "GFX_NRR_parliament_dot" position = { x = 422 y = 164 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_260" spriteType = "GFX_NRR_parliament_dot" position = { x = 465 y = 122 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_261" spriteType = "GFX_NRR_parliament_dot" position = { x = 382 y = 208 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_262" spriteType = "GFX_NRR_parliament_dot" position = { x = 454 y = 139 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_263" spriteType = "GFX_NRR_parliament_dot" position = { x = 440 y = 154 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_264" spriteType = "GFX_NRR_parliament_dot" position = { x = 397 y = 196 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_265" spriteType = "GFX_NRR_parliament_dot" position = { x = 471 y = 128 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_266" spriteType = "GFX_NRR_parliament_dot" position = { x = 413 y = 183 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_267" spriteType = "GFX_NRR_parliament_dot" position = { x = 429 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_268" spriteType = "GFX_NRR_parliament_dot" position = { x = 460 y = 146 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_269" spriteType = "GFX_NRR_parliament_dot" position = { x = 446 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_270" spriteType = "GFX_NRR_parliament_dot" position = { x = 477 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_271" spriteType = "GFX_NRR_parliament_dot" position = { x = 387 y = 214 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_272" spriteType = "GFX_NRR_parliament_dot" position = { x = 403 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_273" spriteType = "GFX_NRR_parliament_dot" position = { x = 419 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_274" spriteType = "GFX_NRR_parliament_dot" position = { x = 466 y = 153 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_275" spriteType = "GFX_NRR_parliament_dot" position = { x = 435 y = 178 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_276" spriteType = "GFX_NRR_parliament_dot" position = { x = 483 y = 142 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_277" spriteType = "GFX_NRR_parliament_dot" position = { x = 452 y = 168 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_278" spriteType = "GFX_NRR_parliament_dot" position = { x = 488 y = 149 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_279" spriteType = "GFX_NRR_parliament_dot" position = { x = 472 y = 161 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_280" spriteType = "GFX_NRR_parliament_dot" position = { x = 440 y = 186 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_281" spriteType = "GFX_NRR_parliament_dot" position = { x = 424 y = 197 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_282" spriteType = "GFX_NRR_parliament_dot" position = { x = 408 y = 209 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_283" spriteType = "GFX_NRR_parliament_dot" position = { x = 458 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_284" spriteType = "GFX_NRR_parliament_dot" position = { x = 392 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_285" spriteType = "GFX_NRR_parliament_dot" position = { x = 493 y = 156 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_286" spriteType = "GFX_NRR_parliament_dot" position = { x = 477 y = 168 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_287" spriteType = "GFX_NRR_parliament_dot" position = { x = 445 y = 194 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_288" spriteType = "GFX_NRR_parliament_dot" position = { x = 463 y = 184 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_289" spriteType = "GFX_NRR_parliament_dot" position = { x = 497 y = 164 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_290" spriteType = "GFX_NRR_parliament_dot" position = { x = 429 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_291" spriteType = "GFX_NRR_parliament_dot" position = { x = 482 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_292" spriteType = "GFX_NRR_parliament_dot" position = { x = 412 y = 216 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_293" spriteType = "GFX_NRR_parliament_dot" position = { x = 396 y = 227 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_294" spriteType = "GFX_NRR_parliament_dot" position = { x = 502 y = 171 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_295" spriteType = "GFX_NRR_parliament_dot" position = { x = 467 y = 192 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_296" spriteType = "GFX_NRR_parliament_dot" position = { x = 450 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_297" spriteType = "GFX_NRR_parliament_dot" position = { x = 486 y = 185 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_298" spriteType = "GFX_NRR_parliament_dot" position = { x = 433 y = 213 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_299" spriteType = "GFX_NRR_parliament_dot" position = { x = 506 y = 179 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_300" spriteType = "GFX_NRR_parliament_dot" position = { x = 416 y = 224 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_301" spriteType = "GFX_NRR_parliament_dot" position = { x = 471 y = 201 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_302" spriteType = "GFX_NRR_parliament_dot" position = { x = 490 y = 193 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_303" spriteType = "GFX_NRR_parliament_dot" position = { x = 454 y = 210 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_304" spriteType = "GFX_NRR_parliament_dot" position = { x = 509 y = 187 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_305" spriteType = "GFX_NRR_parliament_dot" position = { x = 399 y = 234 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_306" spriteType = "GFX_NRR_parliament_dot" position = { x = 437 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_307" spriteType = "GFX_NRR_parliament_dot" position = { x = 493 y = 202 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_308" spriteType = "GFX_NRR_parliament_dot" position = { x = 475 y = 209 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_309" spriteType = "GFX_NRR_parliament_dot" position = { x = 513 y = 196 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_310" spriteType = "GFX_NRR_parliament_dot" position = { x = 419 y = 232 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_311" spriteType = "GFX_NRR_parliament_dot" position = { x = 457 y = 219 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_312" spriteType = "GFX_NRR_parliament_dot" position = { x = 515 y = 204 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_313" spriteType = "GFX_NRR_parliament_dot" position = { x = 496 y = 210 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_314" spriteType = "GFX_NRR_parliament_dot" position = { x = 440 y = 230 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_315" spriteType = "GFX_NRR_parliament_dot" position = { x = 478 y = 218 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_316" spriteType = "GFX_NRR_parliament_dot" position = { x = 402 y = 242 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_317" spriteType = "GFX_NRR_parliament_dot" position = { x = 460 y = 228 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_318" spriteType = "GFX_NRR_parliament_dot" position = { x = 518 y = 213 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_319" spriteType = "GFX_NRR_parliament_dot" position = { x = 499 y = 219 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_320" spriteType = "GFX_NRR_parliament_dot" position = { x = 422 y = 240 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_321" spriteType = "GFX_NRR_parliament_dot" position = { x = 481 y = 227 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_322" spriteType = "GFX_NRR_parliament_dot" position = { x = 442 y = 238 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_323" spriteType = "GFX_NRR_parliament_dot" position = { x = 520 y = 221 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_324" spriteType = "GFX_NRR_parliament_dot" position = { x = 501 y = 228 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_325" spriteType = "GFX_NRR_parliament_dot" position = { x = 462 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_326" spriteType = "GFX_NRR_parliament_dot" position = { x = 403 y = 249 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_327" spriteType = "GFX_NRR_parliament_dot" position = { x = 482 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_328" spriteType = "GFX_NRR_parliament_dot" position = { x = 522 y = 230 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_329" spriteType = "GFX_NRR_parliament_dot" position = { x = 424 y = 248 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_330" spriteType = "GFX_NRR_parliament_dot" position = { x = 503 y = 237 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_331" spriteType = "GFX_NRR_parliament_dot" position = { x = 444 y = 247 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_332" spriteType = "GFX_NRR_parliament_dot" position = { x = 464 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_333" spriteType = "GFX_NRR_parliament_dot" position = { x = 523 y = 239 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_334" spriteType = "GFX_NRR_parliament_dot" position = { x = 484 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_335" spriteType = "GFX_NRR_parliament_dot" position = { x = 504 y = 246 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_336" spriteType = "GFX_NRR_parliament_dot" position = { x = 405 y = 257 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_337" spriteType = "GFX_NRR_parliament_dot" position = { x = 524 y = 247 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_338" spriteType = "GFX_NRR_parliament_dot" position = { x = 425 y = 257 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_339" spriteType = "GFX_NRR_parliament_dot" position = { x = 445 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_340" spriteType = "GFX_NRR_parliament_dot" position = { x = 465 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_341" spriteType = "GFX_NRR_parliament_dot" position = { x = 485 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_342" spriteType = "GFX_NRR_parliament_dot" position = { x = 505 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_343" spriteType = "GFX_NRR_parliament_dot" position = { x = 525 y = 256 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_344" spriteType = "GFX_NRR_parliament_dot" position = { x = 405 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_345" spriteType = "GFX_NRR_parliament_dot" position = { x = 425 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_346" spriteType = "GFX_NRR_parliament_dot" position = { x = 445 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_347" spriteType = "GFX_NRR_parliament_dot" position = { x = 465 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_348" spriteType = "GFX_NRR_parliament_dot" position = { x = 485 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_349" spriteType = "GFX_NRR_parliament_dot" position = { x = 505 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+			iconType = { name = "NRR_house_dot_350" spriteType = "GFX_NRR_parliament_dot" position = { x = 525 y = 265 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+
+			# House Party Legend / Stats (Horizontal layout below dots)
+			instantTextBoxType = {
+				name = "NRR_house_dem_seats"
+				position = { x = 20 y = 295 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_DEM_SEATS_LABEL"
+				maxWidth = 200
+				maxHeight = 18
+			}
+			instantTextBoxType = {
+				name = "NRR_house_soc_seats"
+				position = { x = 230 y = 295 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_SOC_SEATS_LABEL"
+				maxWidth = 200
+				maxHeight = 18
+			}
+			instantTextBoxType = {
+				name = "NRR_house_peo_seats"
+				position = { x = 440 y = 295 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_PEO_SEATS_LABEL"
+				maxWidth = 200
+				maxHeight = 18
+			}
+			# Committee line in House (leaf widget so _visible works)
+			instantTextBoxType = {
+				name = "NRR_house_rec_seats"
+				position = { x = 20 y = 320 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_REC_SEATS_LABEL"
+				maxWidth = 350
+				maxHeight = 18
+			}
+			instantTextBoxType = {
+				name = "NRR_house_threshold_note"
+				position = { x = 20 y = 345 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_THRESHOLD_DESC"
+				maxWidth = 625
+				maxHeight = 20
+				format = center
+			}
+
+			# Head of Government Portrait & Name (Top Right of House Panel)
+			iconType = {
+				name = "NRR_leader_portrait"
+				spriteType = "GFX_NRR_parl_leader_xitan"
+				position = { x = 543 y = 18 }
+				scale = 0.72
+			}
+			iconType = {
+				name = "NRR_leader_portrait_frame"
+				spriteType = "GFX_NRR_parliament_portrait_frame"
+				position = { x = 540 y = 15 }
+				alwaystransparent = yes
+			}
+			instantTextBoxType = {
+				name = "NRR_head_of_gov_text"
+				position = { x = 524 y = 178 }
+				font = "hoi_16mbs"
+				text = "NRR_PARLIAMENT_HEAD_OF_GOV"
+				maxWidth = 150
+				maxHeight = 40
+				format = center
+			}
+		}
+
+		# ========================================================
+		#  BOTTOM PANEL: Legislation & Voting Console (y: 470-720)
+		# ========================================================
+		containerWindowType = {
+			name = "NRR_legislation_console"
+			position = { x = 25 y = 470 }
+			size = { width = 990 height = 245 }
+
+			# Active Bill Icon (Focus GFX)
+			iconType = {
+				name = "NRR_active_bill_icon"
+				spriteType = "GFX_goal_generic_positive_trade_relations"
+				position = { x = 20 y = 15 }
+			}
+
+			# Active Bill Title & Desc
+			instantTextBoxType = {
+				name = "NRR_active_bill_title"
+				position = { x = 120 y = 10 }
+				font = "hoi_20b"
+				text = "[Root.GetNRRActiveBillTitle]"
+				maxWidth = 500
+				maxHeight = 25
+			}
+			instantTextBoxType = {
+				name = "NRR_active_bill_desc"
+				position = { x = 120 y = 38 }
+				font = "hoi_16mbs"
+				text = "[Root.GetNRRActiveBillDesc]"
+				maxWidth = 500
+				maxHeight = 60
+			}
+
+			# Vote Projections & Bar (Right side of bill header)
+			iconType = {
+				name = "NRR_vote_progress_bar"
+				spriteType = "GFX_NRR_parliament_progress_bar"
+				position = { x = 670 y = 35 }
+			}
+			instantTextBoxType = {
+				name = "NRR_house_vote_projection"
+				position = { x = 650 y = 12 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_VOTE_PROJECTION_TEXT"
+				maxWidth = 320
+				maxHeight = 20
+				format = center
+			}
+			instantTextBoxType = {
+				name = "NRR_senate_vote_projection"
+				position = { x = 650 y = 56 }
+				font = "hoi_16mbs"
+				text = "[Root.GetNRRSenateVoteProjectionText]"
+				maxWidth = 320
+				maxHeight = 20
+				format = center
+			}
+
+			# ----------------------------------------------------
+			# Party Support Rates & Lobbying Buttons
+			# ----------------------------------------------------
+			# 1. Dem-Rep
+			instantTextBoxType = {
+				name = "NRR_support_dem_text"
+				position = { x = 20 y = 110 }
+				font = "hoi_16mbs"
+				text = "NRR_SUPPORT_DEM_TEXT"
+				maxWidth = 180
+				maxHeight = 20
+			}
+			buttonType = {
+				name = "NRR_lobby_dem_btn"
+				position = { x = 20 y = 135 }
+				quadTextureSprite = "GFX_NRR_parliament_btn"
+				buttonText = "NRR_LOBBY_DEM_BTN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_LOBBY_DEM_BTN_TT"
+				clicksound = click_default
+			}
+
+			# 2. Socialist
+			instantTextBoxType = {
+				name = "NRR_support_soc_text"
+				position = { x = 180 y = 110 }
+				font = "hoi_16mbs"
+				text = "NRR_SUPPORT_SOC_TEXT"
+				maxWidth = 180
+				maxHeight = 20
+			}
+			buttonType = {
+				name = "NRR_lobby_soc_btn"
+				position = { x = 180 y = 135 }
+				quadTextureSprite = "GFX_NRR_parliament_btn"
+				buttonText = "NRR_LOBBY_SOC_BTN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_LOBBY_SOC_BTN_TT"
+				clicksound = click_default
+			}
+
+			# 3. People's
+			instantTextBoxType = {
+				name = "NRR_support_peo_text"
+				position = { x = 340 y = 110 }
+				font = "hoi_16mbs"
+				text = "NRR_SUPPORT_PEO_TEXT"
+				maxWidth = 180
+				maxHeight = 20
+			}
+			buttonType = {
+				name = "NRR_lobby_peo_btn"
+				position = { x = 340 y = 135 }
+				quadTextureSprite = "GFX_NRR_parliament_btn"
+				buttonText = "NRR_LOBBY_PEO_BTN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_LOBBY_PEO_BTN_TT"
+				clicksound = click_default
+			}
+
+			# 4. Committee (Direct leaf widgets so _visible works)
+			instantTextBoxType = {
+				name = "NRR_support_rec_text"
+				position = { x = 500 y = 110 }
+				font = "hoi_16mbs"
+				text = "NRR_SUPPORT_REC_TEXT"
+				maxWidth = 160
+				maxHeight = 20
+			}
+			buttonType = {
+				name = "NRR_lobby_rec_btn"
+				position = { x = 500 y = 135 }
+				quadTextureSprite = "GFX_NRR_parliament_btn"
+				buttonText = "NRR_LOBBY_REC_BTN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_LOBBY_REC_BTN_TT"
+				clicksound = click_default
+			}
+
+			# 42-Day Vote Countdown Display (Right)
+			instantTextBoxType = {
+				name = "NRR_bill_countdown_text"
+				position = { x = 650 y = 135 }
+				font = "hoi_18mbs"
+				text = "[Root.GetNRRBillCountdownText]"
+				maxWidth = 320
+				maxHeight = 30
+				format = center
+			}
+		}
+	}
+
+	# ========================================================
+	#  SEPARATE TOP-LEVEL WINDOW: Senate Subwindow (50 Seats)
+	#  Attached to NRR_parliament_main_window via parent_window_name
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_senate_subwindow"
+		position = { x = 25 y = 60 }
+		size = { width = 310 height = 380 }
+
+		iconType = {
+			name = "NRR_senate_bg"
+			spriteType = "GFX_NRR_parliament_senate_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		instantTextBoxType = {
+			name = "NRR_senate_title"
+			position = { x = 15 y = 8 }
+			font = "hoi_18mbs"
+			text = "[Root.GetNRRSenateTitle]"
+			maxWidth = 280
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "NRR_senate_seats_summary"
+			position = { x = 15 y = 42 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_TOTAL_SEATS_TEXT"
+			maxWidth = 280
+			maxHeight = 20
+			format = center
+		}
+
+		# Senate 50 Dots (Sorted left-to-right by angle for sector wedges)
+		iconType = { name = "NRR_senate_dot_1" spriteType = "GFX_NRR_parliament_dot" position = { x = 95 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_2" spriteType = "GFX_NRR_parliament_dot" position = { x = 75 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_3" spriteType = "GFX_NRR_parliament_dot" position = { x = 55 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_4" spriteType = "GFX_NRR_parliament_dot" position = { x = 56 y = 189 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_5" spriteType = "GFX_NRR_parliament_dot" position = { x = 76 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_6" spriteType = "GFX_NRR_parliament_dot" position = { x = 97 y = 191 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_7" spriteType = "GFX_NRR_parliament_dot" position = { x = 60 y = 174 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_8" spriteType = "GFX_NRR_parliament_dot" position = { x = 81 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_9" spriteType = "GFX_NRR_parliament_dot" position = { x = 66 y = 160 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_10" spriteType = "GFX_NRR_parliament_dot" position = { x = 102 y = 178 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_11" spriteType = "GFX_NRR_parliament_dot" position = { x = 88 y = 163 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_12" spriteType = "GFX_NRR_parliament_dot" position = { x = 75 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_13" spriteType = "GFX_NRR_parliament_dot" position = { x = 111 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_14" spriteType = "GFX_NRR_parliament_dot" position = { x = 97 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_15" spriteType = "GFX_NRR_parliament_dot" position = { x = 86 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_16" spriteType = "GFX_NRR_parliament_dot" position = { x = 108 y = 143 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_17" spriteType = "GFX_NRR_parliament_dot" position = { x = 98 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_18" spriteType = "GFX_NRR_parliament_dot" position = { x = 122 y = 157 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_19" spriteType = "GFX_NRR_parliament_dot" position = { x = 112 y = 118 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_20" spriteType = "GFX_NRR_parliament_dot" position = { x = 121 y = 136 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_21" spriteType = "GFX_NRR_parliament_dot" position = { x = 136 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_22" spriteType = "GFX_NRR_parliament_dot" position = { x = 127 y = 113 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_23" spriteType = "GFX_NRR_parliament_dot" position = { x = 135 y = 131 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_24" spriteType = "GFX_NRR_parliament_dot" position = { x = 142 y = 110 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_25" spriteType = "GFX_NRR_parliament_dot" position = { x = 150 y = 150 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_26" spriteType = "GFX_NRR_parliament_dot" position = { x = 150 y = 130 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_27" spriteType = "GFX_NRR_parliament_dot" position = { x = 158 y = 110 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_28" spriteType = "GFX_NRR_parliament_dot" position = { x = 165 y = 131 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_29" spriteType = "GFX_NRR_parliament_dot" position = { x = 173 y = 113 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_30" spriteType = "GFX_NRR_parliament_dot" position = { x = 164 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_31" spriteType = "GFX_NRR_parliament_dot" position = { x = 179 y = 136 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_32" spriteType = "GFX_NRR_parliament_dot" position = { x = 188 y = 118 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_33" spriteType = "GFX_NRR_parliament_dot" position = { x = 178 y = 157 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_34" spriteType = "GFX_NRR_parliament_dot" position = { x = 202 y = 125 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_35" spriteType = "GFX_NRR_parliament_dot" position = { x = 192 y = 143 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_36" spriteType = "GFX_NRR_parliament_dot" position = { x = 214 y = 135 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_37" spriteType = "GFX_NRR_parliament_dot" position = { x = 189 y = 166 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_38" spriteType = "GFX_NRR_parliament_dot" position = { x = 203 y = 152 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_39" spriteType = "GFX_NRR_parliament_dot" position = { x = 225 y = 147 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_40" spriteType = "GFX_NRR_parliament_dot" position = { x = 212 y = 163 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_41" spriteType = "GFX_NRR_parliament_dot" position = { x = 198 y = 178 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_42" spriteType = "GFX_NRR_parliament_dot" position = { x = 234 y = 160 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_43" spriteType = "GFX_NRR_parliament_dot" position = { x = 219 y = 176 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_44" spriteType = "GFX_NRR_parliament_dot" position = { x = 240 y = 174 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_45" spriteType = "GFX_NRR_parliament_dot" position = { x = 203 y = 191 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_46" spriteType = "GFX_NRR_parliament_dot" position = { x = 224 y = 190 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_47" spriteType = "GFX_NRR_parliament_dot" position = { x = 244 y = 189 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_48" spriteType = "GFX_NRR_parliament_dot" position = { x = 205 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_49" spriteType = "GFX_NRR_parliament_dot" position = { x = 225 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+		iconType = { name = "NRR_senate_dot_50" spriteType = "GFX_NRR_parliament_dot" position = { x = 245 y = 205 } pdx_tooltip = "NRR_parliament_seat_dot_tt" }
+
+		# Senate Party Breakdown
+		instantTextBoxType = {
+			name = "NRR_senate_dem_seats"
+			position = { x = 20 y = 240 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_DEM_SEATS_LABEL"
+			maxWidth = 270
+			maxHeight = 18
+		}
+		instantTextBoxType = {
+			name = "NRR_senate_soc_seats"
+			position = { x = 20 y = 262 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_SOC_SEATS_LABEL"
+			maxWidth = 270
+			maxHeight = 18
+		}
+		instantTextBoxType = {
+			name = "NRR_senate_peo_seats"
+			position = { x = 20 y = 284 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_PEO_SEATS_LABEL"
+			maxWidth = 270
+			maxHeight = 18
+		}
+		# Committee line (leaf widget so _visible works)
+		instantTextBoxType = {
+			name = "NRR_senate_rec_seats"
+			position = { x = 20 y = 306 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_REC_SEATS_LABEL"
+			maxWidth = 270
+			maxHeight = 18
+		}
+		instantTextBoxType = {
+			name = "NRR_senate_threshold_note"
+			position = { x = 15 y = 336 }
+			font = "hoi_16mbs"
+			text = "NRR_SENATE_THRESHOLD_DESC"
+			maxWidth = 280
+			maxHeight = 20
+			format = center
+		}
+	}
+}

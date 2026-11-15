@@ -14,6 +14,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_neworder
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_ARG_chilean_ultimatum
 		x=9
 		y=0
@@ -33,6 +36,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_rebuild_declearation
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_rebuild_declearation
 		x=8
 		y=1
@@ -52,6 +58,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_dismiss_senate
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_dismiss_senate
 		x=10
 		y=1
@@ -71,6 +80,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_wait_calls
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_generic_conference
 		x=9
 		y=2
@@ -91,6 +103,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_theheart
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_MY
 		x=7
 		y=3
@@ -110,6 +125,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_thewarrior
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_thewarrior
 		x=9
 		y=3
@@ -129,6 +147,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_thecareerist
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_ASDS
 		x=11
 		y=3
@@ -148,6 +169,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_thecurtain_rises
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_TZM_leader
 		x=9
 		y=4
@@ -176,6 +200,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_thecivil_servant_system
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_thecivil_servant_system
 		x=1
 		y=5
@@ -195,6 +222,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_education
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_the_education
 		x=5
 		y=5
@@ -214,6 +244,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_parties
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_the_parties
 		x=9
 		y=5
@@ -233,6 +266,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_economy
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_the_economy
 		x=13
 		y=5
@@ -261,6 +297,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_people
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_the_people
 		x=17
 		y=5
@@ -280,6 +319,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_scalpel
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_scalpel
 		x=0
 		y=6
@@ -307,6 +349,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_broadsword
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_broadsword
 		x=2
 		y=6
@@ -334,6 +379,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Republican_morality
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Republican_morality
 		x=4
 		y=6
@@ -358,6 +406,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Revolutionary_morality
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Revolutionary_morality
 		x=6
 		y=6
@@ -382,6 +433,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Partisan_politics
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Partisan_politics
 		x=8
 		y=6
@@ -408,6 +462,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_The_Banality_of_Evil
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_The_Banality_of_Evil
 		x=10
 		y=6
@@ -433,6 +490,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Local_autonomous_economy
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Local_autonomous_economy
 		x=12
 		y=6
@@ -457,6 +517,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Centralized_economy
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Centralized_economy
 		x=14
 		y=6
@@ -481,6 +544,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_As_steady_as_usual
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_As_steady_as_usual
 		x=16
 		y=6
@@ -505,6 +571,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Temporary_patience
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Temporary_patience
 		x=18
 		y=6
@@ -529,6 +598,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_National_Supervision_Law
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_National_Supervision_Law
 		x=0
 		y=7
@@ -552,6 +624,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Independent_system
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Independent_system
 		x=2
 		y=7
@@ -574,6 +649,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_government_sponsored_teacher
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_government_sponsored_teacher
 		x=4
 		y=7
@@ -601,6 +679,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_commissar_transfers_to_school
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_commissar_transfers_to_school
 		x=6
 		y=7
@@ -626,6 +707,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_reorganize_DR
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_reorganize_DR
 		x=8
 		y=7
@@ -653,6 +737,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_liquidate_DR
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_liquidate_DR
 		x=10
 		y=7
@@ -680,6 +767,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Withdraw_from_light_industry
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Withdraw_from_light_industry
 		x=12
 		y=7
@@ -711,6 +801,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Centralized_development_plan
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Centralized_development_plan
 		x=14
 		y=7
@@ -742,6 +835,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Social_Insurance_Law
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Social_Insurance_Law
 		x=16
 		y=7
@@ -768,6 +864,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Food_rationing_system
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Food_rationing_system
 		x=18
 		y=7
@@ -794,6 +893,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Subsidy_Amendment
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Subsidy_Amendment
 		x=0
 		y=8
@@ -816,6 +918,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Ombudsman
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Ombudsman
 		x=2
 		y=8
@@ -838,6 +943,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Textbook_Management_Law
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Textbook_Management_Law
 		x=4
 		y=8
@@ -860,6 +968,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Statutes_of_public_institutions
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Statutes_of_public_institutions
 		x=6
 		y=8
@@ -882,6 +993,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Political_donation_management_law
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Political_donation_management_law
 		x=8
 		y=8
@@ -907,6 +1021,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Anti_Bribery_Election_Law
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Anti_Bribery_Election_Law
 		x=10
 		y=8
@@ -932,6 +1049,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Medium_Enterprise_Promotion_Act
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Medium_Enterprise_Promotion_Act
 		x=12
 		y=8
@@ -954,6 +1074,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Bureau_of_Commercial_Security
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Bureau_of_Commercial_Security
 		x=14
 		y=8
@@ -976,6 +1099,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Autonomous_funding_allocation_system
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Autonomous_funding_allocation_system
 		x=16
 		y=8
@@ -998,6 +1124,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Bureau_of_Public_Welfare_Planning
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Bureau_of_Public_Welfare_Planning
 		x=18
 		y=8
@@ -1020,6 +1149,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Mandalay_Declaration
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_AST_under_the_rule_of_canberra
 		x=23
 		y=0
@@ -1041,6 +1173,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_League_of_the_Just
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_League_of_the_Just
 		x=23
 		y=1
@@ -1060,6 +1195,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Proceed_south
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Proceed_south
 		x=23
 		y=2
@@ -1085,6 +1223,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_return_home_in_glory
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_return_home_in_glory
 		x=22
 		y=3
@@ -1114,6 +1255,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_return_home_in_battle
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_return_home_in_battle
 		x=24
 		y=3
@@ -1148,6 +1292,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Harmony_brings_wealth
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Harmony_brings_wealth
 		x=22
 		y=4
@@ -1168,6 +1315,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_not_to_be_interfered
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_not_to_be_interfered
 		x=24
 		y=4
@@ -1187,6 +1337,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_South_Asian_Unification
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_South_Asian_Unification
 		x=23
 		y=5
@@ -1226,6 +1379,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_to_the_world
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_to_the_world
 		x=23
 		y=6
@@ -1252,6 +1408,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Discipline_Inspection_Department
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Discipline_Inspection_Department
 		x=1
 		y=9
@@ -1281,6 +1440,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_School_Opening_Day_Speech
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_School_Opening_Day_Speech
 		x=5
 		y=9
@@ -1307,6 +1469,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Multi_party_joint_meeting
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Multi_party_joint_meeting
 		x=9
 		y=9
@@ -1332,6 +1497,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Quarterly_Financial_Report
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Quarterly_Financial_Report
 		x=13
 		y=9
@@ -1357,6 +1525,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Famine_Relief_Act
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Famine_Relief_Act
 		x=17
 		y=9
@@ -1382,6 +1553,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Dissolve_the_SNRC
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Dissolve_the_SNRC
 		x=3
 		y=10
@@ -1411,6 +1585,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_New_election
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_New_election
 		x=9
 		y=10
@@ -1440,6 +1617,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Farewell_Speech
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_Farewell_Speech
 		x=15
 		y=10
@@ -1468,6 +1648,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_back_to_normal_life
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_back_to_normal_life
 		x=9
 		y=12
@@ -1492,6 +1675,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_dream_comes_ture
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_dream_comes_ture
 		x=9
 		y=14
@@ -1512,6 +1698,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_War_Department
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_advanced_military_studies
 		x=30
 		y=0
@@ -1531,6 +1720,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Air_Force_Department
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_aircraft_production
 		x=34
 		y=0
@@ -1550,6 +1742,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Admiralty
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_battleship_guns
 		x=38
 		y=0
@@ -1569,6 +1764,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_new_night_raid
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon = GFX_goal_generic_special_forces
 		x=28
 		y=1
@@ -1590,6 +1788,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Army_air_force_integration
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_tank_air_support
 		x=32
 		y=1
@@ -1609,6 +1810,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_navy_air_force_Integration 
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_air_carrier
 		x=36
 		y=1
@@ -1628,6 +1832,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_The_Sea_Power_Theory
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_large_navy
 		x=40
 		y=1
@@ -1650,6 +1857,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Weapon_Modernization
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_tank_assault
 		x=28
 		y=2
@@ -1693,6 +1903,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Devolution_of_support_powers
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_armored_air_support
 		x=30
 		y=2
@@ -1711,6 +1924,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_improve_CAS
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_cas_aircraft
 		x=32
 		y=2
@@ -1739,6 +1955,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_company_core
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_army_attack
 		x=28
 		y=3
@@ -1766,6 +1985,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Improve_air_defense_weapons
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_PER_construct_air_defenses
 		x=30
 		y=3
@@ -1798,6 +2020,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Systematic_dive_bombing
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_multi_role_aircraft
 		x=32
 		y=3
@@ -1815,6 +2040,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_National_Aviation_Military_Academy
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_education
 		x=34
 		y=2
@@ -1832,6 +2060,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_improve_Naval_bomber
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_SWE_marauder_bombers
 		x=36
 		y=2
@@ -1859,6 +2090,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Drawing_on_foreign_airframes
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_generic_copy_plane_designs
 		x=34
 		y=3
@@ -1887,6 +2121,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Improved_shipborne_radar
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_goal_generic_radar
 		x=36
 		y=3
@@ -1913,6 +2150,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_unorthodox_approach
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_PHI_thats_not_an_island
 		x=38
 		y=2
@@ -1942,6 +2182,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Sea_Eagle
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon= GFX_focus_SMB_blue_water_fleet
 		x=38
 		y=3
@@ -1970,6 +2213,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Focus_on_submarine
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_generic_cruiser_submarines
 		x=40
 		y=2
@@ -1993,6 +2239,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_From_green_to_blue
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_SIA_use_ships_as_generators
 		x=40
 		y=3
@@ -2010,6 +2259,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_our_Army_world_army
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_PRC_immediate_response_to_lack_of_army
 		x=34
 		y=4
@@ -2035,6 +2287,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_Courtesy_before_force
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_generic_worker_expansion
 		x=32
 		y=5
@@ -2096,6 +2351,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_preemptive_strike
+		allow_branch = {
+			has_country_flag = NRR_TZM_revolution
+		}
 		icon=GFX_focus_generic_workers
 		x=36
 		y=5

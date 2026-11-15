@@ -1,0 +1,114 @@
+defined_text = {
+	name = GetNRRParliamentSystemType
+	text = {
+		trigger = {
+			has_country_flag = NRR_has_senate
+		}
+		localization_key = NRR_PARLIAMENT_SYSTEM_BICAMERAL
+	}
+	text = {
+		localization_key = NRR_PARLIAMENT_SYSTEM_UNICAMERAL
+	}
+}
+
+defined_text = {
+	name = GetNRRSenateTitle
+	text = {
+		trigger = {
+			has_country_flag = NRR_senate_is_committee
+		}
+		localization_key = NRR_SENATE_TITLE_COMMITTEE
+	}
+	text = {
+		localization_key = NRR_SENATE_TITLE_DEFAULT
+	}
+}
+
+defined_text = {
+	name = GetNRRSenateVoteProjectionText
+	text = {
+		trigger = {
+			has_country_flag = NRR_has_senate
+		}
+		localization_key = NRR_SENATE_VOTE_PROJECTION_ACTIVE
+	}
+	text = {
+		localization_key = NRR_SENATE_VOTE_PROJECTION_INACTIVE
+	}
+}
+
+defined_text = {
+	name = GetNRRActiveBillTitle
+	# 注意：带 trigger 的法案条目必须写在最前面，无 trigger 的默认“暂无提案”必须放在最后！
+	text = {
+		trigger = { check_variable = { NRR_active_bill_id = 1 } }
+		localization_key = NRR_BILL_1_TITLE
+	}
+	text = {
+		localization_key = NRR_BILL_NONE_TITLE
+	}
+}
+
+defined_text = {
+	name = GetNRRActiveBillDesc
+	# 注意：带 trigger 的法案条目必须写在最前面，无 trigger 的默认“暂无提案”必须放在最后！
+	text = {
+		trigger = { check_variable = { NRR_active_bill_id = 1 } }
+		localization_key = NRR_BILL_1_DESC
+	}
+	text = {
+		localization_key = NRR_BILL_NONE_DESC
+	}
+}
+
+defined_text = {
+	name = GetNRRBillCountdownText
+	text = {
+		trigger = {
+			has_country_flag = NRR_has_active_bill
+		}
+		localization_key = NRR_BILL_COUNTDOWN_ACTIVE
+	}
+	text = {
+		localization_key = NRR_BILL_COUNTDOWN_IDLE
+	}
+}
+
+defined_text = {
+	name = GetNRRLeaderPortrait
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_xitan } }
+		localization_key = GFX_NRR_parl_leader_xitan
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_TZM } }
+		localization_key = GFX_NRR_parl_leader_TZM
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_chitong } }
+		localization_key = GFX_NRR_parl_leader_chitong
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_LBK } }
+		localization_key = GFX_NRR_parl_leader_LBK
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_LON } }
+		localization_key = GFX_NRR_parl_leader_LON
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_MY } }
+		localization_key = GFX_NRR_parl_leader_MY
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_QEX } }
+		localization_key = GFX_NRR_parl_leader_QEX
+	}
+	text = {
+		trigger = { has_country_leader = { ruling_only = yes character = NRR_XE } }
+		localization_key = GFX_NRR_parl_leader_XE
+	}
+	text = {
+		localization_key = GFX_NRR_parl_leader_xitan
+	}
+}

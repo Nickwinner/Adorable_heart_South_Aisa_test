@@ -6,10 +6,7 @@ state={
 	history = {
 		owner = NRR
 		add_core_of = NRR
-		add_to_array = { state_victory_points = 4883 }
-		add_to_array = { state_victory_points = 10030 }
-		victory_points = { 4883 2 }  ##那格浦尔
-		victory_points = { 10030 1 }  ##阿恰尔普尔
+		victory_points = { 7430 5 }
 		buildings = {
 			industrial_complex = 1
 			arms_factory = 1

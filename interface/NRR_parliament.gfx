@@ -1,0 +1,95 @@
+spriteTypes = {
+
+	# Parliament Background Window
+	spriteType = {
+		name = "GFX_NRR_parliament_bg"
+		texturefile = "gfx/interface/parliament/NRR_parliament_bg.dds"
+	}
+
+	# Senate Subwindow Background
+	spriteType = {
+		name = "GFX_NRR_parliament_senate_bg"
+		texturefile = "gfx/interface/parliament/NRR_parliament_senate_bg.dds"
+	}
+
+	# 5-Frame Parliament Dot (1: Dem-Rep, 2: Socialist, 3: People's/Grey, 4: Committee/Crimson, 5: Vacant/Outline)
+	spriteType = {
+		name = "GFX_NRR_parliament_dot"
+		texturefile = "gfx/interface/parliament/NRR_parliament_dot.dds"
+		noOfFrames = 5
+	}
+
+	# Entrance button on the right sidebar (above crosshair)
+	spriteType = {
+		name = "GFX_NRR_parliament_open_btn"
+		texturefile = "gfx/interface/parliament/NRR_parliament_open_btn.dds"
+		noOfFrames = 2
+	}
+
+	# Generic Cool Dark Button
+	spriteType = {
+		name = "GFX_NRR_parliament_btn"
+		texturefile = "gfx/interface/parliament/NRR_parliament_btn.dds"
+		noOfFrames = 2
+	}
+
+	# Call For Vote Gold Accent Button
+	spriteType = {
+		name = "GFX_NRR_parliament_btn_gold"
+		texturefile = "gfx/interface/parliament/NRR_parliament_btn_gold.dds"
+		noOfFrames = 2
+	}
+
+	# Vote Progress Bar
+	progressbartype = {
+		name = "GFX_NRR_parliament_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/parliament/NRR_parliament_progress_bar.dds"
+		textureFile2 = "gfx/interface/parliament/NRR_parliament_progress_bar_bg.dds"
+		size = { x = 280 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	# Leader Portrait Frame
+	spriteType = {
+		name = "GFX_NRR_parliament_portrait_frame"
+		texturefile = "gfx/interface/parliament/NRR_parliament_portrait_frame.dds"
+	}
+
+	# NRR Country Leader Portraits
+	spriteType = {
+		name = "GFX_NRR_parl_leader_xitan"
+		texturefile = "gfx/leaders/NRR/Najenda_alternate.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_TZM"
+		texturefile = "gfx/leaders/NRR/Tatsumi_alternate_1.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_chitong"
+		texturefile = "gfx/leaders/NRR/Akame_alternate_3.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_LBK"
+		texturefile = "gfx/leaders/NRR/LBK.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_LON"
+		texturefile = "gfx/leaders/NRR/Leone.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_MY"
+		texturefile = "gfx/leaders/NRR/GFX_NRR_MY.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_QEX"
+		texturefile = "gfx/leaders/NRR/Chelsea.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_parl_leader_XE"
+		texturefile = "gfx/leaders/NRR/XE.dds"
+	}
+
+}

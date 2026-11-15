@@ -10,6 +10,9 @@ focus_tree={
 	default=no
 	focus={
 		id=NRR_the_consititution
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_AUS_lawmaking_leniency
 		x=6
 		y=0
@@ -32,6 +35,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_old_man
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_BRA_free_prestes
 		x=6
 		y=1
@@ -51,6 +57,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_we_need_to_choose
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_ARG_the_buenos_aires_conference
 		x=6
 		y=2
@@ -70,6 +79,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_fate_come
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_AFG_secure_dynasty
 		x=6
 		y=3
@@ -97,6 +109,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_anti_corruption
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_ARG_anti_corruption_policies
 		x=0
 		y=3
@@ -118,6 +133,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_lock_them_down
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_ARG_crackdown_on_corruption
 		x=2
 		y=3
@@ -137,6 +155,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_of_the_people
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_BRA_ethical_internationalism
 		x=4
 		y=3
@@ -156,6 +177,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_new_problem_comes
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_ARG_balancing_act
 		x=12
 		y=3
@@ -177,6 +201,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_replace_or_respect
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_BEL_government_resigns
 		x=10
 		y=3
@@ -196,6 +223,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_cold_market
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_BRA_coffee_crisis
 		x=8
 		y=3
@@ -215,6 +245,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_our_new_man
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_ARG_strengthening_the_concordancia
 		x=6
 		y=6
@@ -237,6 +270,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_little_train
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_BEL_engine_of_the_economy
 		x=6
 		y=5
@@ -256,6 +292,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_great_hope_down
+		allow_branch = {
+			has_country_flag = NRR_fate_crossroad
+		}
 		icon=GFX_focus_eng_move_to_secure_the_dominions
 		x=6
 		y=4

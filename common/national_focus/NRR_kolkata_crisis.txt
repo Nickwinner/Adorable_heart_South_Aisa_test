@@ -13,6 +13,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_total_crisis
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon= GFX_focus_SWE_organize_a_putsch
 		x=9
 		y=0
@@ -34,6 +37,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_tough_decision
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_red_in_the_shadows
 		x=9
 		y=1
@@ -53,6 +59,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_worst_plan
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_military_into_the_workforce
 		x=9
 		y=2
@@ -72,6 +81,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_loading_shells
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_mountain_guns
 		x=9
 		y=3
@@ -97,6 +109,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_endgame
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_declare_military_emergency
 		x=9
 		y=4
@@ -132,6 +147,7 @@ focus_tree={
 		}
 		allow_branch = {
 			has_country_flag = NRR_waves_message
+			has_country_flag = NRR_kolkata_crisis
 		}
 		completion_reward={
 			country_event={ 
@@ -141,6 +157,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_enemy_of_my_enemy
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_seek_allies_with_the_muslim_league
 		x=2
 		y=4
@@ -160,6 +179,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_pyrrhic_victory
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_i_shall_return
 		x=9
 		y=5
@@ -185,6 +207,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_quick_and_clean
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_kingmaker
 		x=0
 		y=6
@@ -210,6 +235,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_loyalty_and_friendship
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PER_strengthen_the_tudeh
 		x=4
 		y=6
@@ -235,6 +263,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_back_to_home
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_SWE_form_rfsu
 		x=0
 		y=7
@@ -254,6 +285,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_a_tough_woman
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_LAT_suspend_constitution_of_latvia
 		x=4
 		y=7
@@ -273,6 +307,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_the_real_goodbye
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PRC_petition_for_freedom
 		x=0
 		y=8
@@ -292,6 +329,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_chains_forever
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_anti_hacendados
 		x=4
 		y=8
@@ -311,6 +351,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_have_a_nice_day
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_utang_na_loob
 		x=2
 		y=10
@@ -331,6 +374,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_determined_to_win
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_bill_of_rights_for_veterans
 		x=2
 		y=5
@@ -376,6 +422,7 @@ focus_tree={
 		allow_branch = {
 			has_idea = NRR_gmjzh_1
 			has_country_flag = NRR_ANR_annexed
+			has_country_flag = NRR_kolkata_crisis
 		}
 		completion_reward={
 			country_event={ 
@@ -399,6 +446,7 @@ focus_tree={
 		allow_branch = {
 			has_idea = NRR_gmjzh_2
 			has_country_flag = NRR_ANR_annexed
+			has_country_flag = NRR_kolkata_crisis
 		}
 		completion_reward={
 			custom_effect_tooltip = NRR_you_already_know_what_you_done
@@ -406,6 +454,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_and_our_people
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_generic_immigration
 		x=7
 		y=7
@@ -439,6 +490,7 @@ focus_tree={
 		allow_branch = {
 			has_idea = NRR_gmjzh_1
 			has_country_flag = NRR_ANR_annexed
+			has_country_flag = NRR_kolkata_crisis
 		}
 		completion_reward={
 			country_event={ 
@@ -448,6 +500,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_safe_return
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_SWE_form_rfsu
 		x=7
 		y=8
@@ -467,6 +522,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_weak_trust
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_generic_whispers
 		x=11
 		y=7
@@ -486,6 +544,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_victorious_but_defeated
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_ITA_topple_amhara_rulers
 		x=11
 		y=8
@@ -505,6 +566,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_nothing_to_reply
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_PHI_the_red_sun_over_manila
 		x=9
 		y=10
@@ -525,6 +589,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_my_dear
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_JAP_revoke_the_peace_preservation_law
 		x=16
 		y=7
@@ -545,6 +612,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_my_dream
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_GER_end_european_communism
 		x=16
 		y=8
@@ -564,6 +634,9 @@ focus_tree={
 	}
 	focus={
 		id=NRR_all_of_them_broken
+		allow_branch = {
+			has_country_flag = NRR_kolkata_crisis
+		}
 		icon=GFX_focus_RAJ_a_private_military
 		x=16
 		y=10

@@ -1,0 +1,71 @@
+﻿l_simp_chinese:
+  # ========================================================
+  #  NRR Parliament Localisation (恒河最高立法机构)
+  # ========================================================
+
+  # 侧边栏准心上方入口按钮
+  NRR_parliament_open_btn_tt:0 "§Y恒河国民议会与两院政局§!"
+  NRR_parliament_open_btn_desc:0 "点击呼出/关闭恒河共和国的立法机构、各派系席位分布、正在审议的法案议程及表决情况。"
+
+  # 标题与体制
+  NRR_PARLIAMENT_MAIN_TITLE:0 "§Y恒河共和国 · 最高立法机构§!"
+  NRR_PARLIAMENT_SYSTEM_BICAMERAL:0 "§O当前体制：两院制代议机关§!"
+  NRR_PARLIAMENT_SYSTEM_UNICAMERAL:0 "§C当前体制：一院制国民议会§!"
+  NRR_PARLIAMENT_HEAD_OF_GOV:0 "§Y政府首脑：§![Root.GetLeader]"
+
+  # 参议院 (左侧)
+  NRR_SENATE_TITLE_DEFAULT:0 "§O恒河参议院§!"
+  NRR_SENATE_TITLE_COMMITTEE:0 "§R国家重建委员会§!"
+  NRR_SENATE_TOTAL_SEATS_TEXT:0 "法定议席：§Y50§! 席 (过半及格线: §G26§!)"
+  NRR_SENATE_DEM_SEATS_LABEL:0 "§C民主共和党:§! [?NRR_sen_seats_dem|0] 席"
+  NRR_SENATE_SOC_SEATS_LABEL:0 "§r恒河社会党:§! [?NRR_sen_seats_soc|0] 席"
+  NRR_SENATE_PEO_SEATS_LABEL:0 "§g恒河人民党:§! [?NRR_sen_seats_peo|0] 席"
+  NRR_SENATE_REC_SEATS_LABEL:0 "§R国家重建委员会:§! [?NRR_sen_seats_rec|0] 席"
+  NRR_SENATE_THRESHOLD_DESC:0 "§7参议院拥有法案审议与复核否决权§!"
+
+  # 国民议会 / 众议院 (右侧)
+  NRR_HOUSE_TITLE:0 "§C恒河国民议会 (众议院)§!"
+  NRR_HOUSE_TOTAL_SEATS_TEXT:0 "法定议席：§Y350§! 席 (多数过半及格线: §G176§!)"
+  NRR_HOUSE_DEM_SEATS_LABEL:0 "§C民主共和党:§! [?NRR_seats_dem|0] 席"
+  NRR_HOUSE_SOC_SEATS_LABEL:0 "§r恒河社会党:§! [?NRR_seats_soc|0] 席"
+  NRR_HOUSE_PEO_SEATS_LABEL:0 "§g恒河人民党:§! [?NRR_seats_peo|0] 席"
+  NRR_HOUSE_REC_SEATS_LABEL:0 "§R国家重建委员会:§! [?NRR_seats_rec|0] 席"
+  NRR_HOUSE_THRESHOLD_DESC:0 "§7法案必须在国民议会获得至少 176 票赞成方可通过§!"
+
+  # 席位点阵通用悬停提示
+  NRR_parliament_seat_dot_tt:0 "§Y议席分布座次§!\n§C天青蓝：民主共和党§!\n§r浅红：社会党§!\n§g灰色：人民党§!\n§R正红：国家重建委员会§!\n§8灰色外圈：空席/未分配§!"
+
+  # 法案审议与表决
+  NRR_BILL_NONE_TITLE:0 "《暂无正在审议的法案》"
+  NRR_BILL_NONE_DESC:0 "议会目前处于例行质询期，请等待下一阶段立法议程开启。"
+  NRR_BILL_COUNTDOWN_ACTIVE:0 "§Y距离终局表决：§! §G[?NRR_bill_days_left|0]§! 天"
+  NRR_BILL_COUNTDOWN_IDLE:0 "§7当前无表决日程§!"
+
+  # 预计票数
+  NRR_HOUSE_VOTE_PROJECTION_TEXT:0 "众议院预计赞成：§Y[?NRR_house_yes_votes|0]§! / 350 (需 §G176§!)"
+  NRR_SENATE_VOTE_PROJECTION_ACTIVE:0 "参议院预计赞成：§Y[?NRR_senate_yes_votes|0]§! / 50 (需 §G26§!)"
+  NRR_SENATE_VOTE_PROJECTION_INACTIVE:0 "§7参议院：已休会 / 一院制体制§!"
+
+  # 党派支持数与游说按钮
+  NRR_SUPPORT_DEM_TEXT:0 "§C民共党赞成:§! §Y[?NRR_bill_yes_dem|0]§! / [?NRR_seats_dem|0]"
+  NRR_LOBBY_DEM_BTN_TEXT:0 "§C游说民共党§!"
+  NRR_LOBBY_DEM_BTN_TT:0 "§Y游说民主共和党议员§!\n花费：£pol_power §R20§!\n效果：§G5§! 名民主共和党成员开始支持该议案"
+
+  NRR_SUPPORT_SOC_TEXT:0 "§r社会党赞成:§! §Y[?NRR_bill_yes_soc|0]§! / [?NRR_seats_soc|0]"
+  NRR_LOBBY_SOC_BTN_TEXT:0 "§r拉拢社会党§!"
+  NRR_LOBBY_SOC_BTN_TT:0 "§Y拉拢恒河社会党议员§!\n花费：£pol_power §R25§!\n效果：§G5§! 名恒河社会党成员开始支持该议案"
+
+  NRR_SUPPORT_PEO_TEXT:0 "§g人民党赞成:§! §Y[?NRR_bill_yes_peo|0]§! / [?NRR_seats_peo|0]"
+  NRR_LOBBY_PEO_BTN_TEXT:0 "§g施压人民党§!"
+  NRR_LOBBY_PEO_BTN_TT:0 "§Y向恒河人民党施加政治压力§!\n花费：£pol_power §R30§!\n效果：§G5§! 名恒河人民党成员开始支持该议案"
+
+  NRR_SUPPORT_REC_TEXT:0 "§R委员会赞成:§! §Y[?NRR_bill_yes_rec|0]§! / [?NRR_seats_rec|0]"
+  NRR_LOBBY_REC_BTN_TEXT:0 "§R协调委员会§!"
+  NRR_LOBBY_REC_BTN_TT:0 "§Y协调国家重建委员会§!\n花费：£pol_power §R25§!\n效果：§G5§! 名国家重建委员会成员开始支持该议案"
+
+  # 表决结算提示
+  NRR_call_vote_resolution_tt:0 "两院正在进行最终点票与法案裁决..."
+
+  #法案
+  NRR_BILL_1_TITLE:0 "《你的法案名称》"
+  NRR_BILL_1_DESC:0 "这里写你的法案背景和内容描述。"

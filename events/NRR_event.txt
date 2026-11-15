@@ -296,20 +296,25 @@ country_event = {
 	fire_only_once = yes
 
 	option = {
-	    name = NRR.event.8.a
+		name = NRR.event.8.a
+		hidden_effect ={
+	        MOE = {
 
-		set_autonomy = {
-		    target = ANR
-		    autonomy_state = autonomy_dominion
-	        }
-			set_state_owner = 887
-			set_state_owner = 888
-			set_state_owner = 435
-			set_state_owner = 323
-			add_state_core = 887
-			add_state_core = 888
-			add_state_core = 435
-			add_state_core = 323
+                1237 = { add_core_of = ANR }
+                1238 = { add_core_of = ANR }
+                443 = { add_core_of = ANR }
+                1261 = { add_core_of = ANR }
+
+                release_puppet = ANR
+                end_puppet = ANR
+            }
+            NRR = {
+                set_autonomy = {
+                    target = ANR
+                    autonomy_state = autonomy_dominion
+                }
+            }
+		}
 	}
 }
 country_event = {
@@ -324,21 +329,30 @@ country_event = {
 	    name = NRR.event.9.a
 
 		set_cosmetic_tag = NRR_RP
+		clr_country_flag = NRR_start_focus
+		set_country_flag = NRR_fate_crossroad
+		mark_focus_tree_layout_dirty = yes
 		add_stability = 0.05
 	}
 	option = {
 	    name = NRR.event.9.b
 
 		set_cosmetic_tag = NRR_DRP
+		clr_country_flag = NRR_start_focus
+		set_country_flag = NRR_fate_crossroad
+		mark_focus_tree_layout_dirty = yes
 		add_popularity = { 
 				ideology = democratic
 				popularity = 0.1
-			}
+		}
 	}
 	option = {
 	    name = NRR.event.9.c
 
 		set_cosmetic_tag = NRR_RRP
+		clr_country_flag = NRR_start_focus
+		set_country_flag = NRR_fate_crossroad
+		mark_focus_tree_layout_dirty = yes
 		add_popularity = { 
 				ideology = democratic
 				popularity = 0.05
@@ -352,6 +366,9 @@ country_event = {
 	    name = NRR.event.9.d
 
 		set_cosmetic_tag = NRR_WPRP
+		clr_country_flag = NRR_start_focus
+		set_country_flag = NRR_fate_crossroad
+		mark_focus_tree_layout_dirty = yes
 		add_popularity = { 
 				ideology = communism
 				popularity = 0.1
@@ -861,6 +878,10 @@ country_event = {
 	option = {
 	    name = NRR.event.35.a
 
+		clr_country_flag = NRR_fate_crossroad
+		set_country_flag = NRR_TZM_revolution
+		mark_focus_tree_layout_dirty = yes
+
 		set_party_name = { 
 				ideology = communism 
 				long_name =  Rebuild_committee_long
@@ -877,7 +898,6 @@ country_event = {
 
 		set_variable = { adorable_heart_super_event_var = 201 }
 		adorable_heart_fire_super_event = yes
-		load_focus_tree = NRR_TZM_revolution
 	}
 }
 
@@ -1926,8 +1946,11 @@ country_event = {  #第一天 加尔各答
 
 	option = {
 	    name = NRR.event.87.a
+		clr_country_flag = NRR_TZM_revolution
+		set_country_flag = NRR_kolkata_crisis
+		mark_focus_tree_layout_dirty = yes
 
-		load_focus_tree = NRR_kolkata_crisis
+
 		NRR = {
 				set_autonomy = {
 					target = ANR

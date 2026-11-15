@@ -1,0 +1,530 @@
+scripted_gui = {
+
+	# ========================================================
+	#  Entrance Button GUI on the Right Sidebar
+	# ========================================================
+	NRR_parliament_open_gui = {
+		context_type = player_context
+		window_name = "NRR_parliament_open_window"
+
+		visible = {
+			tag = NRR
+			has_country_flag = NRR_national_parliament
+		}
+
+		effects = {
+			NRR_parliament_open_btn_click = {
+				if = {
+					limit = { has_country_flag = NRR_parliament_window_open }
+					clr_country_flag = NRR_parliament_window_open
+				}
+				else = {
+					set_country_flag = NRR_parliament_window_open
+					NRR_init_parliament_if_needed = yes
+					NRR_calculate_parliament_all = yes
+				}
+			}
+		}
+	}
+
+	# ========================================================
+	#  Main Parliament Window GUI (House + Legislation Console)
+	# ========================================================
+	NRR_parliament_main_gui = {
+		context_type = player_context
+		window_name = "NRR_parliament_main_window"
+
+		visible = {
+			tag = NRR
+			has_country_flag = NRR_national_parliament
+			has_country_flag = NRR_parliament_window_open
+		}
+
+		triggers = {
+			# Hide bill icon when no bill is active (recess)
+			NRR_active_bill_icon_visible = {
+				has_country_flag = NRR_has_active_bill
+			}
+			# Committee leaf elements (only shown after committee flag is set)
+			NRR_house_rec_seats_visible = {
+				has_country_flag = NRR_senate_is_committee
+			}
+			NRR_support_rec_text_visible = {
+				has_country_flag = NRR_senate_is_committee
+			}
+			NRR_lobby_rec_btn_visible = {
+				has_country_flag = NRR_senate_is_committee
+			}
+			# Lobby buttons enabled condition
+			NRR_lobby_dem_btn_click_enabled = {
+				has_country_flag = NRR_has_active_bill
+				has_political_power > 19
+				check_variable = { NRR_bill_yes_dem < NRR_seats_dem }
+			}
+			NRR_lobby_soc_btn_click_enabled = {
+				has_country_flag = NRR_has_active_bill
+				has_political_power > 24
+				check_variable = { NRR_bill_yes_soc < NRR_seats_soc }
+			}
+			NRR_lobby_peo_btn_click_enabled = {
+				has_country_flag = NRR_has_active_bill
+				has_political_power > 29
+				check_variable = { NRR_bill_yes_peo < NRR_seats_peo }
+			}
+			NRR_lobby_rec_btn_click_enabled = {
+				has_country_flag = NRR_has_active_bill
+				has_political_power > 24
+				check_variable = { NRR_bill_yes_rec < NRR_seats_rec }
+			}
+		}
+
+		effects = {
+			NRR_parliament_close_btn_click = {
+				clr_country_flag = NRR_parliament_window_open
+			}
+			NRR_lobby_dem_btn_click = {
+				NRR_lobby_dem_effect = yes
+			}
+			NRR_lobby_soc_btn_click = {
+				NRR_lobby_soc_effect = yes
+			}
+			NRR_lobby_peo_btn_click = {
+				NRR_lobby_peo_effect = yes
+			}
+			NRR_lobby_rec_btn_click = {
+				NRR_lobby_rec_effect = yes
+			}
+		}
+
+		properties = {
+			NRR_leader_portrait = { image = "[Root.GetNRRLeaderPortrait]" }
+			# House 350 Dots
+			NRR_house_dot_1 = { frame = NRR_house_dots^0 }
+			NRR_house_dot_2 = { frame = NRR_house_dots^1 }
+			NRR_house_dot_3 = { frame = NRR_house_dots^2 }
+			NRR_house_dot_4 = { frame = NRR_house_dots^3 }
+			NRR_house_dot_5 = { frame = NRR_house_dots^4 }
+			NRR_house_dot_6 = { frame = NRR_house_dots^5 }
+			NRR_house_dot_7 = { frame = NRR_house_dots^6 }
+			NRR_house_dot_8 = { frame = NRR_house_dots^7 }
+			NRR_house_dot_9 = { frame = NRR_house_dots^8 }
+			NRR_house_dot_10 = { frame = NRR_house_dots^9 }
+			NRR_house_dot_11 = { frame = NRR_house_dots^10 }
+			NRR_house_dot_12 = { frame = NRR_house_dots^11 }
+			NRR_house_dot_13 = { frame = NRR_house_dots^12 }
+			NRR_house_dot_14 = { frame = NRR_house_dots^13 }
+			NRR_house_dot_15 = { frame = NRR_house_dots^14 }
+			NRR_house_dot_16 = { frame = NRR_house_dots^15 }
+			NRR_house_dot_17 = { frame = NRR_house_dots^16 }
+			NRR_house_dot_18 = { frame = NRR_house_dots^17 }
+			NRR_house_dot_19 = { frame = NRR_house_dots^18 }
+			NRR_house_dot_20 = { frame = NRR_house_dots^19 }
+			NRR_house_dot_21 = { frame = NRR_house_dots^20 }
+			NRR_house_dot_22 = { frame = NRR_house_dots^21 }
+			NRR_house_dot_23 = { frame = NRR_house_dots^22 }
+			NRR_house_dot_24 = { frame = NRR_house_dots^23 }
+			NRR_house_dot_25 = { frame = NRR_house_dots^24 }
+			NRR_house_dot_26 = { frame = NRR_house_dots^25 }
+			NRR_house_dot_27 = { frame = NRR_house_dots^26 }
+			NRR_house_dot_28 = { frame = NRR_house_dots^27 }
+			NRR_house_dot_29 = { frame = NRR_house_dots^28 }
+			NRR_house_dot_30 = { frame = NRR_house_dots^29 }
+			NRR_house_dot_31 = { frame = NRR_house_dots^30 }
+			NRR_house_dot_32 = { frame = NRR_house_dots^31 }
+			NRR_house_dot_33 = { frame = NRR_house_dots^32 }
+			NRR_house_dot_34 = { frame = NRR_house_dots^33 }
+			NRR_house_dot_35 = { frame = NRR_house_dots^34 }
+			NRR_house_dot_36 = { frame = NRR_house_dots^35 }
+			NRR_house_dot_37 = { frame = NRR_house_dots^36 }
+			NRR_house_dot_38 = { frame = NRR_house_dots^37 }
+			NRR_house_dot_39 = { frame = NRR_house_dots^38 }
+			NRR_house_dot_40 = { frame = NRR_house_dots^39 }
+			NRR_house_dot_41 = { frame = NRR_house_dots^40 }
+			NRR_house_dot_42 = { frame = NRR_house_dots^41 }
+			NRR_house_dot_43 = { frame = NRR_house_dots^42 }
+			NRR_house_dot_44 = { frame = NRR_house_dots^43 }
+			NRR_house_dot_45 = { frame = NRR_house_dots^44 }
+			NRR_house_dot_46 = { frame = NRR_house_dots^45 }
+			NRR_house_dot_47 = { frame = NRR_house_dots^46 }
+			NRR_house_dot_48 = { frame = NRR_house_dots^47 }
+			NRR_house_dot_49 = { frame = NRR_house_dots^48 }
+			NRR_house_dot_50 = { frame = NRR_house_dots^49 }
+			NRR_house_dot_51 = { frame = NRR_house_dots^50 }
+			NRR_house_dot_52 = { frame = NRR_house_dots^51 }
+			NRR_house_dot_53 = { frame = NRR_house_dots^52 }
+			NRR_house_dot_54 = { frame = NRR_house_dots^53 }
+			NRR_house_dot_55 = { frame = NRR_house_dots^54 }
+			NRR_house_dot_56 = { frame = NRR_house_dots^55 }
+			NRR_house_dot_57 = { frame = NRR_house_dots^56 }
+			NRR_house_dot_58 = { frame = NRR_house_dots^57 }
+			NRR_house_dot_59 = { frame = NRR_house_dots^58 }
+			NRR_house_dot_60 = { frame = NRR_house_dots^59 }
+			NRR_house_dot_61 = { frame = NRR_house_dots^60 }
+			NRR_house_dot_62 = { frame = NRR_house_dots^61 }
+			NRR_house_dot_63 = { frame = NRR_house_dots^62 }
+			NRR_house_dot_64 = { frame = NRR_house_dots^63 }
+			NRR_house_dot_65 = { frame = NRR_house_dots^64 }
+			NRR_house_dot_66 = { frame = NRR_house_dots^65 }
+			NRR_house_dot_67 = { frame = NRR_house_dots^66 }
+			NRR_house_dot_68 = { frame = NRR_house_dots^67 }
+			NRR_house_dot_69 = { frame = NRR_house_dots^68 }
+			NRR_house_dot_70 = { frame = NRR_house_dots^69 }
+			NRR_house_dot_71 = { frame = NRR_house_dots^70 }
+			NRR_house_dot_72 = { frame = NRR_house_dots^71 }
+			NRR_house_dot_73 = { frame = NRR_house_dots^72 }
+			NRR_house_dot_74 = { frame = NRR_house_dots^73 }
+			NRR_house_dot_75 = { frame = NRR_house_dots^74 }
+			NRR_house_dot_76 = { frame = NRR_house_dots^75 }
+			NRR_house_dot_77 = { frame = NRR_house_dots^76 }
+			NRR_house_dot_78 = { frame = NRR_house_dots^77 }
+			NRR_house_dot_79 = { frame = NRR_house_dots^78 }
+			NRR_house_dot_80 = { frame = NRR_house_dots^79 }
+			NRR_house_dot_81 = { frame = NRR_house_dots^80 }
+			NRR_house_dot_82 = { frame = NRR_house_dots^81 }
+			NRR_house_dot_83 = { frame = NRR_house_dots^82 }
+			NRR_house_dot_84 = { frame = NRR_house_dots^83 }
+			NRR_house_dot_85 = { frame = NRR_house_dots^84 }
+			NRR_house_dot_86 = { frame = NRR_house_dots^85 }
+			NRR_house_dot_87 = { frame = NRR_house_dots^86 }
+			NRR_house_dot_88 = { frame = NRR_house_dots^87 }
+			NRR_house_dot_89 = { frame = NRR_house_dots^88 }
+			NRR_house_dot_90 = { frame = NRR_house_dots^89 }
+			NRR_house_dot_91 = { frame = NRR_house_dots^90 }
+			NRR_house_dot_92 = { frame = NRR_house_dots^91 }
+			NRR_house_dot_93 = { frame = NRR_house_dots^92 }
+			NRR_house_dot_94 = { frame = NRR_house_dots^93 }
+			NRR_house_dot_95 = { frame = NRR_house_dots^94 }
+			NRR_house_dot_96 = { frame = NRR_house_dots^95 }
+			NRR_house_dot_97 = { frame = NRR_house_dots^96 }
+			NRR_house_dot_98 = { frame = NRR_house_dots^97 }
+			NRR_house_dot_99 = { frame = NRR_house_dots^98 }
+			NRR_house_dot_100 = { frame = NRR_house_dots^99 }
+			NRR_house_dot_101 = { frame = NRR_house_dots^100 }
+			NRR_house_dot_102 = { frame = NRR_house_dots^101 }
+			NRR_house_dot_103 = { frame = NRR_house_dots^102 }
+			NRR_house_dot_104 = { frame = NRR_house_dots^103 }
+			NRR_house_dot_105 = { frame = NRR_house_dots^104 }
+			NRR_house_dot_106 = { frame = NRR_house_dots^105 }
+			NRR_house_dot_107 = { frame = NRR_house_dots^106 }
+			NRR_house_dot_108 = { frame = NRR_house_dots^107 }
+			NRR_house_dot_109 = { frame = NRR_house_dots^108 }
+			NRR_house_dot_110 = { frame = NRR_house_dots^109 }
+			NRR_house_dot_111 = { frame = NRR_house_dots^110 }
+			NRR_house_dot_112 = { frame = NRR_house_dots^111 }
+			NRR_house_dot_113 = { frame = NRR_house_dots^112 }
+			NRR_house_dot_114 = { frame = NRR_house_dots^113 }
+			NRR_house_dot_115 = { frame = NRR_house_dots^114 }
+			NRR_house_dot_116 = { frame = NRR_house_dots^115 }
+			NRR_house_dot_117 = { frame = NRR_house_dots^116 }
+			NRR_house_dot_118 = { frame = NRR_house_dots^117 }
+			NRR_house_dot_119 = { frame = NRR_house_dots^118 }
+			NRR_house_dot_120 = { frame = NRR_house_dots^119 }
+			NRR_house_dot_121 = { frame = NRR_house_dots^120 }
+			NRR_house_dot_122 = { frame = NRR_house_dots^121 }
+			NRR_house_dot_123 = { frame = NRR_house_dots^122 }
+			NRR_house_dot_124 = { frame = NRR_house_dots^123 }
+			NRR_house_dot_125 = { frame = NRR_house_dots^124 }
+			NRR_house_dot_126 = { frame = NRR_house_dots^125 }
+			NRR_house_dot_127 = { frame = NRR_house_dots^126 }
+			NRR_house_dot_128 = { frame = NRR_house_dots^127 }
+			NRR_house_dot_129 = { frame = NRR_house_dots^128 }
+			NRR_house_dot_130 = { frame = NRR_house_dots^129 }
+			NRR_house_dot_131 = { frame = NRR_house_dots^130 }
+			NRR_house_dot_132 = { frame = NRR_house_dots^131 }
+			NRR_house_dot_133 = { frame = NRR_house_dots^132 }
+			NRR_house_dot_134 = { frame = NRR_house_dots^133 }
+			NRR_house_dot_135 = { frame = NRR_house_dots^134 }
+			NRR_house_dot_136 = { frame = NRR_house_dots^135 }
+			NRR_house_dot_137 = { frame = NRR_house_dots^136 }
+			NRR_house_dot_138 = { frame = NRR_house_dots^137 }
+			NRR_house_dot_139 = { frame = NRR_house_dots^138 }
+			NRR_house_dot_140 = { frame = NRR_house_dots^139 }
+			NRR_house_dot_141 = { frame = NRR_house_dots^140 }
+			NRR_house_dot_142 = { frame = NRR_house_dots^141 }
+			NRR_house_dot_143 = { frame = NRR_house_dots^142 }
+			NRR_house_dot_144 = { frame = NRR_house_dots^143 }
+			NRR_house_dot_145 = { frame = NRR_house_dots^144 }
+			NRR_house_dot_146 = { frame = NRR_house_dots^145 }
+			NRR_house_dot_147 = { frame = NRR_house_dots^146 }
+			NRR_house_dot_148 = { frame = NRR_house_dots^147 }
+			NRR_house_dot_149 = { frame = NRR_house_dots^148 }
+			NRR_house_dot_150 = { frame = NRR_house_dots^149 }
+			NRR_house_dot_151 = { frame = NRR_house_dots^150 }
+			NRR_house_dot_152 = { frame = NRR_house_dots^151 }
+			NRR_house_dot_153 = { frame = NRR_house_dots^152 }
+			NRR_house_dot_154 = { frame = NRR_house_dots^153 }
+			NRR_house_dot_155 = { frame = NRR_house_dots^154 }
+			NRR_house_dot_156 = { frame = NRR_house_dots^155 }
+			NRR_house_dot_157 = { frame = NRR_house_dots^156 }
+			NRR_house_dot_158 = { frame = NRR_house_dots^157 }
+			NRR_house_dot_159 = { frame = NRR_house_dots^158 }
+			NRR_house_dot_160 = { frame = NRR_house_dots^159 }
+			NRR_house_dot_161 = { frame = NRR_house_dots^160 }
+			NRR_house_dot_162 = { frame = NRR_house_dots^161 }
+			NRR_house_dot_163 = { frame = NRR_house_dots^162 }
+			NRR_house_dot_164 = { frame = NRR_house_dots^163 }
+			NRR_house_dot_165 = { frame = NRR_house_dots^164 }
+			NRR_house_dot_166 = { frame = NRR_house_dots^165 }
+			NRR_house_dot_167 = { frame = NRR_house_dots^166 }
+			NRR_house_dot_168 = { frame = NRR_house_dots^167 }
+			NRR_house_dot_169 = { frame = NRR_house_dots^168 }
+			NRR_house_dot_170 = { frame = NRR_house_dots^169 }
+			NRR_house_dot_171 = { frame = NRR_house_dots^170 }
+			NRR_house_dot_172 = { frame = NRR_house_dots^171 }
+			NRR_house_dot_173 = { frame = NRR_house_dots^172 }
+			NRR_house_dot_174 = { frame = NRR_house_dots^173 }
+			NRR_house_dot_175 = { frame = NRR_house_dots^174 }
+			NRR_house_dot_176 = { frame = NRR_house_dots^175 }
+			NRR_house_dot_177 = { frame = NRR_house_dots^176 }
+			NRR_house_dot_178 = { frame = NRR_house_dots^177 }
+			NRR_house_dot_179 = { frame = NRR_house_dots^178 }
+			NRR_house_dot_180 = { frame = NRR_house_dots^179 }
+			NRR_house_dot_181 = { frame = NRR_house_dots^180 }
+			NRR_house_dot_182 = { frame = NRR_house_dots^181 }
+			NRR_house_dot_183 = { frame = NRR_house_dots^182 }
+			NRR_house_dot_184 = { frame = NRR_house_dots^183 }
+			NRR_house_dot_185 = { frame = NRR_house_dots^184 }
+			NRR_house_dot_186 = { frame = NRR_house_dots^185 }
+			NRR_house_dot_187 = { frame = NRR_house_dots^186 }
+			NRR_house_dot_188 = { frame = NRR_house_dots^187 }
+			NRR_house_dot_189 = { frame = NRR_house_dots^188 }
+			NRR_house_dot_190 = { frame = NRR_house_dots^189 }
+			NRR_house_dot_191 = { frame = NRR_house_dots^190 }
+			NRR_house_dot_192 = { frame = NRR_house_dots^191 }
+			NRR_house_dot_193 = { frame = NRR_house_dots^192 }
+			NRR_house_dot_194 = { frame = NRR_house_dots^193 }
+			NRR_house_dot_195 = { frame = NRR_house_dots^194 }
+			NRR_house_dot_196 = { frame = NRR_house_dots^195 }
+			NRR_house_dot_197 = { frame = NRR_house_dots^196 }
+			NRR_house_dot_198 = { frame = NRR_house_dots^197 }
+			NRR_house_dot_199 = { frame = NRR_house_dots^198 }
+			NRR_house_dot_200 = { frame = NRR_house_dots^199 }
+			NRR_house_dot_201 = { frame = NRR_house_dots^200 }
+			NRR_house_dot_202 = { frame = NRR_house_dots^201 }
+			NRR_house_dot_203 = { frame = NRR_house_dots^202 }
+			NRR_house_dot_204 = { frame = NRR_house_dots^203 }
+			NRR_house_dot_205 = { frame = NRR_house_dots^204 }
+			NRR_house_dot_206 = { frame = NRR_house_dots^205 }
+			NRR_house_dot_207 = { frame = NRR_house_dots^206 }
+			NRR_house_dot_208 = { frame = NRR_house_dots^207 }
+			NRR_house_dot_209 = { frame = NRR_house_dots^208 }
+			NRR_house_dot_210 = { frame = NRR_house_dots^209 }
+			NRR_house_dot_211 = { frame = NRR_house_dots^210 }
+			NRR_house_dot_212 = { frame = NRR_house_dots^211 }
+			NRR_house_dot_213 = { frame = NRR_house_dots^212 }
+			NRR_house_dot_214 = { frame = NRR_house_dots^213 }
+			NRR_house_dot_215 = { frame = NRR_house_dots^214 }
+			NRR_house_dot_216 = { frame = NRR_house_dots^215 }
+			NRR_house_dot_217 = { frame = NRR_house_dots^216 }
+			NRR_house_dot_218 = { frame = NRR_house_dots^217 }
+			NRR_house_dot_219 = { frame = NRR_house_dots^218 }
+			NRR_house_dot_220 = { frame = NRR_house_dots^219 }
+			NRR_house_dot_221 = { frame = NRR_house_dots^220 }
+			NRR_house_dot_222 = { frame = NRR_house_dots^221 }
+			NRR_house_dot_223 = { frame = NRR_house_dots^222 }
+			NRR_house_dot_224 = { frame = NRR_house_dots^223 }
+			NRR_house_dot_225 = { frame = NRR_house_dots^224 }
+			NRR_house_dot_226 = { frame = NRR_house_dots^225 }
+			NRR_house_dot_227 = { frame = NRR_house_dots^226 }
+			NRR_house_dot_228 = { frame = NRR_house_dots^227 }
+			NRR_house_dot_229 = { frame = NRR_house_dots^228 }
+			NRR_house_dot_230 = { frame = NRR_house_dots^229 }
+			NRR_house_dot_231 = { frame = NRR_house_dots^230 }
+			NRR_house_dot_232 = { frame = NRR_house_dots^231 }
+			NRR_house_dot_233 = { frame = NRR_house_dots^232 }
+			NRR_house_dot_234 = { frame = NRR_house_dots^233 }
+			NRR_house_dot_235 = { frame = NRR_house_dots^234 }
+			NRR_house_dot_236 = { frame = NRR_house_dots^235 }
+			NRR_house_dot_237 = { frame = NRR_house_dots^236 }
+			NRR_house_dot_238 = { frame = NRR_house_dots^237 }
+			NRR_house_dot_239 = { frame = NRR_house_dots^238 }
+			NRR_house_dot_240 = { frame = NRR_house_dots^239 }
+			NRR_house_dot_241 = { frame = NRR_house_dots^240 }
+			NRR_house_dot_242 = { frame = NRR_house_dots^241 }
+			NRR_house_dot_243 = { frame = NRR_house_dots^242 }
+			NRR_house_dot_244 = { frame = NRR_house_dots^243 }
+			NRR_house_dot_245 = { frame = NRR_house_dots^244 }
+			NRR_house_dot_246 = { frame = NRR_house_dots^245 }
+			NRR_house_dot_247 = { frame = NRR_house_dots^246 }
+			NRR_house_dot_248 = { frame = NRR_house_dots^247 }
+			NRR_house_dot_249 = { frame = NRR_house_dots^248 }
+			NRR_house_dot_250 = { frame = NRR_house_dots^249 }
+			NRR_house_dot_251 = { frame = NRR_house_dots^250 }
+			NRR_house_dot_252 = { frame = NRR_house_dots^251 }
+			NRR_house_dot_253 = { frame = NRR_house_dots^252 }
+			NRR_house_dot_254 = { frame = NRR_house_dots^253 }
+			NRR_house_dot_255 = { frame = NRR_house_dots^254 }
+			NRR_house_dot_256 = { frame = NRR_house_dots^255 }
+			NRR_house_dot_257 = { frame = NRR_house_dots^256 }
+			NRR_house_dot_258 = { frame = NRR_house_dots^257 }
+			NRR_house_dot_259 = { frame = NRR_house_dots^258 }
+			NRR_house_dot_260 = { frame = NRR_house_dots^259 }
+			NRR_house_dot_261 = { frame = NRR_house_dots^260 }
+			NRR_house_dot_262 = { frame = NRR_house_dots^261 }
+			NRR_house_dot_263 = { frame = NRR_house_dots^262 }
+			NRR_house_dot_264 = { frame = NRR_house_dots^263 }
+			NRR_house_dot_265 = { frame = NRR_house_dots^264 }
+			NRR_house_dot_266 = { frame = NRR_house_dots^265 }
+			NRR_house_dot_267 = { frame = NRR_house_dots^266 }
+			NRR_house_dot_268 = { frame = NRR_house_dots^267 }
+			NRR_house_dot_269 = { frame = NRR_house_dots^268 }
+			NRR_house_dot_270 = { frame = NRR_house_dots^269 }
+			NRR_house_dot_271 = { frame = NRR_house_dots^270 }
+			NRR_house_dot_272 = { frame = NRR_house_dots^271 }
+			NRR_house_dot_273 = { frame = NRR_house_dots^272 }
+			NRR_house_dot_274 = { frame = NRR_house_dots^273 }
+			NRR_house_dot_275 = { frame = NRR_house_dots^274 }
+			NRR_house_dot_276 = { frame = NRR_house_dots^275 }
+			NRR_house_dot_277 = { frame = NRR_house_dots^276 }
+			NRR_house_dot_278 = { frame = NRR_house_dots^277 }
+			NRR_house_dot_279 = { frame = NRR_house_dots^278 }
+			NRR_house_dot_280 = { frame = NRR_house_dots^279 }
+			NRR_house_dot_281 = { frame = NRR_house_dots^280 }
+			NRR_house_dot_282 = { frame = NRR_house_dots^281 }
+			NRR_house_dot_283 = { frame = NRR_house_dots^282 }
+			NRR_house_dot_284 = { frame = NRR_house_dots^283 }
+			NRR_house_dot_285 = { frame = NRR_house_dots^284 }
+			NRR_house_dot_286 = { frame = NRR_house_dots^285 }
+			NRR_house_dot_287 = { frame = NRR_house_dots^286 }
+			NRR_house_dot_288 = { frame = NRR_house_dots^287 }
+			NRR_house_dot_289 = { frame = NRR_house_dots^288 }
+			NRR_house_dot_290 = { frame = NRR_house_dots^289 }
+			NRR_house_dot_291 = { frame = NRR_house_dots^290 }
+			NRR_house_dot_292 = { frame = NRR_house_dots^291 }
+			NRR_house_dot_293 = { frame = NRR_house_dots^292 }
+			NRR_house_dot_294 = { frame = NRR_house_dots^293 }
+			NRR_house_dot_295 = { frame = NRR_house_dots^294 }
+			NRR_house_dot_296 = { frame = NRR_house_dots^295 }
+			NRR_house_dot_297 = { frame = NRR_house_dots^296 }
+			NRR_house_dot_298 = { frame = NRR_house_dots^297 }
+			NRR_house_dot_299 = { frame = NRR_house_dots^298 }
+			NRR_house_dot_300 = { frame = NRR_house_dots^299 }
+			NRR_house_dot_301 = { frame = NRR_house_dots^300 }
+			NRR_house_dot_302 = { frame = NRR_house_dots^301 }
+			NRR_house_dot_303 = { frame = NRR_house_dots^302 }
+			NRR_house_dot_304 = { frame = NRR_house_dots^303 }
+			NRR_house_dot_305 = { frame = NRR_house_dots^304 }
+			NRR_house_dot_306 = { frame = NRR_house_dots^305 }
+			NRR_house_dot_307 = { frame = NRR_house_dots^306 }
+			NRR_house_dot_308 = { frame = NRR_house_dots^307 }
+			NRR_house_dot_309 = { frame = NRR_house_dots^308 }
+			NRR_house_dot_310 = { frame = NRR_house_dots^309 }
+			NRR_house_dot_311 = { frame = NRR_house_dots^310 }
+			NRR_house_dot_312 = { frame = NRR_house_dots^311 }
+			NRR_house_dot_313 = { frame = NRR_house_dots^312 }
+			NRR_house_dot_314 = { frame = NRR_house_dots^313 }
+			NRR_house_dot_315 = { frame = NRR_house_dots^314 }
+			NRR_house_dot_316 = { frame = NRR_house_dots^315 }
+			NRR_house_dot_317 = { frame = NRR_house_dots^316 }
+			NRR_house_dot_318 = { frame = NRR_house_dots^317 }
+			NRR_house_dot_319 = { frame = NRR_house_dots^318 }
+			NRR_house_dot_320 = { frame = NRR_house_dots^319 }
+			NRR_house_dot_321 = { frame = NRR_house_dots^320 }
+			NRR_house_dot_322 = { frame = NRR_house_dots^321 }
+			NRR_house_dot_323 = { frame = NRR_house_dots^322 }
+			NRR_house_dot_324 = { frame = NRR_house_dots^323 }
+			NRR_house_dot_325 = { frame = NRR_house_dots^324 }
+			NRR_house_dot_326 = { frame = NRR_house_dots^325 }
+			NRR_house_dot_327 = { frame = NRR_house_dots^326 }
+			NRR_house_dot_328 = { frame = NRR_house_dots^327 }
+			NRR_house_dot_329 = { frame = NRR_house_dots^328 }
+			NRR_house_dot_330 = { frame = NRR_house_dots^329 }
+			NRR_house_dot_331 = { frame = NRR_house_dots^330 }
+			NRR_house_dot_332 = { frame = NRR_house_dots^331 }
+			NRR_house_dot_333 = { frame = NRR_house_dots^332 }
+			NRR_house_dot_334 = { frame = NRR_house_dots^333 }
+			NRR_house_dot_335 = { frame = NRR_house_dots^334 }
+			NRR_house_dot_336 = { frame = NRR_house_dots^335 }
+			NRR_house_dot_337 = { frame = NRR_house_dots^336 }
+			NRR_house_dot_338 = { frame = NRR_house_dots^337 }
+			NRR_house_dot_339 = { frame = NRR_house_dots^338 }
+			NRR_house_dot_340 = { frame = NRR_house_dots^339 }
+			NRR_house_dot_341 = { frame = NRR_house_dots^340 }
+			NRR_house_dot_342 = { frame = NRR_house_dots^341 }
+			NRR_house_dot_343 = { frame = NRR_house_dots^342 }
+			NRR_house_dot_344 = { frame = NRR_house_dots^343 }
+			NRR_house_dot_345 = { frame = NRR_house_dots^344 }
+			NRR_house_dot_346 = { frame = NRR_house_dots^345 }
+			NRR_house_dot_347 = { frame = NRR_house_dots^346 }
+			NRR_house_dot_348 = { frame = NRR_house_dots^347 }
+			NRR_house_dot_349 = { frame = NRR_house_dots^348 }
+			NRR_house_dot_350 = { frame = NRR_house_dots^349 }
+		}
+	}
+
+	# ========================================================
+	#  Senate Subwindow GUI (50 Seats, Bicameral Only)
+	# ========================================================
+	NRR_parliament_senate_gui = {
+		context_type = player_context
+		window_name = "NRR_senate_subwindow"
+		parent_window_name = "NRR_parliament_main_window"
+
+		visible = {
+			tag = NRR
+			has_country_flag = NRR_national_parliament
+			has_country_flag = NRR_parliament_window_open
+			has_country_flag = NRR_has_senate
+		}
+
+		triggers = {
+			NRR_senate_rec_seats_visible = {
+				has_country_flag = NRR_senate_is_committee
+			}
+		}
+
+		properties = {
+			# Senate 50 Dots
+			NRR_senate_dot_1 = { frame = NRR_senate_dots^0 }
+			NRR_senate_dot_2 = { frame = NRR_senate_dots^1 }
+			NRR_senate_dot_3 = { frame = NRR_senate_dots^2 }
+			NRR_senate_dot_4 = { frame = NRR_senate_dots^3 }
+			NRR_senate_dot_5 = { frame = NRR_senate_dots^4 }
+			NRR_senate_dot_6 = { frame = NRR_senate_dots^5 }
+			NRR_senate_dot_7 = { frame = NRR_senate_dots^6 }
+			NRR_senate_dot_8 = { frame = NRR_senate_dots^7 }
+			NRR_senate_dot_9 = { frame = NRR_senate_dots^8 }
+			NRR_senate_dot_10 = { frame = NRR_senate_dots^9 }
+			NRR_senate_dot_11 = { frame = NRR_senate_dots^10 }
+			NRR_senate_dot_12 = { frame = NRR_senate_dots^11 }
+			NRR_senate_dot_13 = { frame = NRR_senate_dots^12 }
+			NRR_senate_dot_14 = { frame = NRR_senate_dots^13 }
+			NRR_senate_dot_15 = { frame = NRR_senate_dots^14 }
+			NRR_senate_dot_16 = { frame = NRR_senate_dots^15 }
+			NRR_senate_dot_17 = { frame = NRR_senate_dots^16 }
+			NRR_senate_dot_18 = { frame = NRR_senate_dots^17 }
+			NRR_senate_dot_19 = { frame = NRR_senate_dots^18 }
+			NRR_senate_dot_20 = { frame = NRR_senate_dots^19 }
+			NRR_senate_dot_21 = { frame = NRR_senate_dots^20 }
+			NRR_senate_dot_22 = { frame = NRR_senate_dots^21 }
+			NRR_senate_dot_23 = { frame = NRR_senate_dots^22 }
+			NRR_senate_dot_24 = { frame = NRR_senate_dots^23 }
+			NRR_senate_dot_25 = { frame = NRR_senate_dots^24 }
+			NRR_senate_dot_26 = { frame = NRR_senate_dots^25 }
+			NRR_senate_dot_27 = { frame = NRR_senate_dots^26 }
+			NRR_senate_dot_28 = { frame = NRR_senate_dots^27 }
+			NRR_senate_dot_29 = { frame = NRR_senate_dots^28 }
+			NRR_senate_dot_30 = { frame = NRR_senate_dots^29 }
+			NRR_senate_dot_31 = { frame = NRR_senate_dots^30 }
+			NRR_senate_dot_32 = { frame = NRR_senate_dots^31 }
+			NRR_senate_dot_33 = { frame = NRR_senate_dots^32 }
+			NRR_senate_dot_34 = { frame = NRR_senate_dots^33 }
+			NRR_senate_dot_35 = { frame = NRR_senate_dots^34 }
+			NRR_senate_dot_36 = { frame = NRR_senate_dots^35 }
+			NRR_senate_dot_37 = { frame = NRR_senate_dots^36 }
+			NRR_senate_dot_38 = { frame = NRR_senate_dots^37 }
+			NRR_senate_dot_39 = { frame = NRR_senate_dots^38 }
+			NRR_senate_dot_40 = { frame = NRR_senate_dots^39 }
+			NRR_senate_dot_41 = { frame = NRR_senate_dots^40 }
+			NRR_senate_dot_42 = { frame = NRR_senate_dots^41 }
+			NRR_senate_dot_43 = { frame = NRR_senate_dots^42 }
+			NRR_senate_dot_44 = { frame = NRR_senate_dots^43 }
+			NRR_senate_dot_45 = { frame = NRR_senate_dots^44 }
+			NRR_senate_dot_46 = { frame = NRR_senate_dots^45 }
+			NRR_senate_dot_47 = { frame = NRR_senate_dots^46 }
+			NRR_senate_dot_48 = { frame = NRR_senate_dots^47 }
+			NRR_senate_dot_49 = { frame = NRR_senate_dots^48 }
+			NRR_senate_dot_50 = { frame = NRR_senate_dots^49 }
+		}
+	}
+}
