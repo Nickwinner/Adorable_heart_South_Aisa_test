@@ -1,0 +1,23 @@
+on_actions = {
+	on_daily_NRR = {
+		effect = {
+			NRR_nr_daily_mission_tick = yes
+		}
+	}
+
+	on_monthly_NRR = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = NRR_night_raid_initialized
+				}
+				add_to_variable = { NRR_nr_ap = NRR_nr_ap_gain }
+				clamp_variable = { var = NRR_nr_ap min = 0 max = 200 }
+			}
+			# 每月1日重置升级按钮冷却
+			clr_country_flag = NRR_nr_hq_monthly_cd
+			clr_country_flag = NRR_nr_train_monthly_cd
+			clr_country_flag = NRR_nr_equip_monthly_cd
+		}
+	}
+}

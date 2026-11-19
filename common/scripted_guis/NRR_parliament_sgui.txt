@@ -1,10 +1,11 @@
 scripted_gui = {
 
 	# ========================================================
-	#  Entrance Button GUI on the Right Sidebar
+	#  Entrance Button GUI inside Politics Tab
 	# ========================================================
 	NRR_parliament_open_gui = {
 		context_type = player_context
+		parent_window_token = politics_tab
 		window_name = "NRR_parliament_open_window"
 
 		visible = {
@@ -41,7 +42,7 @@ scripted_gui = {
 		}
 
 		triggers = {
-			# Hide bill icon when no bill is active (recess)
+			# Hide bill icon when no bill is active (recess); active bills without a custom icon fall back to transparent
 			NRR_active_bill_icon_visible = {
 				has_country_flag = NRR_has_active_bill
 			}
@@ -98,6 +99,9 @@ scripted_gui = {
 
 		properties = {
 			NRR_leader_portrait = { image = "[Root.GetNRRLeaderPortrait]" }
+			# 法案图标已自动绑定至 NRR_parliament_sloc.txt 的 GetNRRActiveBillIcon，平时加新法案图标无需修改此处
+			NRR_active_bill_icon = { image = "[Root.GetNRRActiveBillIcon]" }
+			NRR_vote_progress_bar = { frame = NRR_vote_progress_pct }
 			# House 350 Dots
 			NRR_house_dot_1 = { frame = NRR_house_dots^0 }
 			NRR_house_dot_2 = { frame = NRR_house_dots^1 }

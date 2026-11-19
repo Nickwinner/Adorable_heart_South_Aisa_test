@@ -1,0 +1,462 @@
+guiTypes = {
+
+	# ========================================================
+	#  Entrance Button inside Politics Tab (countrypoliticsview)
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_night_raid_open_window"
+		position = { x = 466 y = 62 }
+		size = { width = 56 height = 56 }
+		Orientation = UPPER_LEFT
+
+		buttonType = {
+			name = "NRR_nr_open_btn"
+			quadTextureSprite = "GFX_NRR_nr_open_btn"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "NRR_nr_open_btn_tt"
+			pdx_tooltip_delayed = "NRR_nr_open_btn_desc"
+			clicksound = click_default
+		}
+	}
+
+	# ========================================================
+	#  NRR Night Raid HQ Main Window (980 x 660)
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_night_raid_main_window"
+		position = { x = -490 y = -330 }
+		size = { width = 980 height = 660 }
+		Orientation = CENTER
+		moveable = yes
+		fade_time = 200
+		fade_type = linear
+
+		iconType = {
+			name = "NRR_nr_bg"
+			spriteType = "GFX_NRR_nr_bg"
+			position = { x = 0 y = 0 }
+		}
+
+		# Header Title & Motto
+		instantTextBoxType = {
+			name = "NRR_nr_title"
+			position = { x = 140 y = 10 }
+			font = "hoi_24header"
+			text = "NRR_NR_TITLE"
+			maxWidth = 700
+			maxHeight = 28
+			format = center
+		}
+		instantTextBoxType = {
+			name = "NRR_nr_motto"
+			position = { x = 140 y = 40 }
+			font = "hoi_16mbs"
+			text = "NRR_NR_MOTTO"
+			maxWidth = 700
+			maxHeight = 22
+			format = center
+		}
+		iconType = {
+			name = "NRR_nr_info_icon"
+			spriteType = "GFX_NRR_nr_info_icon"
+			position = { x = 900 y = 16 }
+			pdx_tooltip = "NRR_NR_INFO_TT"
+		}
+		buttonType = {
+			name = "NRR_nr_close_btn"
+			position = { x = 936 y = 16 }
+			quadTextureSprite = "GFX_NRR_nr_close_btn"
+			clicksound = click_close
+		}
+
+		# ====================================================
+		#  UPPER LEFT: Minister of Defense Akame Portrait
+		# ====================================================
+		iconType = {
+			name = "NRR_nr_akame_portrait"
+			spriteType = "GFX_NRR_parl_leader_chitong"
+			position = { x = 74 y = 103 }
+			scale = 0.85
+		}
+		iconType = {
+			name = "NRR_nr_portrait_frame"
+			spriteType = "GFX_NRR_nr_portrait_frame"
+			position = { x = 71 y = 100 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_nr_minister_label"
+			position = { x = 30 y = 296 }
+			font = "hoi_18mbs"
+			text = "NRR_NR_MINISTER_LABEL"
+			maxWidth = 220
+			maxHeight = 26
+			format = center
+		}
+
+		# ====================================================
+		#  UPPER CENTER: Target Countries (Enemies Grid)
+		# ====================================================
+		containerWindowType = {
+			name = "NRR_nr_targets_panel"
+			position = { x = 265 y = 80 }
+			size = { width = 360 height = 330 }
+
+			iconType = {
+				name = "NRR_nr_targets_bg"
+				spriteType = "GFX_NRR_nr_panel_targets"
+				position = { x = 0 y = 0 }
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_targets_header"
+				position = { x = 10 y = 12 }
+				font = "hoi_18mbs"
+				text = "NRR_NR_TARGETS_HEADER"
+				maxWidth = 340
+				maxHeight = 24
+				format = center
+			}
+
+			containerWindowType = {
+				name = "NRR_nr_enemies_scroll_box"
+				position = { x = 18 y = 46 }
+				size = { width = 326 height = 228 }
+				verticalScrollbar = "right_vertical_slider"
+				scroll_wheel_factor = 40
+				smooth_scrolling = yes
+				margin = { top = 4 bottom = 4 }
+
+				background = {
+					name = "Background"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+
+				gridboxtype = {
+					name = "NRR_nr_enemies_grid"
+					position = { x = 4 y = 0 }
+					size = { width = 300 height = 220 }
+					slotsize = { width = 150 height = 74 }
+					max_slots_horizontal = 2
+					format = "UPPER_LEFT"
+				}
+			}
+
+			instantTextBoxType = {
+				name = "NRR_nr_target_status_text"
+				position = { x = 15 y = 296 }
+				font = "hoi_16mbs"
+				text = "[Root.GetNRRNightRaidTargetText]"
+				maxWidth = 330
+				maxHeight = 22
+				format = center
+			}
+		}
+
+		# ====================================================
+		#  UPPER RIGHT: Operation Contents (5 Choices)
+		# ====================================================
+		containerWindowType = {
+			name = "NRR_nr_ops_panel"
+			position = { x = 645 y = 80 }
+			size = { width = 305 height = 330 }
+
+			iconType = {
+				name = "NRR_nr_ops_bg"
+				spriteType = "GFX_NRR_nr_panel_ops"
+				position = { x = 0 y = 0 }
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_ops_header"
+				position = { x = 10 y = 12 }
+				font = "hoi_18mbs"
+				text = "NRR_NR_OPS_HEADER"
+				maxWidth = 285
+				maxHeight = 24
+				format = center
+			}
+
+			# Op 1: 袭击敌将领
+			buttonType = {
+				name = "NRR_nr_op_btn_1"
+				position = { x = 22 y = 52 }
+				quadTextureSprite = "GFX_NRR_nr_op_btn"
+				buttonText = "NRR_NR_OP_1_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_OP_1_TT"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "NRR_nr_op_selected_1"
+				spriteType = "GFX_NRR_nr_op_selected"
+				position = { x = 22 y = 52 }
+				alwaystransparent = yes
+			}
+
+			# Op 2: 获取敌军情报
+			buttonType = {
+				name = "NRR_nr_op_btn_2"
+				position = { x = 22 y = 104 }
+				quadTextureSprite = "GFX_NRR_nr_op_btn"
+				buttonText = "NRR_NR_OP_2_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_OP_2_TT"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "NRR_nr_op_selected_2"
+				spriteType = "GFX_NRR_nr_op_selected"
+				position = { x = 22 y = 104 }
+				alwaystransparent = yes
+			}
+
+			# Op 3: 破坏敌工业设施
+			buttonType = {
+				name = "NRR_nr_op_btn_3"
+				position = { x = 22 y = 156 }
+				quadTextureSprite = "GFX_NRR_nr_op_btn"
+				buttonText = "NRR_NR_OP_3_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_OP_3_TT"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "NRR_nr_op_selected_3"
+				spriteType = "GFX_NRR_nr_op_selected"
+				position = { x = 22 y = 156 }
+				alwaystransparent = yes
+			}
+
+			# Op 4: 扰乱敌社会秩序
+			buttonType = {
+				name = "NRR_nr_op_btn_4"
+				position = { x = 22 y = 208 }
+				quadTextureSprite = "GFX_NRR_nr_op_btn"
+				buttonText = "NRR_NR_OP_4_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_OP_4_TT"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "NRR_nr_op_selected_4"
+				spriteType = "GFX_NRR_nr_op_selected"
+				position = { x = 22 y = 208 }
+				alwaystransparent = yes
+			}
+
+			# Op 5: 瘫痪敌特务机构
+			buttonType = {
+				name = "NRR_nr_op_btn_5"
+				position = { x = 22 y = 260 }
+				quadTextureSprite = "GFX_NRR_nr_op_btn"
+				buttonText = "NRR_NR_OP_5_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_OP_5_TT"
+				clicksound = click_default
+			}
+			iconType = {
+				name = "NRR_nr_op_selected_5"
+				spriteType = "GFX_NRR_nr_op_selected"
+				position = { x = 22 y = 260 }
+				alwaystransparent = yes
+			}
+		}
+
+		# ====================================================
+		#  LOWER LEFT: Action Points & HQ Upgrades / Budget
+		# ====================================================
+		containerWindowType = {
+			name = "NRR_nr_mgmt_panel"
+			position = { x = 30 y = 430 }
+			size = { width = 450 height = 200 }
+
+			iconType = {
+				name = "NRR_nr_mgmt_bg"
+				spriteType = "GFX_NRR_nr_panel_mgmt"
+				position = { x = 0 y = 0 }
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_ap_text"
+				position = { x = 20 y = 18 }
+				font = "hoi_18mbs"
+				text = "NRR_NR_AP_TEXT"
+				maxWidth = 240
+				maxHeight = 24
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_ap_gain_text"
+				position = { x = 245 y = 20 }
+				font = "hoi_16mbs"
+				text = "[Root.GetNRRNightRaidAPGainText]"
+				maxWidth = 185
+				maxHeight = 22
+				format = right
+			}
+
+			# Row 1: 3 Upgrade Buttons
+			buttonType = {
+				name = "NRR_nr_upgrade_hq_btn"
+				position = { x = 18 y = 65 }
+				quadTextureSprite = "GFX_NRR_nr_mgmt_btn"
+				buttonText = "NRR_NR_UPGRADE_HQ_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_UPGRADE_HQ_TT"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "NRR_nr_upgrade_train_btn"
+				position = { x = 159 y = 65 }
+				quadTextureSprite = "GFX_NRR_nr_mgmt_btn"
+				buttonText = "NRR_NR_UPGRADE_TRAIN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_UPGRADE_TRAIN_TT"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "NRR_nr_upgrade_equip_btn"
+				position = { x = 300 y = 65 }
+				quadTextureSprite = "GFX_NRR_nr_mgmt_btn"
+				buttonText = "NRR_NR_UPGRADE_EQUIP_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_UPGRADE_EQUIP_TT"
+				clicksound = click_default
+			}
+
+			# Row 2: 2 Budget Buttons
+			buttonType = {
+				name = "NRR_nr_budget_up_btn"
+				position = { x = 26 y = 128 }
+				quadTextureSprite = "GFX_NRR_nr_budget_btn"
+				buttonText = "NRR_NR_BUDGET_UP_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_BUDGET_UP_TT"
+				clicksound = click_default
+			}
+			buttonType = {
+				name = "NRR_nr_budget_down_btn"
+				position = { x = 234 y = 128 }
+				quadTextureSprite = "GFX_NRR_nr_budget_btn"
+				buttonText = "NRR_NR_BUDGET_DOWN_TEXT"
+				buttonFont = "hoi_16mbs"
+				pdx_tooltip = "NRR_NR_BUDGET_DOWN_TT"
+				clicksound = click_default
+			}
+		}
+
+		# ====================================================
+		#  LOWER RIGHT: Mission Clearance Tiers (Execute)
+		# ====================================================
+		containerWindowType = {
+			name = "NRR_nr_tier_panel"
+			position = { x = 500 y = 430 }
+			size = { width = 450 height = 200 }
+
+			iconType = {
+				name = "NRR_nr_tier_bg"
+				spriteType = "GFX_NRR_nr_panel_tier"
+				position = { x = 0 y = 0 }
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_tier_header"
+				position = { x = 25 y = 20 }
+				font = "hoi_18mbs"
+				text = "NRR_NR_TIER_HEADER"
+				maxWidth = 400
+				maxHeight = 26
+				format = center
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_tier_hint"
+				position = { x = 25 y = 50 }
+				font = "hoi_16mbs"
+				text = "NRR_NR_TIER_HINT"
+				maxWidth = 400
+				maxHeight = 22
+				format = center
+			}
+
+			buttonType = {
+				name = "NRR_nr_exec_tier1_btn"
+				position = { x = 24 y = 82 }
+				quadTextureSprite = "GFX_NRR_nr_tier_btn"
+				buttonText = "NRR_NR_TIER_1_TEXT"
+				buttonFont = "hoi_18mbs"
+				pdx_tooltip = "NRR_NR_TIER_1_TT"
+				clicksound = click_ok
+			}
+			buttonType = {
+				name = "NRR_nr_exec_tier2_btn"
+				position = { x = 162 y = 82 }
+				quadTextureSprite = "GFX_NRR_nr_tier_btn"
+				buttonText = "NRR_NR_TIER_2_TEXT"
+				buttonFont = "hoi_18mbs"
+				pdx_tooltip = "NRR_NR_TIER_2_TT"
+				clicksound = click_ok
+			}
+			buttonType = {
+				name = "NRR_nr_exec_tier3_btn"
+				position = { x = 300 y = 82 }
+				quadTextureSprite = "GFX_NRR_nr_tier_btn"
+				buttonText = "NRR_NR_TIER_3_TEXT"
+				buttonFont = "hoi_18mbs"
+				pdx_tooltip = "NRR_NR_TIER_3_TT"
+				clicksound = click_ok
+			}
+
+			# 20-Day Mission Execution Progress Bar & Status
+			iconType = {
+				name = "NRR_nr_mission_progress_bar"
+				spriteType = "GFX_NRR_nr_progress_bar"
+				position = { x = 55 y = 144 }
+			}
+			instantTextBoxType = {
+				name = "NRR_nr_mission_status_text"
+				position = { x = 25 y = 164 }
+				font = "hoi_16mbs"
+				text = "[Root.GetNRRNightRaidMissionStatus]"
+				maxWidth = 400
+				maxHeight = 24
+				format = center
+			}
+		}
+	}
+
+	# ========================================================
+	#  Dynamic List Entry: Enemy Country Flag Slot
+	# ========================================================
+	containerWindowType = {
+		name = "NRR_nr_enemy_flag_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 144 height = 68 }
+
+		buttonType = {
+			name = "NRR_nr_enemy_flag_btn"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_NRR_nr_flag_slot_bg"
+			pdx_tooltip = "NRR_NR_ENEMY_FLAG_TT"
+			clicksound = click_default
+		}
+		iconType = {
+			name = "NRR_nr_enemy_flag_icon"
+			spriteType = "GFX_shield_medium"
+			position = { x = 40 y = 6 }
+			scale = 0.78
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_nr_enemy_name"
+			position = { x = 4 y = 47 }
+			font = "hoi_16mbs"
+			text = "[This.GetName]"
+			maxWidth = 136
+			maxHeight = 18
+			format = center
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "NRR_nr_enemy_flag_selected"
+			spriteType = "GFX_NRR_nr_flag_selected"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+}

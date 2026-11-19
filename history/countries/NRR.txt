@@ -49,7 +49,7 @@ recruit_character = NRR_XE
 
 
 set_country_flag = NRR_start_focus
-
+set_country_flag = NRR_night_raid_unlocked
 
 set_convoys = 20
 set_cosmetic_tag = NRR 

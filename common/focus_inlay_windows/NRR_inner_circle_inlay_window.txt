@@ -1,0 +1,64 @@
+NRR_inner_circle_inlay_window = {
+	window_name = NRR_inner_circle_inlay_window_gui
+	internal = yes
+
+	visible = {
+		tag = NRR
+		has_country_flag = NRR_inner_circle_unlocked
+	}
+
+	scripted_images = {
+		# 顶部当前国家领袖头像
+		NRR_ic_leader_portrait = {
+			GFX_NRR_parl_leader_TZM = {
+				has_country_leader = { ruling_only = yes character = NRR_TZM }
+			}
+			GFX_NRR_parl_leader_xitan = {
+				has_country_leader = { ruling_only = yes character = NRR_xitan }
+			}
+			GFX_NRR_parl_leader_chitong = {
+				has_country_leader = { ruling_only = yes character = NRR_chitong }
+			}
+			GFX_NRR_parl_leader_LBK = {
+				has_country_leader = { ruling_only = yes character = NRR_LBK }
+			}
+			GFX_NRR_parl_leader_LON = {
+				has_country_leader = { ruling_only = yes character = NRR_LON }
+			}
+			GFX_NRR_parl_leader_MY = {
+				has_country_leader = { ruling_only = yes character = NRR_MY }
+			}
+			GFX_NRR_parl_leader_QEX = {
+				has_country_leader = { ruling_only = yes character = NRR_QEX }
+			}
+			GFX_NRR_parl_leader_XE = {
+				has_country_leader = { ruling_only = yes character = NRR_XE }
+			}
+			GFX_NRR_parl_leader_TZM = yes
+		}
+
+		# 席位 1（塔兹米线：玛茵）—— 以后加其他路线成员可继续写在 fallback 上方
+		NRR_ic_slot1_portrait = {
+			GFX_NRR_parl_leader_MY = {
+				has_country_flag = NRR_ic_MY
+			}
+			GFX_NRR_ic_empty_portrait = yes
+		}
+
+		# 席位 2（塔兹米线：拉伯克）
+		NRR_ic_slot2_portrait = {
+			GFX_NRR_parl_leader_LBK = {
+				has_country_flag = NRR_ic_LBK
+			}
+			GFX_NRR_ic_empty_portrait = yes
+		}
+
+		# 席位 3（塔兹米线：赤瞳）
+		NRR_ic_slot3_portrait = {
+			GFX_NRR_parl_leader_chitong = {
+				has_country_flag = NRR_ic_chitong
+			}
+			GFX_NRR_ic_empty_portrait = yes
+		}
+	}
+}

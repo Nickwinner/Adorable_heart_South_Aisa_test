@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_NRR_ic_bg"
+		texturefile = "gfx/interface/gui/NRR_inner_circle/NRR_ic_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_ic_slot_frame"
+		texturefile = "gfx/interface/gui/NRR_inner_circle/NRR_ic_slot_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_ic_empty_portrait"
+		texturefile = "gfx/interface/gui/NRR_inner_circle/NRR_ic_empty_portrait.dds"
+	}
+}

@@ -1,0 +1,87 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_NRR_nr_open_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_open_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_bg"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_portrait_frame"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_portrait_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_panel_targets"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_panel_targets.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_panel_ops"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_panel_ops.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_panel_mgmt"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_panel_mgmt.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_panel_tier"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_panel_tier.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_flag_slot_bg"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_flag_slot_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_flag_selected"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_flag_selected.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_op_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_op_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_op_selected"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_op_selected.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_mgmt_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_mgmt_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_budget_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_budget_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_tier_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_tier_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_close_btn"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_close_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_NRR_nr_info_icon"
+		texturefile = "gfx/interface/gui/NRR_night_raid/NRR_nr_info_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_NRR_nr_intel_paralyzed"
+		texturefile = "gfx/interface/ideas/NRR/NRR_nr_intel_paralyzed.dds"
+	}
+	progressbartype = {
+		name = "GFX_NRR_nr_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/gui/NRR_night_raid/NRR_nr_progress_bar.dds"
+		textureFile2 = "gfx/interface/gui/NRR_night_raid/NRR_nr_progress_bar_bg.dds"
+		size = { x = 340 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

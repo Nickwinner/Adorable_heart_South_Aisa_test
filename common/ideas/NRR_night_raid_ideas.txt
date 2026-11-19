@@ -1,0 +1,35 @@
+ideas = {
+	country = {
+		NRR_nr_intel_paralyzed_idea = {
+			picture = NRR_nr_intel_paralyzed
+			allowed = {
+				always = no
+			}
+			modifier = {
+				intel_network_gain_factor = -0.50
+				decryption_power_factor = -0.30
+				own_operative_detection_chance_factor = 0.25
+				own_operative_capture_chance_factor = 0.25
+			}
+		}
+	}
+
+	hidden_ideas = {
+		NRR_nr_hq_operative_1_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				operative_slot = 1
+			}
+		}
+		NRR_nr_hq_operative_2_idea = {
+			allowed = {
+				always = no
+			}
+			modifier = {
+				operative_slot = 2
+			}
+		}
+	}
+}

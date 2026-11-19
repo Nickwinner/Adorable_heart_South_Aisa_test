@@ -3,40 +3,40 @@ spriteTypes = {
 	# Parliament Background Window
 	spriteType = {
 		name = "GFX_NRR_parliament_bg"
-		texturefile = "gfx/interface/parliament/NRR_parliament_bg.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_bg.dds"
 	}
 
 	# Senate Subwindow Background
 	spriteType = {
 		name = "GFX_NRR_parliament_senate_bg"
-		texturefile = "gfx/interface/parliament/NRR_parliament_senate_bg.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_senate_bg.dds"
 	}
 
 	# 5-Frame Parliament Dot (1: Dem-Rep, 2: Socialist, 3: People's/Grey, 4: Committee/Crimson, 5: Vacant/Outline)
 	spriteType = {
 		name = "GFX_NRR_parliament_dot"
-		texturefile = "gfx/interface/parliament/NRR_parliament_dot.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_dot.dds"
 		noOfFrames = 5
 	}
 
 	# Entrance button on the right sidebar (above crosshair)
 	spriteType = {
 		name = "GFX_NRR_parliament_open_btn"
-		texturefile = "gfx/interface/parliament/NRR_parliament_open_btn.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_open_btn.dds"
 		noOfFrames = 2
 	}
 
 	# Generic Cool Dark Button
 	spriteType = {
 		name = "GFX_NRR_parliament_btn"
-		texturefile = "gfx/interface/parliament/NRR_parliament_btn.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_btn.dds"
 		noOfFrames = 2
 	}
 
 	# Call For Vote Gold Accent Button
 	spriteType = {
 		name = "GFX_NRR_parliament_btn_gold"
-		texturefile = "gfx/interface/parliament/NRR_parliament_btn_gold.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_btn_gold.dds"
 		noOfFrames = 2
 	}
 
@@ -45,8 +45,8 @@ spriteTypes = {
 		name = "GFX_NRR_parliament_progress_bar"
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
-		textureFile1 = "gfx/interface/parliament/NRR_parliament_progress_bar.dds"
-		textureFile2 = "gfx/interface/parliament/NRR_parliament_progress_bar_bg.dds"
+		textureFile1 = "gfx/interface/gui/NRR_parliament/NRR_parliament_progress_bar.dds"
+		textureFile2 = "gfx/interface/gui/NRR_parliament/NRR_parliament_progress_bar_bg.dds"
 		size = { x = 280 y = 14 }
 		effectFile = "gfx/FX/progress.lua"
 		horizontal = yes
@@ -55,7 +55,13 @@ spriteTypes = {
 	# Leader Portrait Frame
 	spriteType = {
 		name = "GFX_NRR_parliament_portrait_frame"
-		texturefile = "gfx/interface/parliament/NRR_parliament_portrait_frame.dds"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_portrait_frame.dds"
+	}
+
+	# Info Icon
+	spriteType = {
+		name = "GFX_NRR_parliament_info_icon"
+		texturefile = "gfx/interface/gui/NRR_parliament/NRR_parliament_info_icon.dds"
 	}
 
 	# NRR Country Leader Portraits
@@ -91,5 +97,20 @@ spriteTypes = {
 		name = "GFX_NRR_parl_leader_XE"
 		texturefile = "gfx/leaders/NRR/XE.dds"
 	}
+
+	# ========================================================
+	#  【法案专属图标注册教程（第 1 步）】
+	#  - 如果你要【复用】原版或主 mod 现有的国策图标（如 GFX_goal_...），可跳过本文件，直接去第 2 步！
+	#  - 如果你要用【自己新画的 .dds 图标】（建议尺寸约 80x70，最大不超过 90x90）：
+	#    1. 把 .dds 图片放进 gfx/interface/goals/NRR/（或 gfx/interface/gui/NRR_parliament/）
+	#    2. 取消下面示例的注释，改好名字和路径（注意：name 必须以 GFX_ 开头）：
+	#
+	#    spriteType = {
+	#        name = "GFX_NRR_bill_1_icon"
+	#        texturefile = "gfx/interface/goals/NRR/NRR_bill_1_icon.dds"
+	#    }
+	#
+	#  第 2 步：去 common/scripted_localisation/NRR_parliament_sloc.txt 的 GetNRRActiveBillIcon 里绑定编号！
+	# ========================================================
 
 }

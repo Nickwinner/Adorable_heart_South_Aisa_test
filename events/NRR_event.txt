@@ -1,6 +1,7 @@
 add_namespace = NRR.event
 add_namespace = NRR_news
 add_namespace = NRR.event.askforhelp
+add_namespace = NRR_night_raid
 
 country_event = {
     
@@ -388,6 +389,8 @@ country_event = {
 	option = {
 	    name = NRR.event.10.a
 
+		set_country_flag = NRR_national_parliament
+		
 		set_party_name = { 
 				ideology = democratic 
 				long_name =  NRR_democratic_republic_party
@@ -819,7 +822,7 @@ country_event = {
 	option = {
 	    name = NRR.event.31.a
 
-		country_event = { id = NRR.event.32  days = 3}
+		country_event = { id = NRR.event.37  days = 3}
 	}
 }
 country_event = {
@@ -917,7 +920,7 @@ country_event = {  #娜洁希坦
 	}
 }
 
-country_event = {  #塔兹米he
+country_event = {  #雨夜·致我的同仁们……
     
 	id =  NRR.event.37
 	title = NRR.event.37.t
@@ -927,6 +930,8 @@ country_event = {  #塔兹米he
 
 	option = {
 	    name = NRR.event.37.a
+
+		country_event = { id = NRR.event.32  days = 3}
 
 	}
 }
@@ -1259,6 +1264,7 @@ country_event = {
 
 		country_event = { id = NRR.event.57  days = 7}
 		custom_effect_tooltip = NRR_for_friend_and_country
+		set_country_flag = NRR_ic_LBK
 	}
 }
 country_event = { 
@@ -2448,5 +2454,73 @@ country_event = {
 
 	option = {
 	    name = NRR.event.118.a
+	}
+}
+
+# ========================================================
+#  夜袭部队 GUI 行动结果事件（与上方剧情事件隔开）
+# ========================================================
+
+# 夜袭行动成功事件（按 NRR_nr_active_op 显示对应行动选项并结算效果）
+country_event = {
+	id = NRR_night_raid.1
+	title = NRR_night_raid.1.t
+	desc = NRR_night_raid.1.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	# 1. 袭击敌将领
+	option = {
+		name = NRR_night_raid.1.a
+		trigger = { check_variable = { NRR_nr_active_op = 1 } }
+		NRR_nr_apply_selected_op_effect = yes
+		NRR_nr_clear_active_mission_vars = yes
+	}
+
+	# 2. 获取敌军情报
+	option = {
+		name = NRR_night_raid.1.b
+		trigger = { check_variable = { NRR_nr_active_op = 2 } }
+		NRR_nr_apply_selected_op_effect = yes
+		NRR_nr_clear_active_mission_vars = yes
+	}
+
+	# 3. 破坏敌工业设施
+	option = {
+		name = NRR_night_raid.1.c
+		trigger = { check_variable = { NRR_nr_active_op = 3 } }
+		NRR_nr_apply_selected_op_effect = yes
+		NRR_nr_clear_active_mission_vars = yes
+	}
+
+	# 4. 扰乱敌社会秩序
+	option = {
+		name = NRR_night_raid.1.e
+		trigger = { check_variable = { NRR_nr_active_op = 4 } }
+		NRR_nr_apply_selected_op_effect = yes
+		NRR_nr_clear_active_mission_vars = yes
+	}
+
+	# 5. 瘫痪敌特务机构
+	option = {
+		name = NRR_night_raid.1.f
+		trigger = { check_variable = { NRR_nr_active_op = 5 } }
+		NRR_nr_apply_selected_op_effect = yes
+		NRR_nr_clear_active_mission_vars = yes
+	}
+}
+
+# 夜袭行动失败事件
+country_event = {
+	id = NRR_night_raid.2
+	title = NRR_night_raid.2.t
+	desc = NRR_night_raid.2.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_night_raid.2.a
+		add_political_power = -10
+		NRR_nr_clear_active_mission_vars = yes
 	}
 }

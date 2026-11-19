@@ -1,0 +1,89 @@
+defined_text = {
+	name = GetNRRICTitle
+	# 未来蓝线等其他路线可在此上方添加分支判断，例如：
+	# text = {
+	# 	trigger = { has_country_flag = NRR_blue_route }
+	# 	localization_key = NRR_IC_TITLE_BLUE
+	# }
+	text = {
+		localization_key = NRR_IC_TITLE
+	}
+}
+
+defined_text = {
+	name = GetNRRICLeaderTitle
+	# 未来蓝线等其他路线可在此上方添加领袖称谓判断，例如：
+	# text = {
+	# 	trigger = { has_country_flag = NRR_blue_route }
+	# 	localization_key = NRR_IC_LEADER_TITLE_BLUE
+	# }
+	text = {
+		localization_key = NRR_IC_LEADER_TITLE_DEFAULT
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot1Name
+	text = {
+		trigger = { has_country_flag = NRR_ic_MY }
+		localization_key = NRR_IC_MY_NAME
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_NAME
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot1Title
+	text = {
+		trigger = { has_country_flag = NRR_ic_MY }
+		localization_key = NRR_IC_MY_TITLE
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_TITLE
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot2Name
+	text = {
+		trigger = { has_country_flag = NRR_ic_LBK }
+		localization_key = NRR_IC_LBK_NAME
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_NAME
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot2Title
+	text = {
+		trigger = { has_country_flag = NRR_ic_LBK }
+		localization_key = NRR_IC_LBK_TITLE
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_TITLE
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot3Name
+	text = {
+		trigger = { has_country_flag = NRR_ic_chitong }
+		localization_key = NRR_IC_CHITONG_NAME
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_NAME
+	}
+}
+
+defined_text = {
+	name = GetNRRICSlot3Title
+	text = {
+		trigger = { has_country_flag = NRR_ic_chitong }
+		localization_key = NRR_IC_CHITONG_TITLE
+	}
+	text = {
+		localization_key = NRR_IC_VACANT_TITLE
+	}
+}

@@ -12,6 +12,10 @@ focus_tree={
 		x = 700
 		y = 2200
 	}
+	inlay_window = {
+		id = NRR_inner_circle_inlay_window
+		position = { x = 3030 y = 820 }
+	}
 	focus={
 		id=NRR_revolution_day
 		allow_branch = {
@@ -29,7 +33,7 @@ focus_tree={
 		}
 		completion_reward={
 			add_political_power = 50
-			NRR_submit_bill_1 = yes
+			#NRR_submit_bill_1 = yes
 		}
 	}
 	focus={
@@ -307,7 +311,7 @@ focus_tree={
 			declare_war_on = { 
 				target = MOE 
 				type = annex_everything
-			 }
+			}
 			every_state = {
 				limit = {
 					is_core_of = MOE
@@ -2018,6 +2022,7 @@ focus_tree={
 			country_event={
 			    id=NRR.event.50
 		    }
+			set_country_flag = NRR_inner_circle_unlocked
 		}
 	}
 	focus={
@@ -2040,6 +2045,7 @@ focus_tree={
 			country_event={
 			    id=NRR.event.51
 		    }
+			set_country_flag = NRR_ic_MY
 		}
 	}
 	focus={
@@ -2062,6 +2068,7 @@ focus_tree={
 			country_event={
 			    id=NRR.event.52
 		    }
+			set_country_flag = NRR_ic_chitong
 		}
 	}
 	focus={

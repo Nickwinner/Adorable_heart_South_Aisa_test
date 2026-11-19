@@ -1,0 +1,65 @@
+defined_text = {
+	name = GetNRRNightRaidTargetText
+	text = {
+		trigger = {
+			has_variable = NRR_nr_target_country
+		}
+		localization_key = NRR_NR_TARGET_SELECTED
+	}
+	text = {
+		localization_key = NRR_NR_TARGET_NONE
+	}
+}
+
+defined_text = {
+	name = GetNRRNightRaidMissionStatus
+	text = {
+		trigger = {
+			has_country_flag = NRR_nr_mission_active
+		}
+		localization_key = NRR_NR_MISSION_ACTIVE_STATUS
+	}
+	text = {
+		localization_key = NRR_NR_MISSION_IDLE_STATUS
+	}
+}
+
+defined_text = {
+	name = GetNRRNightRaidAPGainText
+	text = {
+		trigger = {
+			check_variable = { NRR_nr_ap_gain < 0 }
+		}
+		localization_key = NRR_NR_AP_GAIN_NEG
+	}
+	text = {
+		localization_key = NRR_NR_AP_GAIN_POS
+	}
+}
+
+defined_text = {
+	name = GetNRRActiveOpName
+	text = {
+		trigger = { check_variable = { NRR_nr_active_op = 1 } }
+		localization_key = NRR_NR_OP_1_TEXT
+	}
+	text = {
+		trigger = { check_variable = { NRR_nr_active_op = 2 } }
+		localization_key = NRR_NR_OP_2_TEXT
+	}
+	text = {
+		trigger = { check_variable = { NRR_nr_active_op = 3 } }
+		localization_key = NRR_NR_OP_3_TEXT
+	}
+	text = {
+		trigger = { check_variable = { NRR_nr_active_op = 4 } }
+		localization_key = NRR_NR_OP_4_TEXT
+	}
+	text = {
+		trigger = { check_variable = { NRR_nr_active_op = 5 } }
+		localization_key = NRR_NR_OP_5_TEXT
+	}
+	text = {
+		localization_key = NRR_NR_OP_1_TEXT
+	}
+}

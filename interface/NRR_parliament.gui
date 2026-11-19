@@ -1,13 +1,13 @@
 guiTypes = {
 
 	# ========================================================
-	#  Entrance Button (Above Crosshair on the Right Sidebar)
+	#  Entrance Button inside Politics Tab (Below Night Raid Btn)
 	# ========================================================
 	containerWindowType = {
 		name = "NRR_parliament_open_window"
-		position = { x = -59 y = -472 }
-		size = { width = 48 height = 48 }
-		Orientation = lower_RIGHT
+		position = { x = 466 y = 123 }
+		size = { width = 56 height = 56 }
+		Orientation = UPPER_LEFT
 
 		buttonType = {
 			name = "NRR_parliament_open_btn"
@@ -15,6 +15,7 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 			pdx_tooltip = "NRR_parliament_open_btn_tt"
 			pdx_tooltip_delayed = "NRR_parliament_open_btn_desc"
+			clicksound = click_default
 		}
 	}
 
@@ -57,6 +58,14 @@ guiTypes = {
 			maxWidth = 400
 			maxHeight = 25
 			format = right
+		}
+
+		# Info Icon
+		iconType = {
+			name = "NRR_parliament_info_icon"
+			spriteType = "GFX_NRR_parliament_info_icon"
+			position = { x = 964 y = 12 }
+			pdx_tooltip = "NRR_PARLIAMENT_INFO_TT"
 		}
 
 		# Close Button
@@ -484,15 +493,6 @@ guiTypes = {
 				maxWidth = 350
 				maxHeight = 18
 			}
-			instantTextBoxType = {
-				name = "NRR_house_threshold_note"
-				position = { x = 20 y = 345 }
-				font = "hoi_16mbs"
-				text = "NRR_HOUSE_THRESHOLD_DESC"
-				maxWidth = 625
-				maxHeight = 20
-				format = center
-			}
 
 			# Head of Government Portrait & Name (Top Right of House Panel)
 			iconType = {
@@ -567,8 +567,17 @@ guiTypes = {
 				format = center
 			}
 			instantTextBoxType = {
+				name = "NRR_house_threshold_note"
+				position = { x = 640 y = 55 }
+				font = "hoi_16mbs"
+				text = "NRR_HOUSE_THRESHOLD_DESC"
+				maxWidth = 340
+				maxHeight = 20
+				format = center
+			}
+			instantTextBoxType = {
 				name = "NRR_senate_vote_projection"
-				position = { x = 650 y = 56 }
+				position = { x = 650 y = 78 }
 				font = "hoi_16mbs"
 				text = "[Root.GetNRRSenateVoteProjectionText]"
 				maxWidth = 320
@@ -685,7 +694,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "NRR_senate_title"
-			position = { x = 15 y = 8 }
+			position = { x = 15 y = 12 }
 			font = "hoi_18mbs"
 			text = "[Root.GetNRRSenateTitle]"
 			maxWidth = 280

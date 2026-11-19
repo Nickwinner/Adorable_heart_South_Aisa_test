@@ -62,6 +62,25 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetNRRActiveBillIcon
+	# ========================================================
+	#  【法案专属图标绑定教程（第 2 步 / 最后一步）】
+	#  1. 在下面“默认透明项”的【上面】，复制并取消注释如下代码块：
+	#     text = {
+	#         trigger = { check_variable = { NRR_active_bill_id = 1 } }  # 改成你的法案编号（1、2、3...）
+	#         localization_key = GFX_NRR_bill_1_icon                     # 改成你在 NRR_parliament.gfx 注册的图标名（或现有国策 GFX_goal_...）
+	#     }
+	#  2. 规则：所有带 trigger 的法案条目【必须】写在下面默认透明项的上面！
+	#  3. 完成以上两步后进游戏即可显示（不需要改 .gui 或 _sgui.txt）；新加 .dds 需重启游戏，复用现有 GFX 可直接控制台 reload scripted_localisation。
+	# ========================================================
+
+	# 默认无图标（未配置专属图标的法案保持透明不显示，请勿删改此项并保持它在最后）
+	text = {
+		localization_key = GFX_tiled_window_transparent
+	}
+}
+
+defined_text = {
 	name = GetNRRBillCountdownText
 	text = {
 		trigger = {

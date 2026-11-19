@@ -1,0 +1,314 @@
+# ========================================================
+#  NRR Night Raid HQ Scripted Effects (夜袭部队总部)
+# ========================================================
+
+NRR_init_night_raid_if_needed = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = NRR_night_raid_initialized }
+		}
+		set_country_flag = NRR_night_raid_initialized
+		set_variable = { NRR_nr_ap = 10 }
+		set_variable = { NRR_nr_hq_level = 0 }
+		set_variable = { NRR_nr_training_level = 0 }
+		set_variable = { NRR_nr_equip_level = 0 }
+		set_variable = { NRR_nr_budget_level = 0 }
+		set_variable = { NRR_nr_selected_op = 0 }
+		NRR_nr_recalc_ap_gain = yes
+	}
+}
+
+NRR_nr_recalc_ap_gain = {
+	# 基础每月增长 4 点 + 总部规模每级 +2 点 + 预算档位每级 +2 点
+	set_variable = { NRR_nr_ap_gain = 4 }
+
+	set_temp_variable = { t_hq = NRR_nr_hq_level }
+	multiply_temp_variable = { t_hq = 2 }
+	add_to_variable = { NRR_nr_ap_gain = t_hq }
+
+	set_temp_variable = { t_bud = NRR_nr_budget_level }
+	multiply_temp_variable = { t_bud = 2 }
+	add_to_variable = { NRR_nr_ap_gain = t_bud }
+}
+
+# --- 1. 扩建总部规模 (最多3次，每月限1次，每次100圣杯盾，第2/3次各+1特工位) ---
+NRR_nr_upgrade_hq_effect = {
+	NRR_init_night_raid_if_needed = yes
+	COST_100_UBS_LOAD = yes
+	set_country_flag = NRR_nr_hq_monthly_cd
+	add_to_variable = { NRR_nr_hq_level = 1 }
+	NRR_nr_recalc_ap_gain = yes
+
+	if = {
+		limit = { check_variable = { NRR_nr_hq_level = 2 } }
+		add_ideas = NRR_nr_hq_operative_1_idea
+	}
+	else_if = {
+		limit = { check_variable = { NRR_nr_hq_level = 3 } }
+		swap_ideas = {
+			remove_idea = NRR_nr_hq_operative_1_idea
+			add_idea = NRR_nr_hq_operative_2_idea
+		}
+	}
+}
+
+# --- 2. 机构人员特训 (最多5次，每月限1次，每次100圣杯盾，从左向右解锁“特工训练”分支) ---
+NRR_nr_upgrade_train_effect = {
+	NRR_init_night_raid_if_needed = yes
+	COST_100_UBS_LOAD = yes
+	set_country_flag = NRR_nr_train_monthly_cd
+	add_to_variable = { NRR_nr_training_level = 1 }
+
+	if = {
+		limit = { has_intelligence_agency = no }
+		create_intelligence_agency = yes
+	}
+	if = {
+		limit = {
+			check_variable = { NRR_nr_training_level = 1 }
+			NOT = { has_done_agency_upgrade = upgrade_training_centers }
+		}
+		upgrade_intelligence_agency = upgrade_training_centers
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_training_level = 2 }
+			NOT = { has_done_agency_upgrade = upgrade_commando_training }
+		}
+		upgrade_intelligence_agency = upgrade_commando_training
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_training_level = 3 }
+			NOT = { has_done_agency_upgrade = upgrade_interrogation_techniques }
+		}
+		upgrade_intelligence_agency = upgrade_interrogation_techniques
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_training_level = 4 }
+			NOT = { has_done_agency_upgrade = upgrade_diplo_training }
+		}
+		upgrade_intelligence_agency = upgrade_diplo_training
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_training_level = 5 }
+			NOT = { has_done_agency_upgrade = upgrade_psycho_warfare }
+		}
+		upgrade_intelligence_agency = upgrade_psycho_warfare
+	}
+}
+
+# --- 3. 更新人员设备 (最多5次，每月限1次，每次100圣杯盾，从左向右解锁“行动”分支) ---
+NRR_nr_upgrade_equip_effect = {
+	NRR_init_night_raid_if_needed = yes
+	COST_100_UBS_LOAD = yes
+	set_country_flag = NRR_nr_equip_monthly_cd
+	add_to_variable = { NRR_nr_equip_level = 1 }
+
+	if = {
+		limit = { has_intelligence_agency = no }
+		create_intelligence_agency = yes
+	}
+	if = {
+		limit = {
+			check_variable = { NRR_nr_equip_level = 1 }
+			NOT = { has_done_agency_upgrade = upgrade_blueprint_stealing }
+		}
+		upgrade_intelligence_agency = upgrade_blueprint_stealing
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_equip_level = 2 }
+			NOT = { has_done_agency_upgrade = upgrade_portable_radios }
+		}
+		upgrade_intelligence_agency = upgrade_portable_radios
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_equip_level = 3 }
+			NOT = { has_done_agency_upgrade = upgrade_invisible_ink }
+		}
+		upgrade_intelligence_agency = upgrade_invisible_ink
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_equip_level = 4 }
+			NOT = { has_done_agency_upgrade = upgrade_plastic_explosives }
+		}
+		upgrade_intelligence_agency = upgrade_plastic_explosives
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR_nr_equip_level = 5 }
+			NOT = { has_done_agency_upgrade = upgrade_suicide_pills }
+		}
+		upgrade_intelligence_agency = upgrade_suicide_pills
+	}
+}
+
+# --- 4/5. 追加 / 削减特别行动预算 (相对基准最多增减各3档 / 每月±6点) ---
+NRR_nr_budget_up_effect = {
+	NRR_init_night_raid_if_needed = yes
+	COST_100_UBS_LOAD = yes
+	add_to_variable = { NRR_nr_budget_level = 1 }
+	clamp_variable = { var = NRR_nr_budget_level min = -3 max = 3 }
+	NRR_nr_recalc_ap_gain = yes
+}
+
+NRR_nr_budget_down_effect = {
+	NRR_init_night_raid_if_needed = yes
+	add_to_variable = { ubs_save = 50 }
+	subtract_from_variable = { NRR_nr_budget_level = 1 }
+	clamp_variable = { var = NRR_nr_budget_level min = -3 max = 3 }
+	NRR_nr_recalc_ap_gain = yes
+}
+
+# --- 执行任务：先选目标国 -> 再选行动内容 -> 最后选级别启动 20 天任务倒计时 ---
+NRR_nr_execute_mission_effect = {
+	NRR_init_night_raid_if_needed = yes
+
+	# 1. 扣除行动点（秘密=1点，机密=3点，绝密=5点）
+	if = {
+		limit = { check_variable = { NRR_nr_exec_tier = 1 } }
+		subtract_from_variable = { NRR_nr_ap = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { NRR_nr_exec_tier = 2 } }
+		subtract_from_variable = { NRR_nr_ap = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { NRR_nr_exec_tier = 3 } }
+		subtract_from_variable = { NRR_nr_ap = 5 }
+	}
+	clamp_variable = { var = NRR_nr_ap min = 0 max = 200 }
+
+	# 2. 锁定本次任务参数并启动 20 天执行倒计时
+	set_variable = { NRR_nr_active_op = NRR_nr_selected_op }
+	set_variable = { NRR_nr_active_tier = NRR_nr_exec_tier }
+	set_variable = { NRR_nr_active_target = NRR_nr_target_country }
+	set_variable = { NRR_nr_mission_days_left = 20 }
+	set_variable = { NRR_nr_mission_progress = 0 }
+	set_country_flag = NRR_nr_mission_active
+}
+
+# --- 每日推进 20 天夜袭任务进度条，到期按成功率弹出成功/失败事件 ---
+NRR_nr_daily_mission_tick = {
+	if = {
+		limit = {
+			has_country_flag = NRR_nr_mission_active
+		}
+		subtract_from_variable = { NRR_nr_mission_days_left = 1 }
+		add_to_variable = { NRR_nr_mission_progress = 5 }
+		clamp_variable = { var = NRR_nr_mission_progress min = 0 max = 100 }
+
+		if = {
+			limit = {
+				check_variable = { NRR_nr_mission_days_left < 1 }
+			}
+			clr_country_flag = NRR_nr_mission_active
+			set_variable = { NRR_nr_mission_days_left = 0 }
+			set_variable = { NRR_nr_mission_progress = 0 }
+
+			# 按级别成功率判定：秘密 60%，机密 80%，绝密 100%
+			if = {
+				limit = { check_variable = { NRR_nr_active_tier = 1 } }
+				random_list = {
+					60 = { country_event = { id = NRR_night_raid.1 } }
+					40 = { country_event = { id = NRR_night_raid.2 } }
+				}
+			}
+			else_if = {
+				limit = { check_variable = { NRR_nr_active_tier = 2 } }
+				random_list = {
+					80 = { country_event = { id = NRR_night_raid.1 } }
+					20 = { country_event = { id = NRR_night_raid.2 } }
+				}
+			}
+			else = {
+				country_event = { id = NRR_night_raid.1 }
+			}
+		}
+	}
+}
+
+NRR_nr_clear_active_mission_vars = {
+	clear_variable = NRR_nr_active_op
+	clear_variable = NRR_nr_active_tier
+	clear_variable = NRR_nr_active_target
+}
+
+NRR_nr_apply_selected_op_effect = {
+	var:NRR_nr_active_target = {
+		if = {
+			limit = { ROOT = { check_variable = { NRR_nr_active_op = 1 } } }
+			# 1. 袭击敌将领：令目标国任意一位未负伤的陆军将领负伤 30 日
+			if = {
+				limit = { any_army_leader = { NOT = { has_trait = wounded } } }
+				random_army_leader = {
+					limit = { NOT = { has_trait = wounded } }
+					add_timed_unit_leader_trait = {
+						trait = wounded
+						days = 30
+					}
+				}
+			}
+			else = {
+				random_army_leader = {
+					add_timed_unit_leader_trait = {
+						trait = wounded
+						days = 30
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { check_variable = { NRR_nr_active_op = 2 } } }
+			# 2. 获取敌军情报：使 NRR 对目标国的陆军情报提升 +50%
+			ROOT = {
+				add_intel = {
+					target = PREV
+					army_intel = 50
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { check_variable = { NRR_nr_active_op = 3 } } }
+			# 3. 破坏敌工业设施：令目标国任一省份民用/军用工厂遭受破坏（暂定 0.5 级，可在下面改小数）
+			if = {
+				limit = { any_owned_controlled_state = { industrial_complex > 0 } }
+				random_owned_controlled_state = {
+					limit = { industrial_complex > 0 }
+					damage_building = {
+						type = industrial_complex
+						damage = 0.5
+					}
+				}
+			}
+			else_if = {
+				limit = { any_owned_controlled_state = { arms_factory > 0 } }
+				random_owned_controlled_state = {
+					limit = { arms_factory > 0 }
+					damage_building = {
+						type = arms_factory
+						damage = 0.5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { check_variable = { NRR_nr_active_op = 4 } } }
+			# 4. 扰乱敌社会秩序：降低目标国稳定度 -10%
+			add_stability = -0.10
+		}
+		else_if = {
+			limit = { ROOT = { check_variable = { NRR_nr_active_op = 5 } } }
+			# 5. 瘫痪敌特务机构：给予目标国持续 60 天的情报获取与特工效率削弱 debuff
+			add_timed_idea = {
+				idea = NRR_nr_intel_paralyzed_idea
+				days = 60
+			}
+		}
+	}
+}

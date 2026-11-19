@@ -1,0 +1,187 @@
+scripted_gui = {
+
+	NRR_night_raid_open_gui = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "NRR_night_raid_open_window"
+
+		visible = {
+			tag = NRR
+			has_country_flag = NRR_night_raid_unlocked
+		}
+
+		effects = {
+			NRR_nr_open_btn_click = {
+				if = {
+					limit = { has_country_flag = NRR_night_raid_window_open }
+					clr_country_flag = NRR_night_raid_window_open
+				}
+				else = {
+					set_country_flag = NRR_night_raid_window_open
+					NRR_init_night_raid_if_needed = yes
+				}
+			}
+		}
+	}
+
+	NRR_night_raid_main_gui = {
+		context_type = player_context
+		window_name = "NRR_night_raid_main_window"
+
+		visible = {
+			tag = NRR
+			has_country_flag = NRR_night_raid_window_open
+		}
+
+		dynamic_lists = {
+			NRR_nr_enemies_grid = {
+				array = enemies
+				change_scope = yes
+				entry_container = NRR_nr_enemy_flag_entry
+			}
+		}
+
+		triggers = {
+			# Selected enemy highlight
+			NRR_nr_enemy_flag_selected_visible = {
+				check_variable = { ROOT.NRR_nr_target_country = THIS }
+			}
+
+			# Selected operation highlights
+			NRR_nr_op_selected_1_visible = {
+				check_variable = { NRR_nr_selected_op = 1 }
+			}
+			NRR_nr_op_selected_2_visible = {
+				check_variable = { NRR_nr_selected_op = 2 }
+			}
+			NRR_nr_op_selected_3_visible = {
+				check_variable = { NRR_nr_selected_op = 3 }
+			}
+			NRR_nr_op_selected_4_visible = {
+				check_variable = { NRR_nr_selected_op = 4 }
+			}
+			NRR_nr_op_selected_5_visible = {
+				check_variable = { NRR_nr_selected_op = 5 }
+			}
+
+			# Upgrade & Budget button conditions (Grail Shield ubs_save >= 100 + monthly cooldown)
+			NRR_nr_upgrade_hq_btn_click_enabled = {
+				NOT = { check_variable = { ubs_save < 100 } }
+				NOT = { has_country_flag = NRR_nr_hq_monthly_cd }
+				check_variable = { NRR_nr_hq_level < 3 }
+			}
+			NRR_nr_upgrade_train_btn_click_enabled = {
+				NOT = { check_variable = { ubs_save < 100 } }
+				NOT = { has_country_flag = NRR_nr_train_monthly_cd }
+				check_variable = { NRR_nr_training_level < 5 }
+			}
+			NRR_nr_upgrade_equip_btn_click_enabled = {
+				NOT = { check_variable = { ubs_save < 100 } }
+				NOT = { has_country_flag = NRR_nr_equip_monthly_cd }
+				check_variable = { NRR_nr_equip_level < 5 }
+			}
+			NRR_nr_budget_up_btn_click_enabled = {
+				NOT = { check_variable = { ubs_save < 100 } }
+				check_variable = { NRR_nr_budget_level < 3 }
+			}
+			NRR_nr_budget_down_btn_click_enabled = {
+				check_variable = { NRR_nr_budget_level > -3 }
+			}
+
+			# Execution tier conditions: must select target country, operation, not already running a mission, and have enough AP (1 / 3 / 5)
+			NRR_nr_exec_tier1_btn_click_enabled = {
+				NOT = { has_country_flag = NRR_nr_mission_active }
+				has_variable = NRR_nr_target_country
+				check_variable = { NRR_nr_selected_op > 0 }
+				check_variable = { NRR_nr_ap > 0 }
+			}
+			NRR_nr_exec_tier2_btn_click_enabled = {
+				NOT = { has_country_flag = NRR_nr_mission_active }
+				has_variable = NRR_nr_target_country
+				check_variable = { NRR_nr_selected_op > 0 }
+				check_variable = { NRR_nr_ap > 2 }
+			}
+			NRR_nr_exec_tier3_btn_click_enabled = {
+				NOT = { has_country_flag = NRR_nr_mission_active }
+				has_variable = NRR_nr_target_country
+				check_variable = { NRR_nr_selected_op > 0 }
+				check_variable = { NRR_nr_ap > 4 }
+			}
+		}
+
+		effects = {
+			NRR_nr_close_btn_click = {
+				clr_country_flag = NRR_night_raid_window_open
+			}
+
+			# Select enemy target country
+			NRR_nr_enemy_flag_btn_click = {
+				ROOT = {
+					set_variable = { NRR_nr_target_country = PREV }
+				}
+			}
+
+			# Select operation 1..5
+			NRR_nr_op_btn_1_click = {
+				NRR_init_night_raid_if_needed = yes
+				set_variable = { NRR_nr_selected_op = 1 }
+			}
+			NRR_nr_op_btn_2_click = {
+				NRR_init_night_raid_if_needed = yes
+				set_variable = { NRR_nr_selected_op = 2 }
+			}
+			NRR_nr_op_btn_3_click = {
+				NRR_init_night_raid_if_needed = yes
+				set_variable = { NRR_nr_selected_op = 3 }
+			}
+			NRR_nr_op_btn_4_click = {
+				NRR_init_night_raid_if_needed = yes
+				set_variable = { NRR_nr_selected_op = 4 }
+			}
+			NRR_nr_op_btn_5_click = {
+				NRR_init_night_raid_if_needed = yes
+				set_variable = { NRR_nr_selected_op = 5 }
+			}
+
+			# Upgrades & Budget
+			NRR_nr_upgrade_hq_btn_click = {
+				NRR_nr_upgrade_hq_effect = yes
+			}
+			NRR_nr_upgrade_train_btn_click = {
+				NRR_nr_upgrade_train_effect = yes
+			}
+			NRR_nr_upgrade_equip_btn_click = {
+				NRR_nr_upgrade_equip_effect = yes
+			}
+			NRR_nr_budget_up_btn_click = {
+				NRR_nr_budget_up_effect = yes
+			}
+			NRR_nr_budget_down_btn_click = {
+				NRR_nr_budget_down_effect = yes
+			}
+
+			# Execute at Tier 1 / 2 / 3
+			NRR_nr_exec_tier1_btn_click = {
+				set_variable = { NRR_nr_exec_tier = 1 }
+				NRR_nr_execute_mission_effect = yes
+			}
+			NRR_nr_exec_tier2_btn_click = {
+				set_variable = { NRR_nr_exec_tier = 2 }
+				NRR_nr_execute_mission_effect = yes
+			}
+			NRR_nr_exec_tier3_btn_click = {
+				set_variable = { NRR_nr_exec_tier = 3 }
+				NRR_nr_execute_mission_effect = yes
+			}
+		}
+
+		properties = {
+			NRR_nr_enemy_flag_icon = {
+				image = "[This.GetFlag]"
+			}
+			NRR_nr_mission_progress_bar = {
+				frame = NRR_nr_mission_progress
+			}
+		}
+	}
+}

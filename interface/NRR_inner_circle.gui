@@ -1,0 +1,155 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "NRR_inner_circle_inlay_window_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 560 height = 415 }
+		clipping = no
+
+		iconType = {
+			name = "NRR_ic_bg"
+			spriteType = "GFX_NRR_ic_bg"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "NRR_ic_title"
+			position = { x = 20 y = 9 }
+			font = "hoi_20b"
+			context_aware_text = "NRR_IC_TITLE_LOC"
+			maxWidth = 520
+			maxHeight = 26
+			format = center
+		}
+
+		# Top: Current Leader Portrait + Name + Chairman Title
+		iconType = {
+			name = "NRR_ic_leader_portrait"
+			spriteType = "GFX_NRR_parl_leader_TZM"
+			position = { x = 240 y = 42 }
+			scale = 0.50
+		}
+		iconType = {
+			name = "NRR_ic_leader_frame"
+			spriteType = "GFX_NRR_ic_slot_frame"
+			position = { x = 238 y = 40 }
+			scale = 0.69
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_leader_name"
+			position = { x = 180 y = 151 }
+			font = "hoi_18mbs"
+			context_aware_text = "NRR_IC_LEADER_NAME_LOC"
+			maxWidth = 200
+			maxHeight = 22
+			format = center
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_leader_title"
+			position = { x = 180 y = 171 }
+			font = "hoi_16mbs"
+			context_aware_text = "NRR_IC_LEADER_TITLE_LOC"
+			maxWidth = 200
+			maxHeight = 20
+			format = center
+		}
+
+		# Slot 1 (Left - e.g. Mine / 玛茵)
+		iconType = {
+			name = "NRR_ic_slot1_portrait"
+			spriteType = "GFX_NRR_ic_empty_portrait"
+			position = { x = 35 y = 200 }
+			scale = 0.72
+		}
+		iconType = {
+			name = "NRR_ic_slot1_frame"
+			spriteType = "GFX_NRR_ic_slot_frame"
+			position = { x = 32 y = 197 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot1_name"
+			position = { x = 20 y = 358 }
+			font = "hoi_18mbs"
+			context_aware_text = "NRR_IC_SLOT1_NAME_LOC"
+			maxWidth = 142
+			maxHeight = 22
+			format = center
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot1_title"
+			position = { x = 20 y = 380 }
+			font = "hoi_16mbs"
+			context_aware_text = "NRR_IC_SLOT1_TITLE_LOC"
+			maxWidth = 142
+			maxHeight = 20
+			format = center
+		}
+
+		# Slot 2 (Center - e.g. Lubbock / 拉伯克)
+		iconType = {
+			name = "NRR_ic_slot2_portrait"
+			spriteType = "GFX_NRR_ic_empty_portrait"
+			position = { x = 224 y = 200 }
+			scale = 0.72
+		}
+		iconType = {
+			name = "NRR_ic_slot2_frame"
+			spriteType = "GFX_NRR_ic_slot_frame"
+			position = { x = 221 y = 197 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot2_name"
+			position = { x = 209 y = 358 }
+			font = "hoi_18mbs"
+			context_aware_text = "NRR_IC_SLOT2_NAME_LOC"
+			maxWidth = 142
+			maxHeight = 22
+			format = center
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot2_title"
+			position = { x = 209 y = 380 }
+			font = "hoi_16mbs"
+			context_aware_text = "NRR_IC_SLOT2_TITLE_LOC"
+			maxWidth = 142
+			maxHeight = 20
+			format = center
+		}
+
+		# Slot 3 (Right - e.g. Akame / 赤瞳)
+		iconType = {
+			name = "NRR_ic_slot3_portrait"
+			spriteType = "GFX_NRR_ic_empty_portrait"
+			position = { x = 413 y = 200 }
+			scale = 0.72
+		}
+		iconType = {
+			name = "NRR_ic_slot3_frame"
+			spriteType = "GFX_NRR_ic_slot_frame"
+			position = { x = 410 y = 197 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot3_name"
+			position = { x = 398 y = 358 }
+			font = "hoi_18mbs"
+			context_aware_text = "NRR_IC_SLOT3_NAME_LOC"
+			maxWidth = 142
+			maxHeight = 22
+			format = center
+		}
+		instantTextBoxType = {
+			name = "NRR_ic_slot3_title"
+			position = { x = 398 y = 380 }
+			font = "hoi_16mbs"
+			context_aware_text = "NRR_IC_SLOT3_TITLE_LOC"
+			maxWidth = 142
+			maxHeight = 20
+			format = center
+		}
+	}
+}
