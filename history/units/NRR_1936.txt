@@ -1,7 +1,6 @@
-
 division_template = { 
-	name = "革命军步兵师"			
-	division_names_group = NRR_INF_01 
+	name = "革命军步兵师"
+	division_names_group = NRR_INF_01
 	priority = 1
 	regiments = {
 		infantry = {
@@ -37,7 +36,7 @@ division_template = {
 	}	
 }
 division_template = { 
-	name = "夜袭团"	
+	name = "夜袭团"
 	division_names_group = NRR_CAV_01
 	regiments = {
 		magic_assault = {
@@ -75,91 +74,130 @@ division_template = {
 
 units = {
 	division = {
-		name = "革命军第1师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
 		location = 8076
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第2师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
 		location = 2105
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第3师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
 		location = 11995
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第4师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
 		location = 4187
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第5师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
 		location = 7430
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第6师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
 		location = 4072
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第7师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
 		location = 12182
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第8师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
 		location = 4353
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第9师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
 		location = 4883
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第10师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
 		location = 4557
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第11师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
 		location = 7119
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "革命军第12师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
 		location = 5019
 		division_template = "革命军步兵师"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division = {
-		name = "夜袭团"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
 		location = 12080
 		division_template = "夜袭团"
 		start_experience_factor = 1

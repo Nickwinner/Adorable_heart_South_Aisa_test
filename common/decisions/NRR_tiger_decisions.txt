@@ -1,0 +1,420 @@
+# ========================================================
+#  与虎谋皮 · 竞价决议系统 (NRR vs MOE -> ENG)
+#  - 竞价期仅扣除即时政治/资金成本，长期负面精神记账至消灭对手后兑现
+#  - 结算胜负的强力增益/孤立减益在 MOE 与 NRR 陷入战争时发放
+#  - AI 规则：NRR 只做轻档且上限 35 分；MOE 做轻/中档（上限 65 / 领先>=15停手），重档概率极低
+# ========================================================
+
+NRR_MOE_tiger_category = {
+
+	# ====================================================
+	#  180 天竞价倒计时任务
+	# ====================================================
+	NRR_MOE_tiger_mission = {
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = {
+			OR = {
+				tag = NRR
+				tag = MOE
+			}
+		}
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		cancel_trigger = {
+			OR = {
+				has_global_flag = NRR_MOE_tiger_ended
+				has_global_flag = NRR_ANR_defected
+				NOT = { country_exists = NRR }
+				NOT = { country_exists = MOE }
+			}
+		}
+		is_good = no
+		days_mission_timeout = 360
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = NRR_MOE_tiger_ended }
+				}
+				NRR_MOE_tiger_resolve_bidding = yes
+			}
+		}
+	}
+
+	# ====================================================
+	#  一、政治与外交让步（轻档 · 可重复）
+	# ====================================================
+
+	# 1. 派遣秘密使团游说圣杯宫廷 (+5分, CD 20天)
+	NRR_MOE_tiger_bid_envoy = {
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			has_political_power > 34
+			check_variable = { ubs_save > 49 }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+		}
+		cost = 35
+		days_re_enable = 20
+
+		complete_effect = {
+			subtract_from_variable = { ubs_save = 50 }
+			add_to_variable = { tiger_score = 5 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_ADD_5_TT
+		}
+
+		ai_will_do = {
+			base = 8
+			modifier = {
+				factor = 0
+				tag = NRR
+				check_variable = { tiger_score > 34 }
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 64 }
+					check_variable = { global.MOE_tiger_lead > 14 }
+				}
+			}
+		}
+	}
+
+	# 2. 压制国内反殖民舆论 (+10分, CD 30天)
+	NRR_MOE_tiger_bid_suppress = {
+		icon = GFX_decision_oppression
+		available = {
+			has_stability > 0.15
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+		}
+		cost = 15
+		days_re_enable = 30
+
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_to_variable = { tiger_score = 10 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_ADD_10_TT
+		}
+
+		ai_will_do = {
+			base = 6
+			modifier = {
+				factor = 0
+				tag = NRR
+				check_variable = { tiger_score > 29 }
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 64 }
+					check_variable = { global.MOE_tiger_lead > 14 }
+				}
+			}
+		}
+	}
+
+	# ====================================================
+	#  二、经济与贸易特权（中档 · 一次性 · 战后兑现）
+	# ====================================================
+
+	# 3. 许诺圣杯商社关税豁免与特权 (+15分)
+	NRR_MOE_tiger_bid_tariff = {
+		icon = GFX_decision_generic_operation
+		available = {
+			NOT = { has_country_flag = tiger_pledge_tariff }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_tariff }
+		}
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = tiger_pledge_tariff
+			add_to_variable = { tiger_score = 15 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_TARIFF_TT
+		}
+
+		ai_will_do = {
+			base = 7
+			modifier = {
+				factor = 0
+				tag = NRR
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 59 }
+					check_variable = { global.MOE_tiger_lead > 14 }
+				}
+			}
+		}
+	}
+
+	# 4. 许诺恒河铁路与矿产优先开采权 (+15分)
+	NRR_MOE_tiger_bid_railway = {
+		icon = GFX_decision_generic_construction
+		available = {
+			NOT = { has_country_flag = tiger_pledge_railway }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_railway }
+		}
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = tiger_pledge_railway
+			add_to_variable = { tiger_score = 15 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_RAILWAY_TT
+		}
+
+		ai_will_do = {
+			base = 6
+			modifier = {
+				factor = 0
+				tag = NRR
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 59 }
+					check_variable = { global.MOE_tiger_lead > 14 }
+				}
+			}
+		}
+	}
+
+	# 5. 承诺承接旧帝国对圣杯巨额债务 (+20分)
+	NRR_MOE_tiger_bid_debt = {
+		icon = GFX_decision_gre_paying_ifc_debt
+		available = {
+			NOT = { has_country_flag = tiger_pledge_debt }
+			check_variable = { ubs_save > 199 }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_debt }
+		}
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			subtract_from_variable = { ubs_save = 200 }
+			set_country_flag = tiger_pledge_debt
+			add_to_variable = { tiger_score = 20 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_DEBT_TT
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				tag = NRR
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 59 }
+					check_variable = { global.MOE_tiger_lead > 9 }
+				}
+			}
+		}
+	}
+
+	# ====================================================
+	#  三、军事与安全让步（中高档 · 一次性 · 战后兑现）
+	# ====================================================
+
+	# 6. 许诺向圣杯王国与 RAJ 开放军事通行与港口补给 (+15分)
+	NRR_MOE_tiger_bid_access = {
+		icon = GFX_decision_generic_naval
+		available = {
+			NOT = { has_country_flag = tiger_pledge_access }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_access }
+		}
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_war_support = -0.05
+			set_country_flag = tiger_pledge_access
+			add_to_variable = { tiger_score = 15 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_ACCESS_TT
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				tag = NRR
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 59 }
+					check_variable = { global.MOE_tiger_lead > 9 }
+				}
+			}
+		}
+	}
+
+	# 7. 许诺接受圣杯军事教官团进驻 (+15分, 附赠 +15 陆军经验)
+	NRR_MOE_tiger_bid_advisors = {
+		icon = GFX_decision_generic_army_support
+		available = {
+			NOT = { has_country_flag = tiger_pledge_advisors }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_advisors }
+		}
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.05
+			army_experience = 15
+			set_country_flag = tiger_pledge_advisors
+			add_to_variable = { tiger_score = 15 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_ADVISORS_TT
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 0
+				tag = NRR
+			}
+			modifier = {
+				factor = 0
+				tag = MOE
+				OR = {
+					check_variable = { tiger_score > 59 }
+					check_variable = { global.MOE_tiger_lead > 9 }
+				}
+			}
+		}
+	}
+
+	# ====================================================
+	#  四、主权与领土底线（重档翻盘王牌 · 一次性 · 通知对手）
+	# ====================================================
+
+	# 8. 承认 RAJ 对孟买等沿岸殖民地的永久统治权 (+25分)
+	NRR_MOE_tiger_bid_mumbai = {
+		icon = GFX_decision_eng_imperial_federation
+		available = {
+			NOT = { has_country_flag = tiger_pledge_mumbai }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_mumbai }
+		}
+		cost = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			set_country_flag = tiger_pledge_mumbai
+			add_to_variable = { tiger_score = 25 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_MUMBAI_TT
+			# 通知对手方：对方已抛出重磅主权筹码
+			if = {
+				limit = { tag = NRR }
+				MOE = { country_event = { id = NRR_tiger.5 } }
+			}
+			else = {
+				NRR = { country_event = { id = NRR_tiger.5 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			# NRR AI 绝不触发；MOE AI 仅在大幅落后 (>=20分) 且总分不高时以极低概率搏命出手
+			modifier = {
+				add = 0.05
+				tag = MOE
+				check_variable = { global.MOE_tiger_lead < -19 }
+				check_variable = { tiger_score < 45 }
+			}
+		}
+	}
+
+	# 9. 签署《南亚势力范围秘密协定》 (+30分 · 终极底牌)
+	NRR_MOE_tiger_bid_sphere = {
+		icon = GFX_decision_generic_sign_treaty2
+		available = {
+			NOT = { has_country_flag = tiger_pledge_sphere }
+		}
+		visible = {
+			has_global_flag = NRR_MOE_tiger_active
+			NOT = { has_global_flag = NRR_MOE_tiger_ended }
+			NOT = { has_country_flag = tiger_pledge_sphere }
+		}
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = -0.10
+			set_country_flag = tiger_pledge_sphere
+			add_to_variable = { tiger_score = 30 }
+			NRR_MOE_tiger_update_lead = yes
+			custom_effect_tooltip = NRR_MOE_TIGER_PLEDGE_SPHERE_TT
+			if = {
+				limit = { tag = NRR }
+				MOE = { country_event = { id = NRR_tiger.5 } }
+			}
+			else = {
+				NRR = { country_event = { id = NRR_tiger.5 } }
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+			# NRR AI 绝不触发；MOE AI 仅在落后 >=25 分时极低概率搏命
+			modifier = {
+				add = 0.03
+				tag = MOE
+				check_variable = { global.MOE_tiger_lead < -24 }
+				check_variable = { tiger_score < 40 }
+			}
+		}
+	}
+}

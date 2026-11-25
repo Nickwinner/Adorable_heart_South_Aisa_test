@@ -574,7 +574,7 @@ ideas = {
 				air_mission_xp_gain_factor = 0.10
 			}
 			equipment_bonus = {
-				cas_bomber = {
+				small_plane_cas_airframe = {
 					build_cost_ic = -0.15
 					soft_attack = 0.10
 					reliability = 0.15
@@ -593,7 +593,7 @@ ideas = {
 				army_bonus_air_superiority_factor = 0.10
 			}
 			equipment_bonus = {
-				light_fighter = {
+				small_plane_airframe = {
 					build_cost_ic = -0.15
 					air_attack = 0.15
 					reliability = 0.15
@@ -703,11 +703,11 @@ ideas = {
 				        build_cost_ic = -0.25
 				        instant = yes
 		            }
-					fighter_equipment = {
+					small_plane_airframe = {
 				        build_cost_ic = -0.25
 				        instant = yes
 			        }
-					CAS_equipment = {
+					small_plane_cas_airframe = {
 				        build_cost_ic = -0.25
 				        instant = yes
 			        }
@@ -723,6 +723,88 @@ ideas = {
 				hcp_exincome_monthly = 10
 				monthly_population = -0.05
 				conscription_factor = -0.05
+			}
+		}
+
+		# ========================================================
+		#  与虎谋皮 · 战时胜负精神 & 战后兑现让步负面精神 (均为 5 的倍数)
+		# ========================================================
+		NRR_tiger_winner_buff = {
+			picture = generic_foreign_capital
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.10
+				industrial_capacity_factory = 0.10
+				supply_consumption_factor = -0.10
+			}
+		}
+
+		NRR_tiger_loser_debuff = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		NRR_tiger_debt_tariff = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		NRR_tiger_debt_railway = {
+			picture = generic_build_infrastructure
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				min_export = 0.15
+			}
+		}
+
+		NRR_tiger_debt_war_debt = {
+			picture = great_depression
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = -0.10
+			}
+		}
+
+		NRR_tiger_debt_access = {
+			picture = generic_coastal_defense_ships
+			allowed = { always = no }
+			modifier = {
+				army_org_regain = -0.05
+			}
+		}
+
+		NRR_tiger_debt_advisors = {
+			picture = generic_army_problems
+			allowed = { always = no }
+			modifier = {
+				max_command_power = -25
+			}
+		}
+
+		NRR_tiger_debt_mumbai = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+			}
+		}
+
+		NRR_tiger_debt_sphere = {
+			picture = generic_constitutional_guarantees
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.05
 			}
 		}
 

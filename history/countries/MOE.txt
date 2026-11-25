@@ -11,13 +11,15 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-	transport = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-	CAS1 = 1
-	early_fighter = 1
 	fuel_silos = 1
 	fuel_refining = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		CAS1 = 1
+		early_fighter = 1
+	}
 }
 
 set_technology = {
@@ -27,6 +29,15 @@ set_technology = {
 }
 
 recruit_character = MOE_HD
+
+# ANR 角色开局暂属 MOE，在 NRR.event.8 释放 ANR 后全部转入 ANR
+recruit_character = ANR_aisi
+recruit_character = ANR_heitong
+recruit_character = ANR_BLS
+recruit_character = ANR_LAN
+recruit_character = ANR_LW
+recruit_character = ANR_SL
+recruit_character = ANR_WE
 
 add_ideas = {
 	volunteer_only

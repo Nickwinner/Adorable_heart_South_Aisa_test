@@ -35,7 +35,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Akame_alternate_3.dds"
-				small="gfx/interface/ideas/advisor/idea_chitong.dds"
+				small="gfx/interface/ideas/NRR/idea_chitong.dds"
 			}
 		}
 		corps_commander = {
@@ -73,7 +73,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/LBK.dds"
-				small="gfx/interface/ideas/advisor/idea_LBK.dds"
+				small="gfx/interface/ideas/NRR/idea_LBK.dds"
 			}
 		}
 		corps_commander = {
@@ -105,7 +105,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Leone.dds"
-				small="gfx/interface/ideas/advisor/idea_LON.dds"
+				small="gfx/interface/ideas/NRR/idea_LON.dds"
 			}
 		}
 		corps_commander = {
@@ -137,7 +137,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/GFX_NRR_MY.dds"
-				small="gfx/interface/ideas/advisor/idea_MY.dds"
+				small="gfx/interface/ideas/NRR/idea_MY.dds"
 			}
 		}
 		corps_commander = {
@@ -169,7 +169,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Chelsea.dds"
-				small="gfx/interface/ideas/advisor/idea_QEX.dds"
+				small="gfx/interface/ideas/NRR/idea_QEX.dds"
 			}
 		}
 		corps_commander = {
@@ -200,7 +200,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Tatsumi_alternate_1.dds"
-				small="gfx/interface/ideas/advisor/idea_TZM.dds"
+				small="gfx/interface/ideas/NRR/idea_TZM.dds"
 			}
 		}
 		country_leader = {
@@ -243,7 +243,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/XE.dds"
-				small="gfx/interface/ideas/advisor/idea_XE.dds"
+				small="gfx/interface/ideas/NRR/idea_XE.dds"
 			}
 		}
 		corps_commander = {
@@ -277,7 +277,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/YaniNeko.dds"
-				small="gfx/interface/ideas/advisor/idea_YaniNeko.dds"
+				small="gfx/interface/ideas/NRR/idea_YaniNeko.dds"
 			}
 		}
 		
@@ -299,7 +299,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Arjuna.dds"
-				small="gfx/interface/ideas/advisor/idea_Arjuna.dds"
+				small="gfx/interface/ideas/NRR/idea_Arjuna.dds"
 			}
 		}
 		corps_commander = {
@@ -333,7 +333,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Ashoka.dds"
-				small="gfx/interface/ideas/advisor/idea_Ashoka.dds"
+				small="gfx/interface/ideas/NRR/idea_Ashoka.dds"
 			}
 		}
 		corps_commander = {
@@ -366,7 +366,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Ashwatthama.dds"
-				small="gfx/interface/ideas/advisor/idea_Ashwatthama.dds"
+				small="gfx/interface/ideas/NRR/idea_Ashwatthama.dds"
 			}
 		}
 		corps_commander = {
@@ -399,7 +399,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Bhima.dds"
-				small="gfx/interface/ideas/advisor/idea_Bhima.dds"
+				small="gfx/interface/ideas/NRR/idea_Bhima.dds"
 			}
 		}
 		corps_commander = {
@@ -432,7 +432,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Durga.dds"
-				small="gfx/interface/ideas/advisor/idea_Durga.dds"
+				small="gfx/interface/ideas/NRR/idea_Durga.dds"
 			}
 		}
 		corps_commander = {
@@ -465,7 +465,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Kama.dds"
-				small="gfx/interface/ideas/advisor/idea_Kama.dds"
+				small="gfx/interface/ideas/NRR/idea_Kama.dds"
 			}
 		}
 		corps_commander = {
@@ -498,7 +498,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Karna.dds"
-				small="gfx/interface/ideas/advisor/idea_Karna.dds"
+				small="gfx/interface/ideas/NRR/idea_Karna.dds"
 			}
 		}
 		corps_commander = {
@@ -531,7 +531,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Lakshmi.dds"
-				small="gfx/interface/ideas/advisor/idea_Lakshmi.dds"
+				small="gfx/interface/ideas/NRR/idea_Lakshmi.dds"
 			}
 		}
 		corps_commander = {
@@ -564,7 +564,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Nemo.dds"
-				small="gfx/interface/ideas/advisor/idea_Nemo.dds"
+				small="gfx/interface/ideas/NRR/idea_Nemo.dds"
 			}
 		}
 		navy_leader = {
@@ -599,7 +599,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Rama.dds"
-				small="gfx/interface/ideas/advisor/idea_Rama.dds"
+				small="gfx/interface/ideas/NRR/idea_Rama.dds"
 			}
 		}
 		corps_commander = {
@@ -632,7 +632,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Sita.dds"
-				small="gfx/interface/ideas/advisor/idea_Sita.dds"
+				small="gfx/interface/ideas/NRR/idea_Sita.dds"
 			}
 		}
 		corps_commander = {
@@ -664,7 +664,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Duryodhana.dds"
-				small="gfx/interface/ideas/advisor/idea_Duryodhana.dds"
+				small="gfx/interface/ideas/NRR/idea_Duryodhana.dds"
 			}
 		}
 		corps_commander = {
@@ -697,7 +697,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Vritra.dds"
-				small="gfx/interface/ideas/advisor/idea_Vritra.dds"
+				small="gfx/interface/ideas/NRR/idea_Vritra.dds"
 			}
 		}
 		corps_commander = {
@@ -730,7 +730,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NRR/Ganesh.dds"
-				small="gfx/interface/ideas/advisor/idea_Ganesh.dds"
+				small="gfx/interface/ideas/NRR/idea_Ganesh.dds"
 			}
 		}
 		corps_commander = {
@@ -755,4 +755,109 @@ characters = {
 		    }
 		}
     }
+
+	NRR_Raman = {
+		name = "钱德拉塞卡拉·文卡塔·拉曼"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRR/Raman.dds"
+			}
+			army = {
+				large = "gfx/leaders/NRR/Raman.dds"
+			}
+		}
+		scientist = {
+			traits = {
+				scientist_trait_surface_ship_specialist
+				scientist_trait_brilliant_theorist
+			}
+			skills = {
+				specialization_naval = 2
+			}
+		}
+	}
+
+	NRR_Bose = {
+		name = "萨特延德拉·纳特·玻色"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRR/Bose.dds"
+			}
+			army = {
+				large = "gfx/leaders/NRR/Bose.dds"
+			}
+		}
+		scientist = {
+			traits = {
+				scientist_trait_nuclear_power_expert
+				scientist_trait_schrodingers_trait
+			}
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+
+	NRR_Bhabha = {
+		name = "霍米·贾汗季·巴巴"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRR/Bhabha.dds"
+			}
+			army = {
+				large = "gfx/leaders/NRR/Bhabha.dds"
+			}
+		}
+		scientist = {
+			traits = {
+				scientist_trait_nuclear_warfare_expert
+				scientist_trait_fast_learner
+			}
+			skills = {
+				specialization_nuclear = 1
+			}
+		}
+	}
+
+	NRR_Chandrasekhar = {
+		name = "苏布拉马尼扬·钱德拉塞卡"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRR/Chandrasekhar.dds"
+			}
+			army = {
+				large = "gfx/leaders/NRR/Chandrasekhar.dds"
+			}
+		}
+		scientist = {
+			traits = {
+				scientist_trait_rocketry_specialist
+				scientist_trait_brilliant_theorist
+			}
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+	NRR_Saha = {
+		name = "梅格纳德·萨哈"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NRR/Saha.dds"
+			}
+			army = {
+				large = "gfx/leaders/NRR/Saha.dds"
+			}
+		}
+		scientist = {
+			traits = {
+				scientist_trait_artillery_specialist
+				scientist_trait_gifted_engineer
+			}
+			skills = {
+				specialization_land = 1
+			}
+		}
+	}
 }

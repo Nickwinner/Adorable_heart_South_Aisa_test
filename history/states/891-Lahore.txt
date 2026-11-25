@@ -11,8 +11,8 @@ state={
 		add_to_array = { state_victory_points = 12005 }
 		victory_points = { 12005 10 }  ##拉合尔
 		buildings = {
-			industrial_complex = 1
-			arms_factory = 1
+			industrial_complex = 3
+			arms_factory = 3
 			infrastructure = 3
 			air_base = 1
 		}

@@ -1,0 +1,42 @@
+music = {
+	song = "super_event_200"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_201"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_202"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_203"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_204"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_205"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}
+music = {
+	song = "super_event_206"
+	chance = {
+		modifier = { factor = 0 }
+	}
+}

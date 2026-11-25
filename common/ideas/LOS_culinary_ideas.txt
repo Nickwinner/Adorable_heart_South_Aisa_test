@@ -1,0 +1,108 @@
+ideas = {
+	country = {
+		# 1. 炭火炙烤（军事攻防）
+		LOS_cul_buff_roast_great = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.10
+				army_org_regain = 0.15
+			}
+		}
+		LOS_cul_buff_roast_normal = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_regain = 0.10
+			}
+		}
+
+		# 2. 铁锅慢炖（工业与补给）
+		LOS_cul_buff_stew_great = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.10
+				supply_consumption_factor = -0.15
+			}
+		}
+		LOS_cul_buff_stew_normal = {
+			picture = generic_production_bonus
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				supply_consumption_factor = -0.10
+			}
+		}
+
+		# 3. 秘制油炸（士气与动员）
+		LOS_cul_buff_fry_great = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = 0.01
+				army_morale_factor = 0.15
+				conscription_factor = 0.10
+			}
+		}
+		LOS_cul_buff_fry_normal = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			modifier = {
+				war_support_weekly = 0.005
+				army_morale_factor = 0.10
+			}
+		}
+
+		# 4. 鲜汤煮制（稳定与建设）
+		LOS_cul_buff_soup_great = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.01
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		LOS_cul_buff_soup_normal = {
+			picture = generic_goods_red_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.005
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# 5. 创意生食（科研与政治）
+		LOS_cul_buff_raw_great = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_gain = 0.35
+			}
+		}
+		LOS_cul_buff_raw_normal = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		# 黑暗料理（趣味小惩罚 30天）
+		LOS_cul_debuff_dark_cuisine = {
+			picture = generic_disjointed_gov
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				army_org_regain = -0.05
+			}
+		}
+	}
+}

@@ -4,6 +4,11 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/MFD/MFD_Yamashiro_Ren.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Yamashiro_Ren.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Yamashiro_Ren.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Yamashiro_Ren.dds"
 			}
 		}
 		country_leader = {
@@ -15,12 +20,43 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
+		field_marshal = {
+			traits = {
+				war_hero
+				brilliant_strategist
+				offensive_doctrine
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MFD_lian
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_WanWuWanXiang
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
-	MFD_lian = {
+
+	MFD_Uzen_Kyoka = {
 		name = "羽前京香"
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/MFD/MFD_Uzen_Kyoka.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Uzen_Kyoka.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Uzen_Kyoka.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Uzen_Kyoka.dds"
 			}
 		}
 		country_leader = {
@@ -31,6 +67,498 @@ characters = {
 			}
 			expire = "1965.1.1.1"
 			id = -1
+		}
+		field_marshal = {
+			traits = {
+				war_hero
+				unyielding_defender
+				inflexible_strategist
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MFD_Uzen_Kyoka
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Eternal_Chains
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Tenka_Izumo = {
+		name = "出云天花"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Tenka_Izumo.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Tenka_Izumo.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Tenka_Izumo.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Tenka_Izumo.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				brilliant_strategist
+				trickster
+				commando
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = MFD_Tenka_Izumo
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Ame_no_Mitori
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Azuma_Fubuki = {
+		name = "东日吹雪"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Fubuki.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Fubuki.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Fubuki.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Fubuki.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				career_officer
+				naval_invader
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = MFD_Azuma_Fubuki
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Spear_of_the_Sun
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Varvara_Pilipenko = {
+		name = "瓦尔瓦拉·皮莉片可"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Varvara_Pilipenko.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Varvara_Pilipenko.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Varvara_Pilipenko.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Varvara_Pilipenko.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				career_officer
+				trickster
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = theorist
+			idea_token = MFD_Varvara_Pilipenko
+			ledger = army
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Holy_Icon
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Ezo_Yakumo = {
+		name = "虾夷夜云"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Ezo_Yakumo.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Ezo_Yakumo.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Ezo_Yakumo.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Ezo_Yakumo.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				commando
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = MFD_Ezo_Yakumo
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Wind_God_Dash
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Bell_Tsukiyono = {
+		name = "月夜野贝儿"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Bell_Tsukiyono.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Bell_Tsukiyono.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Bell_Tsukiyono.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Bell_Tsukiyono.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_cautious
+				organizer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MFD_Bell_Tsukiyono
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_BuSiNiaoZhiLei
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Mira_Kamiunten = {
+		name = "上运天美罗"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Mira_Kamiunten.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Mira_Kamiunten.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Mira_Kamiunten.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Mira_Kamiunten.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				harsh_leader
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MFD_Mira_Kamiunten
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_All_Out_Assault
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Azuma_Himari = {
+		name = "东日万凛"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Himari.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Himari.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Himari.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Himari.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MFD_Azuma_Himari
+			ledger = army
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Blue_Cloud_Ambition
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Azuma_Yachiho = {
+		name = "东八千穗"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Yachiho.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Yachiho.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Azuma_Yachiho.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Azuma_Yachiho.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				trickster
+				brilliant_strategist
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = theorist
+			idea_token = MFD_Azuma_Yachiho
+			ledger = army
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Golden_Hour
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Konomi_Tatara = {
+		name = "多多良木乃实"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Konomi_Tatara.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Konomi_Tatara.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Konomi_Tatara.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Konomi_Tatara.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				infantry_officer
+				fortress_buster
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MFD_Konomi_Tatara
+			ledger = army
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Heavenly_Thunder
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Yuuki_Wakura = {
+		name = "和仓优希"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Yuuki_Wakura.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Yuuki_Wakura.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Yuuki_Wakura.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Yuuki_Wakura.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				skilled_staffer
+				organizer
+				adaptable
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MFD_Yuuki_Wakura
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_NuLiQiYue
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Shushu_Suruga = {
+		name = "骏河朱朱"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Shushu_Suruga.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Shushu_Suruga.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Shushu_Suruga.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Shushu_Suruga.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				fortress_buster
+			}
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MFD_Shushu_Suruga
+			ledger = army
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Pandora
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	MFD_Nei_Ookawamura = {
+		name = "大川村宁"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MFD/MFD_Nei_Ookawamura.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Nei_Ookawamura.dds"
+			}
+			army = {
+				large = "gfx/leaders/MFD/MFD_Nei_Ookawamura.dds"
+				small = "gfx/interface/ideas/MFD/idea_MFD_Nei_Ookawamura.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_cautious
+				skilled_staffer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = MFD_Nei_Ookawamura
+			allowed = {
+				original_tag = MFD
+			}
+			traits = {
+				MFD_trait_Clairvoyance
+			}
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 }

@@ -10,6 +10,7 @@ state={
 		victory_points = { 1409 3 }  ##马杜赖
 		buildings = {
 			industrial_complex = 1
+			arms_factory = 1
 			infrastructure = 2
 			4327 = {
 				naval_base = 1

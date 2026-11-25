@@ -1185,8 +1185,10 @@ NRR_Servant_Summon = {
 			tag = MFD
 			tag = LOS
 		    }
-		    is_ai = no
 	    }
+		visible = {
+			is_ai = no
+		}
 		available = { 
 		   has_government = communism
 		   not = { has_country_flag = NRR_has_all_the_Servants }
@@ -1224,8 +1226,10 @@ NRR_Servant_Summon = {
 			tag = MFD
 			tag = LOS
 		    }
-		    is_ai = no
 	    }
+		visible = {
+			is_ai = no
+		}
 		available = { 
 		   has_government = democratic
 		   not = { has_country_flag = NRR_has_all_the_Servants }
@@ -1263,8 +1267,10 @@ NRR_Servant_Summon = {
 			tag = MFD
 			tag = LOS
 		    }
-		    is_ai = no
 	    }
+		visible = {
+			is_ai = no
+		}
 		available = { 
 		   has_government = neutrality
 		   not = { has_country_flag = NRR_has_all_the_Servants }
@@ -1299,8 +1305,10 @@ NRR_Servant_Summon = {
 			tag = MFD
 			tag = LOS
 		    }
-		    is_ai = no
 	    }
+		visible = {
+			is_ai = no
+		}
 		available = { 
 	    }
 

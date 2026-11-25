@@ -1,0 +1,114 @@
+defined_text = {
+	name = GetLOSCulIngEntryName
+	text = { trigger = { check_variable = { v_ing = 1 } } localization_key = LOS_CUL_ING_1_NAME }
+	text = { trigger = { check_variable = { v_ing = 2 } } localization_key = LOS_CUL_ING_2_NAME }
+	text = { trigger = { check_variable = { v_ing = 3 } } localization_key = LOS_CUL_ING_3_NAME }
+	text = { trigger = { check_variable = { v_ing = 4 } } localization_key = LOS_CUL_ING_4_NAME }
+	text = { trigger = { check_variable = { v_ing = 5 } } localization_key = LOS_CUL_ING_5_NAME }
+	text = { trigger = { check_variable = { v_ing = 6 } } localization_key = LOS_CUL_ING_6_NAME }
+	text = { trigger = { check_variable = { v_ing = 7 } } localization_key = LOS_CUL_ING_7_NAME }
+	text = { trigger = { check_variable = { v_ing = 8 } } localization_key = LOS_CUL_ING_8_NAME }
+	text = { trigger = { check_variable = { v_ing = 9 } } localization_key = LOS_CUL_ING_9_NAME }
+	text = { trigger = { check_variable = { v_ing = 10 } } localization_key = LOS_CUL_ING_10_NAME }
+	text = { trigger = { check_variable = { v_ing = 11 } } localization_key = LOS_CUL_ING_11_NAME }
+	text = { trigger = { check_variable = { v_ing = 12 } } localization_key = LOS_CUL_ING_12_NAME }
+	text = { localization_key = LOS_CUL_ING_UNKNOWN }
+}
+
+defined_text = {
+	name = GetLOSCulIngEntryTag
+	text = { trigger = { check_variable = { v_ing = 1 } check_variable = { LOS_cul_ing_cd_1 > 0 } } localization_key = LOS_CUL_ING_1_CD }
+	text = { trigger = { check_variable = { v_ing = 2 } check_variable = { LOS_cul_ing_cd_2 > 0 } } localization_key = LOS_CUL_ING_2_CD }
+	text = { trigger = { check_variable = { v_ing = 3 } check_variable = { LOS_cul_ing_cd_3 > 0 } } localization_key = LOS_CUL_ING_3_CD }
+	text = { trigger = { check_variable = { v_ing = 4 } check_variable = { LOS_cul_ing_cd_4 > 0 } } localization_key = LOS_CUL_ING_4_CD }
+	text = { trigger = { check_variable = { v_ing = 5 } check_variable = { LOS_cul_ing_cd_5 > 0 } } localization_key = LOS_CUL_ING_5_CD }
+	text = { trigger = { check_variable = { v_ing = 6 } check_variable = { LOS_cul_ing_cd_6 > 0 } } localization_key = LOS_CUL_ING_6_CD }
+	text = { trigger = { check_variable = { v_ing = 7 } check_variable = { LOS_cul_ing_cd_7 > 0 } } localization_key = LOS_CUL_ING_7_CD }
+	text = { trigger = { check_variable = { v_ing = 8 } check_variable = { LOS_cul_ing_cd_8 > 0 } } localization_key = LOS_CUL_ING_8_CD }
+	text = { trigger = { check_variable = { v_ing = 9 } check_variable = { LOS_cul_ing_cd_9 > 0 } } localization_key = LOS_CUL_ING_9_CD }
+	text = { trigger = { check_variable = { v_ing = 10 } check_variable = { LOS_cul_ing_cd_10 > 0 } } localization_key = LOS_CUL_ING_10_CD }
+	text = { trigger = { check_variable = { v_ing = 11 } check_variable = { LOS_cul_ing_cd_11 > 0 } } localization_key = LOS_CUL_ING_11_CD }
+	text = { trigger = { check_variable = { v_ing = 12 } check_variable = { LOS_cul_ing_cd_12 > 0 } } localization_key = LOS_CUL_ING_12_CD }
+	text = { trigger = { check_variable = { v_ing = 1 } } localization_key = LOS_CUL_ING_1_TAG }
+	text = { trigger = { check_variable = { v_ing = 2 } } localization_key = LOS_CUL_ING_2_TAG }
+	text = { trigger = { check_variable = { v_ing = 3 } } localization_key = LOS_CUL_ING_3_TAG }
+	text = { trigger = { check_variable = { v_ing = 4 } } localization_key = LOS_CUL_ING_4_TAG }
+	text = { trigger = { check_variable = { v_ing = 5 } } localization_key = LOS_CUL_ING_5_TAG }
+	text = { trigger = { check_variable = { v_ing = 6 } } localization_key = LOS_CUL_ING_6_TAG }
+	text = { trigger = { check_variable = { v_ing = 7 } } localization_key = LOS_CUL_ING_7_TAG }
+	text = { trigger = { check_variable = { v_ing = 8 } } localization_key = LOS_CUL_ING_8_TAG }
+	text = { trigger = { check_variable = { v_ing = 9 } } localization_key = LOS_CUL_ING_9_TAG }
+	text = { trigger = { check_variable = { v_ing = 10 } } localization_key = LOS_CUL_ING_10_TAG }
+	text = { trigger = { check_variable = { v_ing = 11 } } localization_key = LOS_CUL_ING_11_TAG }
+	text = { trigger = { check_variable = { v_ing = 12 } } localization_key = LOS_CUL_ING_12_TAG }
+	text = { localization_key = LOS_CUL_ING_TAG_NONE }
+}
+
+defined_text = {
+	name = GetLOSCulSelectedIngName
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 1 } } localization_key = LOS_CUL_ING_1_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 2 } } localization_key = LOS_CUL_ING_2_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 3 } } localization_key = LOS_CUL_ING_3_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 4 } } localization_key = LOS_CUL_ING_4_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 5 } } localization_key = LOS_CUL_ING_5_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 6 } } localization_key = LOS_CUL_ING_6_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 7 } } localization_key = LOS_CUL_ING_7_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 8 } } localization_key = LOS_CUL_ING_8_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 9 } } localization_key = LOS_CUL_ING_9_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 10 } } localization_key = LOS_CUL_ING_10_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 11 } } localization_key = LOS_CUL_ING_11_NAME }
+	text = { trigger = { check_variable = { LOS_cul_selected_ing = 12 } } localization_key = LOS_CUL_ING_12_NAME }
+	text = { localization_key = LOS_CUL_NONE_TEXT }
+}
+
+defined_text = {
+	name = GetLOSCulSelectedCookName
+	text = { trigger = { check_variable = { LOS_cul_selected_cook = 1 } } localization_key = LOS_CUL_COOK_1 }
+	text = { trigger = { check_variable = { LOS_cul_selected_cook = 2 } } localization_key = LOS_CUL_COOK_2 }
+	text = { trigger = { check_variable = { LOS_cul_selected_cook = 3 } } localization_key = LOS_CUL_COOK_3 }
+	text = { trigger = { check_variable = { LOS_cul_selected_cook = 4 } } localization_key = LOS_CUL_COOK_4 }
+	text = { trigger = { check_variable = { LOS_cul_selected_cook = 5 } } localization_key = LOS_CUL_COOK_5 }
+	text = { localization_key = LOS_CUL_NONE_TEXT }
+}
+
+defined_text = {
+	name = GetLOSCulSelectedChefName
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 1 } } localization_key = LOS_CUL_CHEF_1 }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 2 } } localization_key = LOS_CUL_CHEF_2 }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 3 } } localization_key = LOS_CUL_CHEF_3 }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 4 } } localization_key = LOS_CUL_CHEF_4 }
+	text = { localization_key = LOS_CUL_NONE_TEXT }
+}
+
+defined_text = {
+	name = GetLOSCulChefPortrait
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 1 } } localization_key = GFX_LOS_cul_chef_sensi }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 2 } } localization_key = GFX_LOS_cul_chef_leos }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 3 } } localization_key = GFX_LOS_cul_chef_malucil }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 4 } } localization_key = GFX_LOS_cul_chef_zilchak }
+	text = { localization_key = GFX_LOS_cul_chef_sensi }
+}
+
+defined_text = {
+	name = GetLOSCulChefSpecialty
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 1 } } localization_key = LOS_CUL_CHEF_1_SPEC }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 2 } } localization_key = LOS_CUL_CHEF_2_SPEC }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 3 } } localization_key = LOS_CUL_CHEF_3_SPEC }
+	text = { trigger = { check_variable = { LOS_cul_selected_chef = 4 } } localization_key = LOS_CUL_CHEF_4_SPEC }
+	text = { localization_key = LOS_CUL_CHEF_1_SPEC }
+}
+
+defined_text = {
+	name = GetLOSCulStatusText
+	text = {
+		trigger = { has_country_flag = LOS_cul_research_active }
+		localization_key = LOS_CUL_STATUS_ACTIVE
+	}
+	text = {
+		trigger = { check_variable = { LOS_cul_cd_days_left > 0 } }
+		localization_key = LOS_CUL_STATUS_COOLDOWN
+	}
+	text = {
+		localization_key = LOS_CUL_STATUS_IDLE
+	}
+}

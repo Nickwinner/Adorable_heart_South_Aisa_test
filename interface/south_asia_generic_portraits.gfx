@@ -1,0 +1,354 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_NRR_generic_officer_01"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_01.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_01_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_01_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_02"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_02.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_02_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_02_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_03"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_03.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_03_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_03_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_04"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_04.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_04_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_04_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_05"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_05.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_05_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_05_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_06"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_06.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_06_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_06_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_07"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_07.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_07_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_07_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_08"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_08.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_08_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_08_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_09"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_09.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_generic_officer_09_small"
+		texturefile = "gfx/leaders/NRR/generic/NRR_generic_officer_09_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_01"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_01.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_01_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_01_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_02"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_02.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_02_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_02_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_03"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_03.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_03_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_03_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_04"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_04.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_04_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_04_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_05"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_05.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_05_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_05_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_06"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_06.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_06_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_06_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_07"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_07.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_07_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_07_small.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_08"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_08.dds"
+	}
+	spriteType = {
+		name = "GFX_NRR_operative_08_small"
+		texturefile = "gfx/leaders/NRR/operative/NRR_operative_08_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_01"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_01.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_01_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_01_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_02"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_02.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_02_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_02_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_03"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_03.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_03_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_03_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_04"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_04.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_04_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_04_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_05"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_05.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_05_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_05_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_06"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_06.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_06_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_06_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_07"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_07.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_07_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_07_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_08"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_08.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_08_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_08_small.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_09"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_09.dds"
+	}
+	spriteType = {
+		name = "GFX_LOS_generic_officer_09_small"
+		texturefile = "gfx/leaders/LOS/generic/LOS_generic_officer_09_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_01"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_01.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_01_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_01_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_02"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_02.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_02_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_02_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_03"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_03.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_03_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_03_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_04"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_04.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_04_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_04_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_05"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_05.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_05_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_05_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_06"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_06.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_06_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_06_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_07"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_07.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_07_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_07_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_08"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_08.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_08_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_08_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_09"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_09.dds"
+	}
+	spriteType = {
+		name = "GFX_MOE_generic_officer_09_small"
+		texturefile = "gfx/leaders/MOE/generic/MOE_generic_officer_09_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_01"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_01.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_01_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_01_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_02"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_02.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_02_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_02_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_03"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_03.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_03_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_03_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_04"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_04.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_04_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_04_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_05"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_05.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_05_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_05_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_06"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_06.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_06_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_06_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_07"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_07.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_07_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_07_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_08"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_08.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_08_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_08_small.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_09"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_09.dds"
+	}
+	spriteType = {
+		name = "GFX_MFD_generic_officer_09_small"
+		texturefile = "gfx/leaders/MFD/generic/MFD_generic_officer_09_small.dds"
+	}
+}

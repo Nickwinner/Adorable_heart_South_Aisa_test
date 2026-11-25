@@ -1,0 +1,28 @@
+music = {
+	name = "super_event_200"
+	file = "LOS_start_war.ogg"
+}
+music = {
+	name = "super_event_201"
+	file = "Dies_Irae.ogg"
+}
+music = {
+	name = "super_event_202"
+	file = "I_vow_to_thee.ogg"
+}
+music = {
+	name = "super_event_203"
+	file = "Battlefield_V_Legacy_Theme.ogg"
+}
+music = {
+	name = "super_event_204"
+	file = "NRR_declearwar_ENG.ogg"
+}
+music = {
+	name = "super_event_205"
+	file = "Dust_And_Light.ogg"
+}
+music = {
+	name = "super_event_206"
+	file = "NRR_fight_Against_JAP.ogg"
+}

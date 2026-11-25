@@ -1,4 +1,5 @@
 add_namespace = LOS.event
+add_namespace = LOS_culinary
 add_namespace = LOS_news
 
 
@@ -178,5 +179,57 @@ country_event = {
 	option = {
 	    name = LOS.event.7.a
 
+	}
+}
+
+# ========================================================
+#  黄金国 · 美食研究结果事件（与上方剧情事件隔开）
+# ========================================================
+
+# 1. 大成功：传世迷宫佳肴
+country_event = {
+	id = LOS_culinary.1
+	title = LOS_culinary.1.t
+	desc = LOS_culinary.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = LOS_culinary.1.a
+		LOS_cul_apply_great_success_effect = yes
+		custom_effect_tooltip = LOS_CUL_SUCCESS_CD_TT
+	}
+}
+
+# 2. 研究成功：美味的迷宫料理
+country_event = {
+	id = LOS_culinary.2
+	title = LOS_culinary.2.t
+	desc = LOS_culinary.2.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = LOS_culinary.2.a
+		LOS_cul_apply_success_effect = yes
+		custom_effect_tooltip = LOS_CUL_SUCCESS_CD_TT
+	}
+}
+
+# 3. 黑暗料理：意外风味
+country_event = {
+	id = LOS_culinary.3
+	title = LOS_culinary.3.t
+	desc = LOS_culinary.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = LOS_culinary.3.a
+		add_timed_idea = {
+			idea = LOS_cul_debuff_dark_cuisine
+			days = 30
+		}
+		custom_effect_tooltip = LOS_CUL_DARK_NO_CD_TT
 	}
 }

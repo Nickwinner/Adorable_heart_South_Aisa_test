@@ -1,0 +1,48 @@
+NRR = {
+	army = {
+		male = {
+			"GFX_NRR_generic_officer_01"
+			"GFX_NRR_generic_officer_02"
+			"GFX_NRR_generic_officer_03"
+			"GFX_NRR_generic_officer_04"
+			"GFX_NRR_generic_officer_05"
+			"GFX_NRR_generic_officer_06"
+			"GFX_NRR_generic_officer_07"
+			"GFX_NRR_generic_officer_08"
+			"GFX_NRR_generic_officer_09"
+		}
+		female = {
+			"GFX_NRR_generic_officer_01"
+			"GFX_NRR_generic_officer_02"
+			"GFX_NRR_generic_officer_03"
+			"GFX_NRR_generic_officer_04"
+			"GFX_NRR_generic_officer_05"
+			"GFX_NRR_generic_officer_06"
+			"GFX_NRR_generic_officer_07"
+			"GFX_NRR_generic_officer_08"
+			"GFX_NRR_generic_officer_09"
+		}
+	}
+	operative = {
+		male = {
+			"GFX_NRR_operative_01"
+			"GFX_NRR_operative_02"
+			"GFX_NRR_operative_03"
+			"GFX_NRR_operative_04"
+			"GFX_NRR_operative_05"
+			"GFX_NRR_operative_06"
+			"GFX_NRR_operative_07"
+			"GFX_NRR_operative_08"
+		}
+		female = {
+			"GFX_NRR_operative_01"
+			"GFX_NRR_operative_02"
+			"GFX_NRR_operative_03"
+			"GFX_NRR_operative_04"
+			"GFX_NRR_operative_05"
+			"GFX_NRR_operative_06"
+			"GFX_NRR_operative_07"
+			"GFX_NRR_operative_08"
+		}
+	}
+}

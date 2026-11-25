@@ -1,0 +1,481 @@
+# ========================================================
+#  LOS Culinary Research Scripted Effects (黄金国·美食研究)
+# ========================================================
+
+LOS_init_culinary_if_needed = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = LOS_culinary_initialized }
+		}
+		set_country_flag = LOS_culinary_initialized
+		set_variable = { LOS_cul_selected_ing = 1 }
+		set_variable = { LOS_cul_selected_cook = 1 }
+		set_variable = { LOS_cul_selected_chef = 1 }
+		set_variable = { LOS_cul_days_left = 0 }
+		set_variable = { LOS_cul_progress = 0 }
+		set_variable = { LOS_cul_cd_days_left = 0 }
+		set_variable = { LOS_cul_ing_cd_1 = 0 }
+		set_variable = { LOS_cul_ing_cd_2 = 0 }
+		set_variable = { LOS_cul_ing_cd_3 = 0 }
+		set_variable = { LOS_cul_ing_cd_4 = 0 }
+		set_variable = { LOS_cul_ing_cd_5 = 0 }
+		set_variable = { LOS_cul_ing_cd_6 = 0 }
+		set_variable = { LOS_cul_ing_cd_7 = 0 }
+		set_variable = { LOS_cul_ing_cd_8 = 0 }
+		set_variable = { LOS_cul_ing_cd_9 = 0 }
+		set_variable = { LOS_cul_ing_cd_10 = 0 }
+		set_variable = { LOS_cul_ing_cd_11 = 0 }
+		set_variable = { LOS_cul_ing_cd_12 = 0 }
+
+		# 初始已发现的 6 种迷宫食材（7~12 号初始锁定，通过对应 country_flag 自动解锁）
+		clear_array = LOS_cul_unlocked_ingredients
+		add_to_array = { LOS_cul_unlocked_ingredients = 1 } # 1. 大蝎子
+		add_to_array = { LOS_cul_unlocked_ingredients = 2 } # 2. 走路菇
+		add_to_array = { LOS_cul_unlocked_ingredients = 3 } # 3. 宝箱怪
+		add_to_array = { LOS_cul_unlocked_ingredients = 4 } # 4. 曼德拉草
+		add_to_array = { LOS_cul_unlocked_ingredients = 5 } # 5. 炎龙肉
+		add_to_array = { LOS_cul_unlocked_ingredients = 6 } # 6. 史莱姆
+	}
+}
+
+# 根据剧情 country_flag 自动解锁后续食材（7~12 号）
+LOS_cul_sync_unlocked_ingredients = {
+	LOS_init_culinary_if_needed = yes
+	# 7. 黄泉丑鬼肉（魔都精兵）
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_shuuki
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 7 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 7 }
+	}
+	# 8. “桃”（魔都精兵）
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_peach
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 8 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 8 }
+	}
+	# 9. 亡灵鬼魂（迷宫饭·鬼魂冰淇淋）
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_ghost
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 9 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 9 }
+	}
+	# 10. 沙威玛（中亚美食）
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_shawarma
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 10 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 10 }
+	}
+	# 11. 中亚籼米与各色香料（中亚美食）
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_rice_spice
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 11 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 11 }
+	}
+	# 12. 不死族骷髅
+	if = {
+		limit = {
+			has_country_flag = LOS_cul_unlock_skeleton
+			NOT = { is_in_array = { array = LOS_cul_unlocked_ingredients value = 12 } }
+		}
+		add_to_array = { LOS_cul_unlocked_ingredients = 12 }
+	}
+}
+
+LOS_cul_start_research_effect = {
+	LOS_init_culinary_if_needed = yes
+	add_political_power = -25
+	set_variable = { LOS_cul_active_ing = LOS_cul_selected_ing }
+	set_variable = { LOS_cul_active_cook = LOS_cul_selected_cook }
+	set_variable = { LOS_cul_active_chef = LOS_cul_selected_chef }
+	set_variable = { LOS_cul_days_left = 15 }
+	set_variable = { LOS_cul_progress = 0 }
+	set_country_flag = LOS_cul_research_active
+}
+
+# ========================================================
+#  【新增食材步骤 2（可选）】：食材 × 做法 契合度表
+#  - 做法编号：1=炭火炙烤  2=铁锅慢炖  3=秘制油炸  4=鲜汤煮制  5=创意生食
+#  - t_synergy =  1 （绝配）：大成功概率 +20%，黑暗料理概率 -15%（最低0%）
+#  - t_synergy =  0 （常规）：完全使用主厨基础概率（新食材不写本表也默认走 0，不会报错）
+#  - t_synergy = -1 （踩雷）：黑暗料理概率 +20%，普通成功概率 -20%
+# ========================================================
+LOS_cul_eval_synergy = {
+	set_temp_variable = { t_synergy = 0 }
+
+	# 1. 大蝎子：绝配=2(铁锅慢炖)，踩雷=5(创意生食)
+	if = {
+		limit = { check_variable = { LOS_cul_active_ing = 1 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 2 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 2. 走路菇：绝配=2(铁锅慢炖) 或 4(鲜汤煮制)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 2 } }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { LOS_cul_active_cook = 2 }
+					check_variable = { LOS_cul_active_cook = 4 }
+				}
+			}
+			set_temp_variable = { t_synergy = 1 }
+		}
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 3. 宝箱怪：绝配=4(鲜汤煮制)，踩雷=1(炭火炙烤)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 3 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 4 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 1 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 4. 曼德拉草：绝配=3(秘制油炸)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 4 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 3 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 5. 炎龙肉：绝配=1(炭火炙烤)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 5 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 1 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 6. 史莱姆：绝配=5(创意生食)，踩雷=1(炭火炙烤)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 6 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 1 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 7. 黄泉丑鬼肉：绝配=1(炭火炙烤) 或 3(秘制油炸)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 7 } }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { LOS_cul_active_cook = 1 }
+					check_variable = { LOS_cul_active_cook = 3 }
+				}
+			}
+			set_temp_variable = { t_synergy = 1 }
+		}
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 8. “桃”：绝配=5(创意生食) 或 4(鲜汤煮制)，踩雷=3(秘制油炸)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 8 } }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { LOS_cul_active_cook = 5 }
+					check_variable = { LOS_cul_active_cook = 4 }
+				}
+			}
+			set_temp_variable = { t_synergy = 1 }
+		}
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 3 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 9. 亡灵鬼魂（鬼魂冰淇淋）：绝配=5(创意生食)，踩雷=2(铁锅慢炖)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 9 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 2 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 10. 沙威玛：绝配=1(炭火炙烤)，踩雷=4(鲜汤煮制)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 10 } }
+		if = { limit = { check_variable = { LOS_cul_active_cook = 1 } } set_temp_variable = { t_synergy = 1 } }
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 4 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 11. 中亚籼米与各色香料：绝配=2(铁锅慢炖/抓饭) 或 1(炭火炙烤)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 11 } }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { LOS_cul_active_cook = 2 }
+					check_variable = { LOS_cul_active_cook = 1 }
+				}
+			}
+			set_temp_variable = { t_synergy = 1 }
+		}
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+	# 12. 不死族骷髅：绝配=4(鲜汤煮制/骨汤) 或 2(铁锅慢炖)，踩雷=5(创意生食)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 12 } }
+		if = {
+			limit = {
+				OR = {
+					check_variable = { LOS_cul_active_cook = 4 }
+					check_variable = { LOS_cul_active_cook = 2 }
+				}
+			}
+			set_temp_variable = { t_synergy = 1 }
+		}
+		else_if = { limit = { check_variable = { LOS_cul_active_cook = 5 } } set_temp_variable = { t_synergy = -1 } }
+	}
+}
+
+# 给刚使用过的食材施加 120 天补货冷却
+LOS_cul_set_active_ing_cd = {
+	if = { limit = { check_variable = { LOS_cul_active_ing = 1 } } set_variable = { LOS_cul_ing_cd_1 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 2 } } set_variable = { LOS_cul_ing_cd_2 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 3 } } set_variable = { LOS_cul_ing_cd_3 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 4 } } set_variable = { LOS_cul_ing_cd_4 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 5 } } set_variable = { LOS_cul_ing_cd_5 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 6 } } set_variable = { LOS_cul_ing_cd_6 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 7 } } set_variable = { LOS_cul_ing_cd_7 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 8 } } set_variable = { LOS_cul_ing_cd_8 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 9 } } set_variable = { LOS_cul_ing_cd_9 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 10 } } set_variable = { LOS_cul_ing_cd_10 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 11 } } set_variable = { LOS_cul_ing_cd_11 = 120 } }
+	else_if = { limit = { check_variable = { LOS_cul_active_ing = 12 } } set_variable = { LOS_cul_ing_cd_12 = 120 } }
+
+	if = {
+		limit = { check_variable = { LOS_cul_selected_ing = LOS_cul_active_ing } }
+		set_variable = { LOS_cul_selected_ing = 0 }
+	}
+}
+
+# 每日递减全局灶台冷却与各食材冷却
+LOS_cul_tick_cooldowns = {
+	if = { limit = { check_variable = { LOS_cul_cd_days_left > 0 } } subtract_from_variable = { LOS_cul_cd_days_left = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_1 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_1 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_2 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_2 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_3 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_3 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_4 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_4 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_5 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_5 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_6 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_6 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_7 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_7 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_8 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_8 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_9 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_9 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_10 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_10 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_11 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_11 = 1 } }
+	if = { limit = { check_variable = { LOS_cul_ing_cd_12 > 0 } } subtract_from_variable = { LOS_cul_ing_cd_12 = 1 } }
+}
+
+LOS_cul_daily_tick = {
+	if = {
+		limit = { has_country_flag = LOS_culinary_unlocked }
+		LOS_cul_sync_unlocked_ingredients = yes
+		LOS_cul_tick_cooldowns = yes
+	}
+	if = {
+		limit = { has_country_flag = LOS_cul_research_active }
+		subtract_from_variable = { LOS_cul_days_left = 1 }
+		set_temp_variable = { t_done = 15 }
+		subtract_from_temp_variable = { t_done = LOS_cul_days_left }
+		multiply_temp_variable = { t_done = 100 }
+		divide_temp_variable = { t_done = 15 }
+		round_temp_variable = t_done
+		set_variable = { LOS_cul_progress = t_done }
+		clamp_variable = { var = LOS_cul_progress min = 0 max = 100 }
+
+		if = {
+			limit = { check_variable = { LOS_cul_days_left < 1 } }
+			clr_country_flag = LOS_cul_research_active
+			set_variable = { LOS_cul_days_left = 0 }
+			set_variable = { LOS_cul_progress = 0 }
+
+			# 1. 计算主厨基础概率（大成功 t_p1 / 普通成功 t_p2 / 黑暗料理 t_p3）
+			if = {
+				limit = { check_variable = { LOS_cul_active_chef = 1 } }
+				set_temp_variable = { t_p1 = 30 }
+				set_temp_variable = { t_p2 = 65 }
+				set_temp_variable = { t_p3 = 5 }
+			}
+			else_if = {
+				limit = { check_variable = { LOS_cul_active_chef = 2 } }
+				set_temp_variable = { t_p1 = 45 }
+				set_temp_variable = { t_p2 = 30 }
+				set_temp_variable = { t_p3 = 25 }
+			}
+			else_if = {
+				limit = { check_variable = { LOS_cul_active_chef = 3 } }
+				set_temp_variable = { t_p1 = 35 }
+				set_temp_variable = { t_p2 = 50 }
+				set_temp_variable = { t_p3 = 15 }
+			}
+			else = {
+				set_temp_variable = { t_p1 = 25 }
+				set_temp_variable = { t_p2 = 65 }
+				set_temp_variable = { t_p3 = 10 }
+			}
+
+			# 2. 叠加食材×做法契合度修正
+			LOS_cul_eval_synergy = yes
+			if = {
+				limit = { check_variable = { t_synergy = 1 } }
+				add_to_temp_variable = { t_p1 = 20 }
+				subtract_from_temp_variable = { t_p3 = 15 }
+				clamp_temp_variable = { var = t_p3 min = 0 max = 100 }
+			}
+			else_if = {
+				limit = { check_variable = { t_synergy = -1 } }
+				add_to_temp_variable = { t_p3 = 20 }
+				subtract_from_temp_variable = { t_p2 = 20 }
+				clamp_temp_variable = { var = t_p2 min = 5 max = 100 }
+			}
+
+			# 3. 无论成败，本次消耗的食材进入 120 天补货冷却
+			LOS_cul_set_active_ing_cd = yes
+
+			# 4. 按最终权重触发结果事件（成功/大成功进入 60 天灶台冷却；黑暗料理无灶台冷却）
+			random_list = {
+				0 = {
+					modifier = { add = t_p1 }
+					set_variable = { LOS_cul_cd_days_left = 60 }
+					country_event = { id = LOS_culinary.1 }
+				}
+				0 = {
+					modifier = { add = t_p2 }
+					set_variable = { LOS_cul_cd_days_left = 60 }
+					country_event = { id = LOS_culinary.2 }
+				}
+				0 = {
+					modifier = { add = t_p3 }
+					country_event = { id = LOS_culinary.3 }
+				}
+			}
+		}
+	}
+}
+
+# ========================================================
+#  【新增食材步骤 3（可选）】：各食材专属即时风味收益
+#  - t_is_great = 1 表示大成功（双倍奖励），0 表示普通成功
+# ========================================================
+LOS_cul_apply_ing_instant_bonus = {
+	# 1. 大蝎子：陆军经验
+	if = {
+		limit = { check_variable = { LOS_cul_active_ing = 1 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } army_experience = 50 }
+		else = { army_experience = 25 }
+	}
+	# 2. 走路菇：稳定度
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 2 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_stability = 0.10 }
+		else = { add_stability = 0.05 }
+	}
+	# 3. 宝箱怪：圣杯盾 (ubs_save)
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 3 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_to_variable = { ubs_save = 200 } }
+		else = { add_to_variable = { ubs_save = 100 } }
+	}
+	# 4. 曼德拉草：政治点数 + 指挥点数
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 4 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_political_power = 100 add_command_power = 50 }
+		else = { add_political_power = 50 add_command_power = 25 }
+	}
+	# 5. 炎龙肉：战争支持度 + 陆军经验
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 5 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_war_support = 0.10 army_experience = 50 }
+		else = { add_war_support = 0.05 army_experience = 25 }
+	}
+	# 6. 史莱姆：政治点数 + 稳定度
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 6 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_political_power = 100 add_stability = 0.10 }
+		else = { add_political_power = 50 add_stability = 0.05 }
+	}
+	# 7. 黄泉丑鬼肉：陆军经验 + 战争支持度
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 7 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } army_experience = 70 add_war_support = 0.10 }
+		else = { army_experience = 35 add_war_support = 0.05 }
+	}
+	# 8. “桃”：政治点数 + 指挥点数
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 8 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_political_power = 150 add_command_power = 70 }
+		else = { add_political_power = 75 add_command_power = 35 }
+	}
+	# 9. 亡灵鬼魂：稳定度 + 政治点数
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 9 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_stability = 0.10 add_political_power = 100 }
+		else = { add_stability = 0.05 add_political_power = 50 }
+	}
+	# 10. 沙威玛：稳定度 + 人力
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 10 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_stability = 0.10 add_manpower = 10000 }
+		else = { add_stability = 0.05 add_manpower = 5000 }
+	}
+	# 11. 中亚籼米与各色香料：圣杯盾 (ubs_save) + 稳定度
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 11 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } add_to_variable = { ubs_save = 300 } add_stability = 0.10 }
+		else = { add_to_variable = { ubs_save = 150 } add_stability = 0.05 }
+	}
+	# 12. 不死族骷髅：陆军经验 + 人力
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_ing = 12 } }
+		if = { limit = { check_variable = { t_is_great = 1 } } army_experience = 70 add_manpower = 10000 }
+		else = { army_experience = 35 add_manpower = 5000 }
+	}
+}
+
+# 结算大成功增益（做法 120 天强力限时精神 + 食材双倍即时收益）
+LOS_cul_apply_great_success_effect = {
+	set_temp_variable = { t_is_great = 1 }
+	LOS_cul_apply_ing_instant_bonus = yes
+	if = {
+		limit = { check_variable = { LOS_cul_active_cook = 1 } }
+		add_timed_idea = { idea = LOS_cul_buff_roast_great days = 120 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 2 } }
+		add_timed_idea = { idea = LOS_cul_buff_stew_great days = 120 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 3 } }
+		add_timed_idea = { idea = LOS_cul_buff_fry_great days = 120 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 4 } }
+		add_timed_idea = { idea = LOS_cul_buff_soup_great days = 120 }
+	}
+	else = {
+		add_timed_idea = { idea = LOS_cul_buff_raw_great days = 120 }
+	}
+}
+
+# 结算普通成功增益（做法 90 天常规限时精神 + 食材基础即时收益）
+LOS_cul_apply_success_effect = {
+	set_temp_variable = { t_is_great = 0 }
+	LOS_cul_apply_ing_instant_bonus = yes
+	if = {
+		limit = { check_variable = { LOS_cul_active_cook = 1 } }
+		add_timed_idea = { idea = LOS_cul_buff_roast_normal days = 90 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 2 } }
+		add_timed_idea = { idea = LOS_cul_buff_stew_normal days = 90 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 3 } }
+		add_timed_idea = { idea = LOS_cul_buff_fry_normal days = 90 }
+	}
+	else_if = {
+		limit = { check_variable = { LOS_cul_active_cook = 4 } }
+		add_timed_idea = { idea = LOS_cul_buff_soup_normal days = 90 }
+	}
+	else = {
+		add_timed_idea = { idea = LOS_cul_buff_raw_normal days = 90 }
+	}
+}

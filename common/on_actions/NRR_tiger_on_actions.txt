@@ -1,0 +1,75 @@
+# ========================================================
+#  与虎谋皮 · On Actions
+#  - 开局第 7 天弹出开场事件开启系统
+#  - 每日检测：ANR 跳反接口 / NRR-MOE 开战发放胜负 Buff / 对手被消灭后战后算账
+# ========================================================
+
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = NRR
+					country_exists = MOE
+				}
+				NRR = { country_event = { id = NRR_tiger.1 days = 7 } }
+				MOE = { country_event = { id = NRR_tiger.1 days = 7 } }
+			}
+		}
+	}
+
+	on_daily_NRR = {
+		effect = {
+			# 1. ANR 跳反接口检测
+			if = {
+				limit = {
+					has_global_flag = NRR_ANR_defected
+					NOT = { has_global_flag = NRR_ANR_defected_handled }
+				}
+				NRR_MOE_tiger_trigger_anr_override = yes
+			}
+			# 2. 与 MOE 陷入战争时发放胜负 Buff
+			if = {
+				limit = {
+					has_global_flag = NRR_MOE_tiger_ended
+					NOT = { has_global_flag = NRR_MOE_tiger_wartime_applied }
+					has_war_with = MOE
+				}
+				NRR_MOE_tiger_apply_wartime_buffs = yes
+			}
+			# 3. 消灭 MOE 后，若此前赢得了圣杯承认，则兑现让步负面 Buff
+			if = {
+				limit = {
+					has_global_flag = NRR_MOE_tiger_winner_NRR
+					NOT = { has_global_flag = NRR_MOE_tiger_table_flipped }
+					NOT = { country_exists = MOE }
+					NOT = { has_country_flag = NRR_MOE_tiger_debts_collected }
+				}
+				NRR_MOE_tiger_collect_debts = yes
+			}
+		}
+	}
+
+	on_daily_MOE = {
+		effect = {
+			# 1. 与 NRR 陷入战争时发放胜负 Buff
+			if = {
+				limit = {
+					has_global_flag = NRR_MOE_tiger_ended
+					NOT = { has_global_flag = NRR_MOE_tiger_wartime_applied }
+					has_war_with = NRR
+				}
+				NRR_MOE_tiger_apply_wartime_buffs = yes
+			}
+			# 2. 消灭 NRR 后，若此前赢得了圣杯承认，则兑现让步负面 Buff
+			if = {
+				limit = {
+					has_global_flag = NRR_MOE_tiger_winner_MOE
+					NOT = { country_exists = NRR }
+					NOT = { has_country_flag = NRR_MOE_tiger_debts_collected }
+				}
+				NRR_MOE_tiger_collect_debts = yes
+			}
+		}
+	}
+}

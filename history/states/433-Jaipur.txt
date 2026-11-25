@@ -9,6 +9,7 @@ state={
 		add_to_array = { state_victory_points = 2054 }
 		victory_points = { 2054 1 }  ##斋浦尔
 		buildings = {
+			industrial_complex = 1
 			infrastructure = 2
 		}
 	}

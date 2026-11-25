@@ -277,7 +277,7 @@ NRR_nr_apply_selected_op_effect = {
 			limit = { ROOT = { check_variable = { NRR_nr_active_op = 3 } } }
 			# 3. 破坏敌工业设施：令目标国任一省份民用/军用工厂遭受破坏（暂定 0.5 级，可在下面改小数）
 			if = {
-				limit = { any_owned_controlled_state = { industrial_complex > 0 } }
+				limit = { any_owned_state = { is_controlled_by = PREV  industrial_complex > 0 } }
 				random_owned_controlled_state = {
 					limit = { industrial_complex > 0 }
 					damage_building = {
@@ -287,7 +287,7 @@ NRR_nr_apply_selected_op_effect = {
 				}
 			}
 			else_if = {
-				limit = { any_owned_controlled_state = { arms_factory > 0 } }
+				limit = { any_owned_state = { is_controlled_by = PREV  arms_factory > 0 } }
 				random_owned_controlled_state = {
 					limit = { arms_factory > 0 }
 					damage_building = {

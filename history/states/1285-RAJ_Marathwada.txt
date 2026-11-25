@@ -7,6 +7,7 @@ state={
 		owner = NRR
 		add_core_of = NRR
 		buildings = {
+			arms_factory = 1
 			infrastructure = 2
 		}
 	}

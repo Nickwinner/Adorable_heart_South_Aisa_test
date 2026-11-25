@@ -10,13 +10,15 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-	transport = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-	CAS1 = 1
-	early_fighter = 1
 	fuel_silos = 1
 	fuel_refining = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		CAS1 = 1
+		early_fighter = 1
+	}
 }
 
 set_technology = {
@@ -26,6 +28,19 @@ set_technology = {
 }
 
 recruit_character = MFD_lian
+recruit_character = MFD_Uzen_Kyoka
+recruit_character = MFD_Tenka_Izumo
+recruit_character = MFD_Azuma_Fubuki
+recruit_character = MFD_Varvara_Pilipenko
+recruit_character = MFD_Ezo_Yakumo
+recruit_character = MFD_Bell_Tsukiyono
+recruit_character = MFD_Mira_Kamiunten
+recruit_character = MFD_Azuma_Himari
+recruit_character = MFD_Azuma_Yachiho
+recruit_character = MFD_Konomi_Tatara
+recruit_character = MFD_Yuuki_Wakura
+recruit_character = MFD_Shushu_Suruga
+recruit_character = MFD_Nei_Ookawamura
 
 
 add_ideas = {

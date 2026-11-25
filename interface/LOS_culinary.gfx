@@ -1,0 +1,35 @@
+spriteTypes = {
+	spriteType = { name = "GFX_LOS_cul_open_btn" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_open_btn.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_LOS_cul_bg" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_bg.dds" }
+	spriteType = { name = "GFX_LOS_cul_panel_ing" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_panel_ing.dds" }
+	spriteType = { name = "GFX_LOS_cul_panel_cook" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_panel_cook.dds" }
+	spriteType = { name = "GFX_LOS_cul_panel_chef" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_panel_chef.dds" }
+	spriteType = { name = "GFX_LOS_cul_panel_bot" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_panel_bot.dds" }
+	spriteType = { name = "GFX_LOS_cul_ing_slot" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_ing_slot.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_LOS_cul_ing_selected" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_ing_selected.dds" }
+	spriteType = { name = "GFX_LOS_cul_cook_btn" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_cook_btn.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_LOS_cul_cook_selected" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_cook_selected.dds" }
+	spriteType = { name = "GFX_LOS_cul_chef_btn" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_chef_btn.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_LOS_cul_chef_selected" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_chef_selected.dds" }
+	spriteType = { name = "GFX_LOS_cul_exec_btn" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_exec_btn.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_LOS_cul_portrait_frame" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_portrait_frame.dds" }
+	spriteType = { name = "GFX_LOS_cul_info_icon" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_info_icon.dds" }
+	spriteType = { name = "GFX_LOS_cul_close_btn" texturefile = "gfx/interface/gui/LOS_culinary/LOS_cul_close_btn.dds" noOfFrames = 2 }
+
+	# Chef Portraits (reusing LOS leader PNGs)
+	spriteType = { name = "GFX_LOS_cul_chef_sensi" texturefile = "gfx/leaders/LOS/sensi.png" }
+	spriteType = { name = "GFX_LOS_cul_chef_leos" texturefile = "gfx/leaders/LOS/leos.png" }
+	spriteType = { name = "GFX_LOS_cul_chef_malucil" texturefile = "gfx/leaders/LOS/malucil.png" }
+	spriteType = { name = "GFX_LOS_cul_chef_zilchak" texturefile = "gfx/leaders/LOS/zilchak.png" }
+
+	progressbartype = {
+		name = "GFX_LOS_cul_progress_bar"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/gui/LOS_culinary/LOS_cul_progress_bar.dds"
+		textureFile2 = "gfx/interface/gui/LOS_culinary/LOS_cul_progress_bar_bg.dds"
+		size = { x = 360 y = 14 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+}

@@ -28,12 +28,6 @@ LOS_decision_category = {
 		    adorable_heart_fire_super_event = yes
 			
 			play_song = super_event_LOS_start_war
-			trigger = {
-				or = {
-					tag = LOS
-					tag = LOS
-				}
-			}
 		}
 	}
 }	

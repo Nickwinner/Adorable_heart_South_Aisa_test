@@ -10,6 +10,7 @@ state={
 		victory_points = { 7150 1 }  ##苏拉特
 		buildings = {
 			industrial_complex = 1
+			arms_factory = 1
 			infrastructure = 3
 		}
 	}

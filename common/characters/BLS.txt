@@ -1,9 +1,12 @@
 characters = {
-	BLS_zihei = {
-		name = "紫黑"
+	BLS_Aoba_Wakura = {
+		name = "和仓青羽"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/BLS/zihei.png"
+				large = "gfx/leaders/BLS/BLS_Aoba_Wakura.dds"
+			}
+			army = {
+				large = "gfx/leaders/BLS/BLS_Aoba_Wakura.dds"
 			}
 		}
 		country_leader = {
@@ -15,5 +18,62 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
-    }
+		field_marshal = {
+			traits = {
+				war_hero
+				trait_reckless
+				inspirational_leader
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BLS_Naon_Yuno = {
+		name = "汤野波音"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLS/BLS_Naon_Yuno.dds"
+			}
+			army = {
+				large = "gfx/leaders/BLS/BLS_Naon_Yuno.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_cautious
+				trickster
+				expert_improviser
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	BLS_Koko_Zenibako = {
+		name = "钱函可可"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLS/BLS_Koko_Zenibako.dds"
+			}
+			army = {
+				large = "gfx/leaders/BLS/BLS_Koko_Zenibako.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				commando
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
 }

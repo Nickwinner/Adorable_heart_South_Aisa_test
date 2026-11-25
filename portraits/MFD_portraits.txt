@@ -1,0 +1,26 @@
+MFD = {
+	army = {
+		male = {
+			"GFX_MFD_generic_officer_01"
+			"GFX_MFD_generic_officer_02"
+			"GFX_MFD_generic_officer_03"
+			"GFX_MFD_generic_officer_04"
+			"GFX_MFD_generic_officer_05"
+			"GFX_MFD_generic_officer_06"
+			"GFX_MFD_generic_officer_07"
+			"GFX_MFD_generic_officer_08"
+			"GFX_MFD_generic_officer_09"
+		}
+		female = {
+			"GFX_MFD_generic_officer_01"
+			"GFX_MFD_generic_officer_02"
+			"GFX_MFD_generic_officer_03"
+			"GFX_MFD_generic_officer_04"
+			"GFX_MFD_generic_officer_05"
+			"GFX_MFD_generic_officer_06"
+			"GFX_MFD_generic_officer_07"
+			"GFX_MFD_generic_officer_08"
+			"GFX_MFD_generic_officer_09"
+		}
+	}
+}

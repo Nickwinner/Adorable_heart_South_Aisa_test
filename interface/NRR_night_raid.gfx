@@ -74,6 +74,11 @@ spriteTypes = {
 		name = "GFX_idea_NRR_nr_intel_paralyzed"
 		texturefile = "gfx/interface/ideas/NRR/NRR_nr_intel_paralyzed.dds"
 	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_NRR_night_raid"
+		texturefile = "gfx/interface/operatives/agencies/intelligence_agency_logo_NRR_night_raid.dds"
+		noOfFrames = 2
+	}
 	progressbartype = {
 		name = "GFX_NRR_nr_progress_bar"
 		color = { 1.0 1.0 1.0 }

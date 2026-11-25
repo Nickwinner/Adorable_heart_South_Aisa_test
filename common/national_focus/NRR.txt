@@ -33,7 +33,7 @@ focus_tree={
 		}
 		completion_reward={
 			add_political_power = 50
-			#NRR_submit_bill_1 = yes
+			
 		}
 	}
 	focus={
@@ -261,7 +261,6 @@ focus_tree={
 		    }
 			create_country_leader = {
 				name = "艾斯德斯"
-				id = NRR_aisi
 				picture = "gfx/leaders/ANR/aisi.dds"
 				desc = ANR_aisi_desc_leader
 			    ideology = autocracy_subideology
@@ -495,13 +494,13 @@ focus_tree={
 			add_tech_bonus = {
 		        bonus = 0.75
 		        uses = 2
-		        category = artillery_equipment
+		        category = artillery
 	        }
 			add_tech_bonus = {
 		        bonus = 1.0 
 		        ahead_reduction = 1 
 		        uses = 1
-		        category = artillery_equipment 
+		        category = artillery
 	        }
 		}
 	}
@@ -1546,7 +1545,8 @@ focus_tree={
 			country_event = { id = NRR.event.42  days = 2}
 		}
 		completion_reward={
-			load_focus_tree = NRR_democracy_republic_survived
+			set_country_flag = NRR_democracy_republic_survived
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	focus={

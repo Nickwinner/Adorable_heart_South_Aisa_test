@@ -1,6 +1,6 @@
 division_template = { 
-	name = "帝国近卫师"			
-	division_names_group = MOE_INF_01 
+	name = "帝国近卫师"
+	division_names_group = MOE_INF_01
 	priority = 1
 	regiments = {
 		infantry = {
@@ -44,8 +44,8 @@ division_template = {
 	}	
 }
 division_template = { 
-	name = "狩人军团"	
-	division_names_group = ANR_CAV_01
+	name = "狩人军团"
+	division_names_group = MOE_CAV_01
 	regiments = {
 		magic_assault = {
 			x = 0
@@ -103,217 +103,310 @@ division_template = {
 
 units = {
 	division = {
-		name = "帝国近卫军第1师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
 		location = 12717
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第2师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
 		location = 12763
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第3师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
 		location = 10905
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第4师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
 		location = 4979
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第5师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
 		location = 10807
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第6师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
 		location = 12822
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第7师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
 		location = 1107
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第8师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
 		location = 8098
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第9师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
 		location = 12774
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第10师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
 		location = 3456
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第11师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
 		location = 7084
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第12师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
 		location = 1144
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第13师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 13
+		}
 		location = 4953
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第14师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
 		location = 1949
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第15师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
 		location = 10816
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第16师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
 		location = 18971
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第17师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
 		location = 12743
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第18师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
 		location = 7165
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第19师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
 		location = 11952
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第20师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
 		location = 7150
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第21师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
 		location = 5040
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第22师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
 		location = 5055
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第23师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
 		location = 12777
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第24师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
 		location = 12786
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第25师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
 		location = 9973
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第26师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
 		location = 7064
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第27师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
 		location = 1983
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第28师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
 		location = 8082
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第29师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
 		location = 2086
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "帝国近卫军第30师"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
 		location = 4915
 		division_template = "帝国近卫师"
 		start_experience_factor = 0
 		start_equipment_factor = 0.3
 	}
 	division = {
-		name = "狩人军团本队"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
 		location = 9975
 		division_template = "狩人军团"
 		start_experience_factor = 1

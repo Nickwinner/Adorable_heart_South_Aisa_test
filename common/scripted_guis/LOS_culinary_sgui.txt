@@ -1,0 +1,121 @@
+scripted_gui = {
+
+	LOS_culinary_open_gui = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "LOS_culinary_open_window"
+
+		visible = {
+			tag = LOS
+			has_country_flag = LOS_culinary_unlocked
+		}
+
+		effects = {
+			LOS_cul_open_btn_click = {
+				if = {
+					limit = { has_country_flag = LOS_culinary_window_open }
+					clr_country_flag = LOS_culinary_window_open
+				}
+				else = {
+					set_country_flag = LOS_culinary_window_open
+					LOS_cul_sync_unlocked_ingredients = yes
+				}
+			}
+		}
+	}
+
+	LOS_culinary_main_gui = {
+		context_type = player_context
+		window_name = "LOS_culinary_main_window"
+
+		visible = {
+			tag = LOS
+			has_country_flag = LOS_culinary_window_open
+		}
+
+		dynamic_lists = {
+			LOS_cul_ing_grid = {
+				array = LOS_cul_unlocked_ingredients
+				value = v_ing
+				index = i_ing
+				change_scope = no
+				entry_container = LOS_cul_ing_entry
+			}
+		}
+
+		triggers = {
+			LOS_cul_ing_selected_visible = {
+				check_variable = { LOS_cul_selected_ing = v_ing }
+			}
+			LOS_cul_ing_btn_click_enabled = {
+				NOT = {
+					OR = {
+						AND = { check_variable = { v_ing = 1 } check_variable = { LOS_cul_ing_cd_1 > 0 } }
+						AND = { check_variable = { v_ing = 2 } check_variable = { LOS_cul_ing_cd_2 > 0 } }
+						AND = { check_variable = { v_ing = 3 } check_variable = { LOS_cul_ing_cd_3 > 0 } }
+						AND = { check_variable = { v_ing = 4 } check_variable = { LOS_cul_ing_cd_4 > 0 } }
+						AND = { check_variable = { v_ing = 5 } check_variable = { LOS_cul_ing_cd_5 > 0 } }
+						AND = { check_variable = { v_ing = 6 } check_variable = { LOS_cul_ing_cd_6 > 0 } }
+						AND = { check_variable = { v_ing = 7 } check_variable = { LOS_cul_ing_cd_7 > 0 } }
+						AND = { check_variable = { v_ing = 8 } check_variable = { LOS_cul_ing_cd_8 > 0 } }
+						AND = { check_variable = { v_ing = 9 } check_variable = { LOS_cul_ing_cd_9 > 0 } }
+						AND = { check_variable = { v_ing = 10 } check_variable = { LOS_cul_ing_cd_10 > 0 } }
+						AND = { check_variable = { v_ing = 11 } check_variable = { LOS_cul_ing_cd_11 > 0 } }
+						AND = { check_variable = { v_ing = 12 } check_variable = { LOS_cul_ing_cd_12 > 0 } }
+					}
+				}
+			}
+			LOS_cul_cook_sel_1_visible = { check_variable = { LOS_cul_selected_cook = 1 } }
+			LOS_cul_cook_sel_2_visible = { check_variable = { LOS_cul_selected_cook = 2 } }
+			LOS_cul_cook_sel_3_visible = { check_variable = { LOS_cul_selected_cook = 3 } }
+			LOS_cul_cook_sel_4_visible = { check_variable = { LOS_cul_selected_cook = 4 } }
+			LOS_cul_cook_sel_5_visible = { check_variable = { LOS_cul_selected_cook = 5 } }
+
+			LOS_cul_chef_sel_1_visible = { check_variable = { LOS_cul_selected_chef = 1 } }
+			LOS_cul_chef_sel_2_visible = { check_variable = { LOS_cul_selected_chef = 2 } }
+			LOS_cul_chef_sel_3_visible = { check_variable = { LOS_cul_selected_chef = 3 } }
+			LOS_cul_chef_sel_4_visible = { check_variable = { LOS_cul_selected_chef = 4 } }
+
+			LOS_cul_exec_btn_click_enabled = {
+				NOT = { has_country_flag = LOS_cul_research_active }
+				check_variable = { LOS_cul_cd_days_left < 1 }
+				check_variable = { LOS_cul_selected_ing > 0 }
+				check_variable = { LOS_cul_selected_cook > 0 }
+				check_variable = { LOS_cul_selected_chef > 0 }
+				has_political_power > 24
+			}
+		}
+
+		effects = {
+			LOS_cul_close_btn_click = {
+				clr_country_flag = LOS_culinary_window_open
+			}
+			LOS_cul_ing_btn_click = {
+				set_variable = { LOS_cul_selected_ing = v_ing }
+			}
+			LOS_cul_cook_btn_1_click = { set_variable = { LOS_cul_selected_cook = 1 } }
+			LOS_cul_cook_btn_2_click = { set_variable = { LOS_cul_selected_cook = 2 } }
+			LOS_cul_cook_btn_3_click = { set_variable = { LOS_cul_selected_cook = 3 } }
+			LOS_cul_cook_btn_4_click = { set_variable = { LOS_cul_selected_cook = 4 } }
+			LOS_cul_cook_btn_5_click = { set_variable = { LOS_cul_selected_cook = 5 } }
+
+			LOS_cul_chef_btn_1_click = { set_variable = { LOS_cul_selected_chef = 1 } }
+			LOS_cul_chef_btn_2_click = { set_variable = { LOS_cul_selected_chef = 2 } }
+			LOS_cul_chef_btn_3_click = { set_variable = { LOS_cul_selected_chef = 3 } }
+			LOS_cul_chef_btn_4_click = { set_variable = { LOS_cul_selected_chef = 4 } }
+
+			LOS_cul_exec_btn_click = {
+				LOS_cul_start_research_effect = yes
+			}
+		}
+
+		properties = {
+			LOS_cul_chef_portrait = {
+				image = "[Root.GetLOSCulChefPortrait]"
+			}
+			LOS_cul_progress_bar = {
+				frame = LOS_cul_progress
+			}
+		}
+	}
+}

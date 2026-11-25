@@ -11,7 +11,7 @@ state={
 		victory_points = { 12182 1 }  ##浦那
 		buildings = {
 			industrial_complex = 1
-			arms_factory = 1
+			arms_factory = 2
 			infrastructure = 3
 			air_base = 1
 		}

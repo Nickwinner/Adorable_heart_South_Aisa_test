@@ -8,7 +8,7 @@ state={
 		add_core_of = NRR
 		victory_points = { 7430 5 }
 		buildings = {
-			industrial_complex = 1
+			industrial_complex = 2
 			arms_factory = 1
 			infrastructure = 2
 		}

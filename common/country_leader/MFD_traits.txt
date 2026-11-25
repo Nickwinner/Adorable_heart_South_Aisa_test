@@ -1,0 +1,177 @@
+leader_traits = {
+	# 政治顾问 (political_advisor)
+	MFD_trait_WanWuWanXiang = { # 万物万象 - 山城恋
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		stability_factor = 0.10
+		production_speed_buildings_factor = 0.10
+		max_command_power = 20
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_BuSiNiaoZhiLei = { # 不死鸟之泪 - 月夜野贝儿
+		random = no
+		sprite = 13
+		experience_loss_factor = -0.15
+		attrition = -0.10
+		army_morale_factor = 0.10
+		stability_weekly = 0.005
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_NuLiQiYue = { # 奴隶契约 - 和仓优希
+		random = no
+		sprite = 10
+		consumer_goods_factor = -0.15
+		industrial_capacity_factory = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		supply_consumption_factor = -0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 理论家 (theorist)
+	MFD_trait_Golden_Hour = { # 黄金时刻 - 东八千穗
+		random = no
+		sprite = 14
+		land_doctrine_cost_factor = -0.10
+		land_mastery_gain_factor = 0.10
+		research_speed_factor = 0.05
+		planning_speed = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_Holy_Icon = { # 圣像画 - 瓦尔瓦拉·皮莉片可
+		random = no
+		sprite = 14
+		land_doctrine_cost_factor = -0.10
+		land_mastery_gain_factor = 0.10
+		max_dig_in_factor = 0.10
+		special_forces_attack_factor = 0.10
+		special_forces_defence_factor = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 陆军总司令 (army_chief)
+	MFD_trait_Eternal_Chains = { # 无穷之锁 - 羽前京香
+		random = no
+		sprite = 5
+		command_cap_increase = 25
+		experience_gain_army = 0.25
+		army_org_factor = 0.10
+		army_attack_factor = 0.10
+		army_defence_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_All_Out_Assault = { # 全军突击 - 上运天美罗
+		random = no
+		sprite = 7
+		command_cap_increase = 20
+		experience_gain_army = 0.20
+		breakthrough_factor = 0.15
+		army_attack_factor = 0.10
+		mobilization_speed = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 空军总司令 (air_chief)
+	MFD_trait_Ame_no_Mitori = { # 天御鸟命 - 出云天花
+		random = no
+		sprite = 1
+		command_cap_increase = 25
+		experience_gain_air = 0.25
+		air_superiority_efficiency = 0.15
+		air_cas_present_factor = 0.15
+		air_night_penalty = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_Wind_God_Dash = { # 风神疾走 - 虾夷夜云
+		random = no
+		sprite = 2
+		command_cap_increase = 20
+		experience_gain_air = 0.20
+		air_agility_factor = 0.15
+		air_intercept_efficiency = 0.15
+		air_weather_penalty = -0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 海军总司令 (navy_chief)
+	MFD_trait_Spear_of_the_Sun = { # 太阳之枪 - 东日吹雪
+		random = no
+		sprite = 3
+		command_cap_increase = 25
+		experience_gain_navy = 0.25
+		navy_capital_ship_attack_factor = 0.15
+		navy_screen_attack_factor = 0.10
+		positioning = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_Clairvoyance = { # 万里眼 - 大川村宁
+		random = no
+		sprite = 4
+		command_cap_increase = 20
+		experience_gain_navy = 0.20
+		spotting_chance = 0.20
+		navy_submarine_detection_factor = 0.15
+		naval_speed_factor = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	# 最高统帅部 (high_command)
+	MFD_trait_Heavenly_Thunder = { # 天鼓雷音 - 多多良木乃实
+		random = no
+		sprite = 16
+		command_cap_increase = 20
+		experience_gain_army = 0.20
+		army_artillery_attack_factor = 0.15
+		army_artillery_defence_factor = 0.10
+		max_planning = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_Blue_Cloud_Ambition = { # 青云之志 - 东日万凛
+		random = no
+		sprite = 8
+		command_cap_increase = 20
+		experience_gain_army = 0.20
+		army_speed_factor = 0.10
+		land_reinforce_rate = 0.03
+		training_time_army_factor = -0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	MFD_trait_Pandora = { # 生体革正 - 骏河朱朱
+		random = no
+		sprite = 15
+		command_cap_increase = 20
+		experience_gain_army = 0.20
+		army_infantry_attack_factor = 0.10
+		army_infantry_defence_factor = 0.15
+		org_loss_when_moving = -0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

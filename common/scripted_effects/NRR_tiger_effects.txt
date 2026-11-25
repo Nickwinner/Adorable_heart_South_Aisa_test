@@ -1,0 +1,203 @@
+# ========================================================
+#  与虎谋皮 · Scripted Effects (NRR vs MOE -> ENG)
+# ========================================================
+
+# 更新全局差值变量 global.MOE_tiger_lead = MOE.tiger_score - NRR.tiger_score（供 AI 权重读取）
+NRR_MOE_tiger_update_lead = {
+	set_variable = { global.MOE_tiger_lead = MOE.tiger_score }
+	subtract_from_variable = { global.MOE_tiger_lead = NRR.tiger_score }
+}
+
+# 启动“与虎谋皮”系统（由开局第 7 天事件调用）
+NRR_MOE_tiger_start_system = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = NRR_MOE_tiger_started }
+		}
+		set_global_flag = NRR_MOE_tiger_started
+		set_global_flag = NRR_MOE_tiger_active
+		NRR = {
+			set_variable = { tiger_score = 0 }
+			activate_mission = NRR_MOE_tiger_mission
+		}
+		MOE = {
+			set_variable = { tiger_score = 0 }
+			activate_mission = NRR_MOE_tiger_mission
+		}
+		NRR_MOE_tiger_update_lead = yes
+	}
+}
+
+# 180 天倒计时结束：判定圣杯王国（ENG）承认归属（最低门槛 30 分，平分偏袒 MOE）
+NRR_MOE_tiger_resolve_bidding = {
+	set_global_flag = NRR_MOE_tiger_ended
+	clr_global_flag = NRR_MOE_tiger_active
+
+	if = {
+		limit = {
+			check_variable = { NRR.tiger_score < 30 }
+			check_variable = { MOE.tiger_score < 30 }
+		}
+		# 双方均未达到最低门槛：ENG 保持冷眼旁观
+		set_global_flag = NRR_MOE_tiger_no_winner
+		NRR = { country_event = { id = NRR_tiger.4 } }
+		MOE = { country_event = { id = NRR_tiger.4 } }
+	}
+	else_if = {
+		limit = {
+			check_variable = { NRR.tiger_score > MOE.tiger_score }
+		}
+		# NRR 筹码更高，赢得圣杯王国承认
+		set_global_flag = NRR_MOE_tiger_winner_NRR
+		NRR = { country_event = { id = NRR_tiger.2 } }
+		MOE = { country_event = { id = NRR_tiger.3 } }
+	}
+	else = {
+		# MOE 筹码更高或平分（传统秩序方占优），赢得圣杯王国承认
+		set_global_flag = NRR_MOE_tiger_winner_MOE
+		MOE = { country_event = { id = NRR_tiger.2 } }
+		NRR = { country_event = { id = NRR_tiger.3 } }
+	}
+
+	# 若结算时双方已陷入战争，则立即发放战时胜负 Buff
+	if = {
+		limit = {
+			NRR = { has_war_with = MOE }
+		}
+		NRR_MOE_tiger_apply_wartime_buffs = yes
+	}
+}
+
+# 阶段一：当 MOE 与 NRR 陷入战争时，发放结算胜利/失败 Buff（只触发一次）
+NRR_MOE_tiger_apply_wartime_buffs = {
+	if = {
+		limit = {
+			has_global_flag = NRR_MOE_tiger_ended
+			NOT = { has_global_flag = NRR_MOE_tiger_wartime_applied }
+			NOT = { has_global_flag = NRR_MOE_tiger_no_winner }
+			NOT = { has_global_flag = NRR_MOE_tiger_table_flipped }
+		}
+		set_global_flag = NRR_MOE_tiger_wartime_applied
+
+		if = {
+			limit = { has_global_flag = NRR_MOE_tiger_winner_NRR }
+			NRR = {
+				add_timed_idea = { idea = NRR_tiger_winner_buff days = 365 }
+				add_stability = 0.10
+				add_political_power = 100
+				add_to_variable = { ubs_save = 300 }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = ENG }
+				add_equipment_to_stockpile = { type = artillery_equipment amount = 200 producer = ENG }
+				add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = ENG }
+			}
+			MOE = {
+				add_timed_idea = { idea = NRR_tiger_loser_debuff days = 180 }
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = NRR_MOE_tiger_winner_MOE }
+			MOE = {
+				add_timed_idea = { idea = NRR_tiger_winner_buff days = 365 }
+				add_stability = 0.10
+				add_political_power = 100
+				add_to_variable = { ubs_save = 300 }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = ENG }
+				add_equipment_to_stockpile = { type = artillery_equipment amount = 200 producer = ENG }
+				add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = ENG }
+			}
+			NRR = {
+				add_timed_idea = { idea = NRR_tiger_loser_debuff days = 180 }
+			}
+		}
+	}
+}
+
+# 阶段二：当对手 TAG 被消灭（内战结束）后，由圣杯王国兑现之前许诺的让步负面 Buff
+NRR_MOE_tiger_collect_debts = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = NRR_MOE_tiger_debts_collected }
+			OR = {
+				has_country_flag = tiger_pledge_tariff
+				has_country_flag = tiger_pledge_railway
+				has_country_flag = tiger_pledge_debt
+				has_country_flag = tiger_pledge_access
+				has_country_flag = tiger_pledge_advisors
+				has_country_flag = tiger_pledge_mumbai
+				has_country_flag = tiger_pledge_sphere
+			}
+		}
+		set_country_flag = NRR_MOE_tiger_debts_collected
+		country_event = { id = NRR_tiger.7 days = 3 }
+	}
+}
+
+# 实际施加账本上的让步负面精神（在 NRR_tiger.7 选项中调用）
+NRR_MOE_tiger_apply_pledged_debuffs = {
+	if = {
+		limit = { has_country_flag = tiger_pledge_tariff }
+		add_timed_idea = { idea = NRR_tiger_debt_tariff days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_railway }
+		add_timed_idea = { idea = NRR_tiger_debt_railway days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_debt }
+		add_timed_idea = { idea = NRR_tiger_debt_war_debt days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_access }
+		give_military_access = ENG
+		if = {
+			limit = { country_exists = RAJ }
+			give_military_access = RAJ
+		}
+		add_timed_idea = { idea = NRR_tiger_debt_access days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_advisors }
+		add_timed_idea = { idea = NRR_tiger_debt_advisors days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_mumbai }
+		add_timed_idea = { idea = NRR_tiger_debt_mumbai days = 365 }
+	}
+	if = {
+		limit = { has_country_flag = tiger_pledge_sphere }
+		add_timed_idea = { idea = NRR_tiger_debt_sphere days = 365 }
+	}
+}
+
+# 清空当前国家所有未兑现的让步账本（用于 ANR 跳反掀桌）
+NRR_MOE_tiger_clear_all_pledges = {
+	clr_country_flag = tiger_pledge_tariff
+	clr_country_flag = tiger_pledge_railway
+	clr_country_flag = tiger_pledge_debt
+	clr_country_flag = tiger_pledge_access
+	clr_country_flag = tiger_pledge_advisors
+	clr_country_flag = tiger_pledge_mumbai
+	clr_country_flag = tiger_pledge_sphere
+}
+
+# ========================================================
+#  【ANR 跳反专属接口（方案 A：何须再与虎谋皮？）】
+#  用法：在你剧情中艾斯德斯/ANR 跳反加入 NRR 时，只需写以下任意一句即可自动触发：
+#    set_global_flag = NRR_ANR_defected
+#  或直接调用：
+#    NRR_MOE_tiger_trigger_anr_override = yes
+# ========================================================
+NRR_MOE_tiger_trigger_anr_override = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = NRR_ANR_defected_handled }
+		}
+		set_global_flag = NRR_ANR_defected
+		set_global_flag = NRR_ANR_defected_handled
+		set_global_flag = NRR_MOE_tiger_ended
+		clr_global_flag = NRR_MOE_tiger_active
+		NRR = {
+			country_event = { id = NRR_tiger.6 }
+		}
+	}
+}

@@ -2,6 +2,7 @@ add_namespace = NRR.event
 add_namespace = NRR_news
 add_namespace = NRR.event.askforhelp
 add_namespace = NRR_night_raid
+add_namespace = NRR_tiger
 
 country_event = {
     
@@ -298,23 +299,127 @@ country_event = {
 
 	option = {
 		name = NRR.event.8.a
-		hidden_effect ={
-	        MOE = {
+		hidden_effect = {
+			MOE = {
+				1237 = { add_core_of = ANR }
+				1238 = { add_core_of = ANR }
+				443 = { add_core_of = ANR }
+				1261 = { add_core_of = ANR }
 
-                1237 = { add_core_of = ANR }
-                1238 = { add_core_of = ANR }
-                443 = { add_core_of = ANR }
-                1261 = { add_core_of = ANR }
+				release_puppet = ANR
+				end_puppet = ANR
 
-                release_puppet = ANR
-                end_puppet = ANR
-            }
-            NRR = {
-                set_autonomy = {
-                    target = ANR
-                    autonomy_state = autonomy_dominion
-                }
-            }
+				# 将原属 ANR 的全部角色从 MOE 转入 ANR
+				ANR_aisi = { set_nationality = ANR }
+				ANR_heitong = { set_nationality = ANR }
+				ANR_BLS = { set_nationality = ANR }
+				ANR_LAN = { set_nationality = ANR }
+				ANR_LW = { set_nationality = ANR }
+				ANR_SL = { set_nationality = ANR }
+				ANR_WE = { set_nationality = ANR }
+			}
+			NRR = {
+				set_autonomy = {
+					target = ANR
+					autonomy_state = autonomy_dominion
+				}
+			}
+			ANR = {
+				promote_character = ANR_aisi
+				set_technology = {
+					magic_weapons0 = 1
+					magic_weapons1 = 1
+				}
+
+				# 编制模板：军团步兵师 & 狩人军团（与 ANR_1936 一致）
+				division_template = {
+					name = "军团步兵师"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+				division_template = {
+					name = "狩人军团"
+					regiments = {
+						magic_assault = { x = 0 y = 0 }
+						magic_assault = { x = 0 y = 1 }
+						magic_assault = { x = 0 y = 2 }
+						magic_assault = { x = 1 y = 0 }
+						magic_assault = { x = 1 y = 1 }
+						magic_assault = { x = 1 y = 2 }
+						magic_assault = { x = 2 y = 0 }
+						magic_assault = { x = 2 y = 1 }
+						magic_assault = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+					}
+				}
+
+				# 在 ANR 领土上创建 3 支狩人军团 + 8 支军团步兵师
+				capital_scope = {
+					create_unit = {
+						division = "name = \"狩人军团本队\" division_template = \"狩人军团\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"狩人军团第一分队\" division_template = \"狩人军团\" start_experience_factor = 1.0 start_equipment_factor = 0.6"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"狩人军团第二分队\" division_template = \"狩人军团\" start_experience_factor = 1.0 start_equipment_factor = 0.6"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第1师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第2师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第3师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第4师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第5师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第6师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第7师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+					create_unit = {
+						division = "name = \"军团第8师\" division_template = \"军团步兵师\" start_experience_factor = 0.3 start_equipment_factor = 1.0"
+						owner = ANR
+					}
+				}
+			}
 		}
 	}
 }
@@ -448,6 +553,8 @@ country_event = {
 	}
 	option = {
 	    name = NRR.event.11.b
+
+		set_country_flag = NRR_has_senate
 		trigger = {
 			has_country_flag = NRR_choose_coop
 		}
@@ -515,7 +622,8 @@ country_event = {
 			id = NRR_crossroad_balance
 			value = 0.05
 		}
-		add_ideas = NRR_education_act
+		#add_ideas = NRR_education_act
+		NRR_submit_bill_1 = yes
 	}
 	option = {
 	    name = NRR.event.14.b
@@ -526,6 +634,7 @@ country_event = {
 			id = NRR_crossroad_balance
 			value = -0.05
 		}
+		NRR_submit_bill_2 = yes
 	}
 }
 country_event = {
@@ -545,7 +654,8 @@ country_event = {
 			id = NRR_crossroad_balance
 			value = 0.05
 		}
-		add_ideas = NRR_investigation_act_amendment
+		#add_ideas = NRR_investigation_act_amendment
+		NRR_submit_bill_3 = yes
 	}
 	option = {
 	    name = NRR.event.15.b
@@ -556,7 +666,8 @@ country_event = {
 			id = NRR_crossroad_balance
 			value = -0.05
 		}		
-		add_ideas = NRR_investigation_act
+		#add_ideas = NRR_investigation_act
+		NRR_submit_bill_4 = yes
 	}
 }
 country_event = { #清白先生
@@ -1105,6 +1216,7 @@ country_event = { #重建宣言3
 		add_manpower = -450
 
 		add_popularity = { ideology = neutrality popularity = -0.1 } 
+		set_country_flag = NRR_senate_is_committee
 		remove_ideas = NRR_mhsddgmjgc 
 	}
 }
@@ -1415,7 +1527,7 @@ country_event = {
 					limit = {
 						is_controlled_by = LOS
 						}
-					add_state_claim = THIS
+					add_claim_by = ROOT
 					add_core_of = ROOT
 				}
 		}
@@ -1874,14 +1986,10 @@ country_event = {
 	option = {
 		trigger = {
 			not = { has_country_flag = NRR_massacre }
-			or = {
+			NOT = {
 			    power_balance_value = {
 				    id = NRR_TZM_balance
-				    value > 0
-			    }
-			    power_balance_value = {
-				    id = NRR_TZM_balance
-				    value = 0
+				    value < 0
 			    }
 		    }
 		}
@@ -2522,5 +2630,125 @@ country_event = {
 		name = NRR_night_raid.2.a
 		add_political_power = -10
 		NRR_nr_clear_active_mission_vars = yes
+	}
+}
+
+# ========================================================
+#  与虎谋皮 · 专属事件 (NRR_tiger.1 ~ NRR_tiger.7)
+# ========================================================
+
+# 1. 开局第 7 天开场事件：开启“与虎谋皮”决议系统
+country_event = {
+	id = NRR_tiger.1
+	title = NRR_tiger.1.t
+	desc = NRR_tiger.1.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.1.a
+		NRR_MOE_tiger_start_system = yes
+		custom_effect_tooltip = NRR_TIGER_START_TT
+	}
+}
+
+# 2. 竞价胜出事件：赢得圣杯王国（ENG）的外交承认
+country_event = {
+	id = NRR_tiger.2
+	title = NRR_tiger.2.t
+	desc = NRR_tiger.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.2.a
+		custom_effect_tooltip = NRR_TIGER_WIN_WAIT_WAR_TT
+	}
+}
+
+# 3. 竞价落败事件：圣杯王国（ENG）倒向对手
+country_event = {
+	id = NRR_tiger.3
+	title = NRR_tiger.3.t
+	desc = NRR_tiger.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.3.a
+		custom_effect_tooltip = NRR_TIGER_LOSE_WAIT_WAR_TT
+	}
+}
+
+# 4. 双方未达门槛：圣杯王国坐山观虎斗
+country_event = {
+	id = NRR_tiger.4
+	title = NRR_tiger.4.t
+	desc = NRR_tiger.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.4.a
+	}
+}
+
+# 5. 对手抛出重磅主权筹码提醒事件
+country_event = {
+	id = NRR_tiger.5
+	title = NRR_tiger.5.t
+	desc = NRR_tiger.5.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.5.a
+	}
+}
+
+# 6. ANR（艾斯德斯）跳反加入 NRR 专属事件（方案 A：何须再与虎谋皮？）
+country_event = {
+	id = NRR_tiger.6
+	title = NRR_tiger.6.t
+	desc = NRR_tiger.6.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	# 选项 A：霸气掀桌！撕毁此前一切对圣杯王国的让步许诺（战后零债务）
+	option = {
+		name = NRR_tiger.6.a
+		set_global_flag = NRR_MOE_tiger_table_flipped
+		NRR_MOE_tiger_clear_all_pledges = yes
+		add_stability = 0.05
+		add_war_support = 0.10
+		custom_effect_tooltip = NRR_TIGER_ANR_FLIP_TT
+	}
+
+	# 选项 B：顺势压价，保留外交承认但免除所有重磅主权债务
+	option = {
+		name = NRR_tiger.6.b
+		set_global_flag = NRR_MOE_tiger_winner_NRR
+		clr_country_flag = tiger_pledge_mumbai
+		clr_country_flag = tiger_pledge_sphere
+		add_political_power = 50
+		custom_effect_tooltip = NRR_TIGER_ANR_PRESS_TT
+		if = {
+			limit = { has_war_with = MOE }
+			NRR_MOE_tiger_apply_wartime_buffs = yes
+		}
+	}
+}
+
+# 7. 内战结束（对手被消灭）：圣杯王国前来兑现战前许诺的让步（虎口兑约）
+country_event = {
+	id = NRR_tiger.7
+	title = NRR_tiger.7.t
+	desc = NRR_tiger.7.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+
+	option = {
+		name = NRR_tiger.7.a
+		NRR_MOE_tiger_apply_pledged_debuffs = yes
 	}
 }

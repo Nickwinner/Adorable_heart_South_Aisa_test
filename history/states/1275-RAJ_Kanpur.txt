@@ -11,8 +11,8 @@ state={
 		victory_points = { 4299 1 }  ##勒克瑙
 		victory_points = { 1377 5 }  ##坎普尔
 		buildings = {
-			industrial_complex = 1
-			arms_factory = 1
+			industrial_complex = 2
+			arms_factory = 3
 			infrastructure = 3
 			air_base = 1
 		}

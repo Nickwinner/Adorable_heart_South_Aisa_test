@@ -11,18 +11,21 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-	transport = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-	CAS1 = 1
-	early_fighter = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	magic_weapons0 = 1
 	magic_weapons1 = 1
 }
+if = {
+	limit = { NOT = { has_dlc = "By Blood Alone" } }
+	set_technology = {
+		CAS1 = 1
+		early_fighter = 1
+	}
+}
 
 set_technology = {
+	mtg_transport = 1
 	early_ship_hull_submarine = 1
 	early_ship_hull_light = 1
 }
@@ -46,10 +49,23 @@ recruit_character = NRR_MY
 recruit_character = NRR_QEX
 recruit_character = NRR_TZM
 recruit_character = NRR_XE
+recruit_character = NRR_Raman
+recruit_character = NRR_Bose
+recruit_character = NRR_Bhabha
+recruit_character = NRR_Chandrasekhar
+recruit_character = NRR_Saha
 
 
 set_country_flag = NRR_start_focus
 set_country_flag = NRR_night_raid_unlocked
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = {
+		name = "夜袭部队"
+		icon = GFX_intelligence_agency_logo_NRR_night_raid
+	}
+}
 
 set_convoys = 20
 set_cosmetic_tag = NRR 

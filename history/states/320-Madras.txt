@@ -9,7 +9,8 @@ state={
 		add_to_array = { state_victory_points = 10278 }
 		victory_points = { 10278 3 }  ##马德拉斯
 		buildings = {
-			industrial_complex = 2
+			industrial_complex = 3
+			arms_factory = 2
 			dockyard = 1
 			infrastructure = 3
 			air_base = 1

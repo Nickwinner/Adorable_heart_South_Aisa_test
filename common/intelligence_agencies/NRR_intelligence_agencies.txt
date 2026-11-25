@@ -1,0 +1,6 @@
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_NRR_night_raid
+	names = { "夜袭部队" }
+	default = { tag = NRR }
+	available = { original_tag = NRR }
+}
